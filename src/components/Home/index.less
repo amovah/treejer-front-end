@@ -140,3 +140,75 @@
     }
   }
 }
+
+
+:local(.planterwithout) {
+
+  > .title {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  > .info {
+    color: #707070;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  > .earth {
+    background-image: url('./earth.png');
+    height: 827px;
+    width: 1365px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+
+    .location {
+      position: absolute;
+      text-align: center;
+
+      p {
+        background-color: #67b68c;
+        height: 36px;
+        padding: 10px 30px;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border-top: 7px solid #67b68c;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          transform: translateX(-50%);
+        }
+      }
+
+      &.india {
+        top: 330px;
+        left: 915px;
+      }
+
+      &.middle {
+        top: 260px;
+        left: 790px;
+      }
+
+      &.africa {
+        top: 520px;
+        left: 780px;
+      }
+
+      &.southAmerica {
+        top: 500px;
+        left: 300px;
+      }
+    }
+  }
+}

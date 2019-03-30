@@ -5,6 +5,7 @@ import styles from './index.less';
 import adoptATree from './adopt-a-tree.png';
 import earnOxygen from './earn-oxygen.png';
 import tradeYourOxygens from './trade-your-oxygens.png';
+import tree from './tree.png';
 
 export default () => (
   <Layout>
@@ -119,5 +120,51 @@ export default () => (
 
     <div className={styles.divider} />
 
+    <div className={styles.planterwithout}>
+      <p className="title">
+        #PlantersWithoutBorders
+      </p>
+      <p className="info">
+        We are accepting local communities from different regions to join the Planet Ecosystem.
+      </p>
+      <div className="earth">
+        <div className="location india">
+          <p>
+            India
+          </p>
+          <img
+            src={tree}
+            alt="tree"
+          />
+        </div>
+        <div className="location middle">
+          <p>
+            Middle East
+          </p>
+          <img
+            src={tree}
+            alt="tree"
+          />
+        </div>
+        <div className="location africa">
+          <p>
+            Africa
+          </p>
+          <img
+            src={tree}
+            alt="tree"
+          />
+        </div>
+        <div className="location southAmerica">
+          <p>
+            South America
+          </p>
+          <img
+            src={tree}
+            alt="tree"
+          />
+        </div>
+      </div>
+    </div>
   </Layout>
 );
