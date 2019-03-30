@@ -1,5 +1,17 @@
 @import '~Root/styles/mixins';
 
+.whiteButton() {
+  text-decoration: none;
+  color: #3e6c54;
+  font-size: 17px;
+  padding: 25px 45px;
+  background-color: #ffffff;
+  border: 2px solid #67b68c;
+  border-radius: 10px;
+  height: 70px;
+  box-sizing: border-box;
+}
+
 :local(.tellingStory) {
   background-image: url(./trees.png);
   height: 725px;
@@ -128,15 +140,7 @@
     margin-top: 75px;
 
     .treejer {
-      text-decoration: none;
-      color: #3e6c54;
-      font-size: 17px;
-      padding: 25px 45px;
-      background-color: #ffffff;
-      border: 2px solid #67b68c;
-      border-radius: 10px;
-      height: 70px;
-      box-sizing: border-box;
+      .whiteButton();
     }
   }
 }
@@ -209,6 +213,15 @@
         top: 500px;
         left: 300px;
       }
+    }
+  }
+
+  .container {
+    .inARow();
+    margin-top: 50px;
+
+    a {
+      .whiteButton();
     }
   }
 }
