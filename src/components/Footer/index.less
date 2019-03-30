@@ -1,0 +1,65 @@
+@import '~Root/styles/mixins';
+
+:local(.container) {
+  .inARow();
+  margin-top: 100px;
+  height: 464px;
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 100px 140px;
+  box-sizing: border-box;
+
+  > * {
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./footer.png');
+    filter: brightness(0.5);
+  }
+
+  .someLinks {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: #bbbbbb;
+      margin-top: 30px;
+    }
+  }
+
+  .footerInfo {
+    width: 398px;
+    color: #b0aeae;
+    line-height: 33px;
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fb8e4f;
+    }
+  }
+
+  .socials {
+    p {
+      color: #b0aeae;
+      margin-left: 15px;
+    }
+
+    > div {
+      > * {
+        margin: 15px;
+      }
+    }
+  }
+}
