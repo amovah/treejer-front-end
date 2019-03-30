@@ -1,7 +1,7 @@
 @import '~Root/styles/mixins';
 
 :local(.tellingStory) {
-  background-image: url(~Root/assets/trees.png);
+  background-image: url(./trees.png);
   height: 725px;
   padding-left: 100px;
 
@@ -77,4 +77,66 @@
   height: 0;
   border: 1px solid #707070;
   margin: 100px auto;
+}
+
+:local(.treejernutshell) {
+  .head {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 150px;
+  }
+
+  .threethere {
+    .inARow();
+
+    > * {
+      margin: 0 35px;
+    }
+
+    .content {
+      width: 390px;
+      text-align: center;
+
+      .title {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .details {
+        color: #a8a8a8;
+        font-size: 22px;
+      }
+
+      .link {
+        color: #2dd393;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .verticalDivider {
+    height: 450px;
+    width: 0;
+    border: 1px solid #707070;
+  }
+
+
+  .treejerContainer {
+    .inARow();
+    margin-top: 75px;
+
+    .treejer {
+      text-decoration: none;
+      color: #3e6c54;
+      font-size: 17px;
+      padding: 25px 45px;
+      background-color: #ffffff;
+      border: 2px solid #67b68c;
+      border-radius: 10px;
+      height: 70px;
+      box-sizing: border-box;
+    }
+  }
 }
