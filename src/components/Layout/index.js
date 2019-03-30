@@ -8,7 +8,7 @@ export default props => (
     <div className={styles.header}>
       <div>
         <img
-          className={styles.logo}
+          className="logo"
           src={Logo}
           alt="logo"
         />

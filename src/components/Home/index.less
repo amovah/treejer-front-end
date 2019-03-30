@@ -1,0 +1,72 @@
+@import '~Root/styles/mixins';
+
+:local(.tellingStory) {
+  background-image: url(~Root/assets/trees.png);
+  height: 725px;
+  padding-left: 100px;
+
+  .head {
+    color: #1f1c1c;
+    width: 880px;
+    font-size: 54px;
+    font-weight: 700;
+  }
+
+  .info {
+    width: 880px;
+    line-height: 42px;
+    font-size: 28px;
+    color: #707070;
+  }
+
+  .buttons {
+    margin-top: 45px;
+    .inARow();
+    justify-content: flex-start;
+
+    > * {
+      margin-right: 50px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .goToPlanet {
+      box-shadow: 0 13px 32px rgba(0, 0, 0, 0.16);
+      border-radius: 10px;
+      background-color: #67b68c;
+      color: #ffffff;
+      height: 80px;
+      box-sizing: border-box;
+      .inARow();
+      padding: 0 30px;
+    }
+
+    .counter {
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+      border: 2px solid #dfdfdf;
+      border-radius: 8px;
+      height: 80px;
+      box-sizing: border-box;
+      .inARow();
+      flex-direction: column;
+      padding: 0 30px;
+
+      p {
+        margin: 0;
+      }
+
+      .count {
+        color: #2dd393;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .details {
+        font-size: 12px;
+        color: #a8a8a8;
+      }
+    }
+  }
+}
