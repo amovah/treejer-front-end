@@ -1,5 +1,47 @@
 @import '~Root/styles/colors';
+@import '~Root/styles/mixins';
 
 :local(.container) {
   background-color: @background-color;
+  padding: 45px 110px;
+}
+
+:local(.header) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  > div {
+    .inARow();
+
+    > * {
+      margin: 0 25px;
+    }
+  }
+
+  a {
+    color: #999999;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &.unique {
+      color: @green;
+    }
+
+    &.login {
+      text-transform: none;
+    }
+
+    &.adopt {
+      color: black;
+      font-size: 24px;
+      border: 2px solid @green;
+      border-radius: 10px;
+      padding: 15px 45px;
+      font-weight: 400;
+    }
+  }
 }
