@@ -6,7 +6,7 @@ import NotFound from './NotFound';
 
 export default () => (
   <Switch404>
-    <Route path="/" exact component={Home} />
     <Route path="/404-notfound" component={NotFound} />
+    <Route path="/" exact component={Home} />
   </Switch404>
 );

@@ -1,7 +1,8 @@
 import React from 'react';
+import Layout from 'Root/components/Layout';
 
 export default () => (
-  <div>
+  <Layout>
     Home
-  </div>
+  </Layout>
 );
