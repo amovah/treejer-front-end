@@ -32,5 +32,7 @@ export default () => (
         </div>
       </div>
     </div>
+
+    <div className={styles.divider} />
   </Layout>
 );
