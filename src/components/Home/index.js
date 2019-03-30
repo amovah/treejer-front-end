@@ -217,7 +217,10 @@ export default () => (
         <input
           placeholder="email@example.com"
         />
-        <button>
+        <button
+          type="button"
+          onClick={() => {}}
+        >
           subscribe
         </button>
       </div>
