@@ -11,6 +11,7 @@ import flashback from './flashback.png';
 import areatak from './areatak.png';
 import aCircle from './a.png';
 import getboarded from './getboarded.png';
+import footer from './footer.png';
 
 export default () => (
   <Layout>
@@ -225,5 +226,11 @@ export default () => (
         </button>
       </div>
     </div>
+
+    {/* <div className={styles.footer}>
+      <p>
+        sfsfsf
+      </p>
+    </div> */}
   </Layout>
 );
