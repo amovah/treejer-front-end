@@ -6,6 +6,11 @@ import adoptATree from './adopt-a-tree.png';
 import earnOxygen from './earn-oxygen.png';
 import tradeYourOxygens from './trade-your-oxygens.png';
 import tree from './tree.png';
+import unicube from './unicube.png';
+import flashback from './flashback.png';
+import areatak from './areatak.png';
+import aCircle from './a.png';
+import getboarded from './getboarded.png';
 
 export default () => (
   <Layout>
@@ -172,6 +177,49 @@ export default () => (
         >
           Start A Plantation Drive in Your Region
         </Link>
+      </div>
+    </div>
+
+    <div className={styles.divider} />
+
+    <div className={styles.theytrusted}>
+      <p className="title">
+        They Trusted Treejer
+      </p>
+
+      <div className="orgs">
+        <img
+          src={unicube}
+          alt="unicube"
+        />
+        <img
+          src={flashback}
+          alt="flashback"
+        />
+        <img
+          src={areatak}
+          alt="areatak"
+        />
+        <img
+          src={aCircle}
+          alt="acircle"
+        />
+        <img
+          src={getboarded}
+          alt="getboarded"
+        />
+      </div>
+
+      <p className="subtext">
+        Subsribe to our newsletter for offers, updates and event promos
+      </p>
+      <div className="subinput">
+        <input
+          placeholder="email@example.com"
+        />
+        <button>
+          subscribe
+        </button>
       </div>
     </div>
   </Layout>
