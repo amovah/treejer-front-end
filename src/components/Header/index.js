@@ -8,9 +8,9 @@ export default () => (
     <div>
       <Link
         to="/"
+        className="logo"
       >
         <img
-          className="logo"
           src={Logo}
           alt="logo"
         />
