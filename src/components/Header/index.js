@@ -41,10 +41,10 @@ export default () => (
 
     <div>
       <Link
-        to="/login"
+        to="/sign-in"
         className="login"
       >
-        Login
+        Sign In
       </Link>
       <Link
         to="/adopt-a-tree"
