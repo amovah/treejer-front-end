@@ -4,7 +4,7 @@
   .inARow();
   justify-content: space-between;
   margin: 0 140px;
-  margin-left: 240px;
+  margin-left: 300px;
   align-items: flex-start;
 
   .ill {
@@ -16,4 +16,35 @@
     font-size: 24px;
     font-weight: bold;
   }
+
+  .row {
+    .inARow();
+    margin: 25px 0;
+
+    > * {
+      margin: 0 10px;
+    }
+  }
+
+  .button {
+    border-radius: 10px;
+    border: 2px solid #67b68c;
+    background-color: #67b68c;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1.8px;
+    padding: 15px 50px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+:local(.textarea) {
+  border-radius: 10px;
+  border: 2px solid #67b68c;
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  resize: none;
 }
