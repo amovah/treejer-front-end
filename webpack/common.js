@@ -26,7 +26,9 @@ const devMode = process.env.NODE_ENV !== 'production';
             "@babel/preset-env",
             "@babel/preset-react"
           ],
-          plugins: [],
+          plugins: [
+            '@babel/plugin-proposal-class-properties',
+          ],
         }
       }, {
         test: /\.(css|less)$/,
