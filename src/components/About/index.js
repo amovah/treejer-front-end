@@ -21,8 +21,8 @@ export default () => (
 
     <Socials />
 
-    <div className={styles.illusterate}>
-      Illusterate
+    <div className={styles.illustrate}>
+      illustrate
     </div>
 
     <div className={styles.section}>

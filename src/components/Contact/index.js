@@ -15,6 +15,15 @@ export default class extends Component {
         <Header />
 
         <Socials />
+
+        <div className={styles.container}>
+          <div className="form">
+            a
+          </div>
+          <div className="ill">
+            Illustration
+          </div>
+        </div>
       </Layout>
     );
   }
