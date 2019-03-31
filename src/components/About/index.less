@@ -39,3 +39,52 @@
     font-size: 24px;
   }
 }
+
+:local(.ourTeam) {
+  background-image: url('./background.png');
+  height: 1361px;
+  margin: auto;
+
+  .title {
+    .inARow();
+    padding-top: 75px;
+    font-size: 48px;
+
+    img {
+      margin: 0 30px;
+    }
+  }
+
+  .row {
+    .inARow();
+    margin: 85px 0;
+
+    .card {
+      width: 260px;
+      height: 260px;
+      box-shadow: 0 13px 32px rgba(0, 0, 0, 0.16);
+      border-radius: 16px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0 85px;
+
+      img {
+        margin-top: 25px;
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #707070;
+        letter-spacing: 1.8px;
+        margin: 0;
+      }
+
+      .role {
+        font-size: 14px;
+        color: #67b68c;
+      }
+    }
+  }
+}

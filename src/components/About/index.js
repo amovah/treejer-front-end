@@ -3,6 +3,16 @@ import Layout from 'Root/components/Layout';
 import Footer from 'Root/components/Footer';
 import Socials from 'Root/components/Socials';
 import styles from './index.less';
+import forest from './forest.png';
+import Ermia from './Ermia.png';
+import Ali from './Ali.png';
+import Alireza from './Alireza.png';
+import Bahareh from './Bahareh.png';
+import Shivam from './Shivam.png';
+import Saeed from './Saeed.png';
+import Negar from './Negar.png';
+import John from './John.png';
+import Nora from './Nora.png';
 
 export default () => (
   <Layout>
@@ -52,6 +62,137 @@ export default () => (
         their income even if they have no access to a bank. However, they
         have the option to change their earnings to fiat money.
       </p>
+    </div>
+
+    <div className={styles.ourTeam}>
+      <div className="title">
+        <img
+          src={forest}
+          alt="forest"
+        />
+        <p>
+          Meet Our Team
+        </p>
+        <img
+          src={forest}
+          alt="forest"
+        />
+      </div>
+
+      <div className="row">
+        <div className="card">
+          <img
+            src={Ermia}
+            alt="Ermia"
+          />
+          <p className="name">
+            Ermia Saharkhiz
+          </p>
+          <p className="role">
+            Cofounder and CEO
+          </p>
+        </div>
+        <div className="card">
+          <img
+            src={Ali}
+            alt="Ali"
+          />
+          <p className="name">
+            Ali Hamidian
+          </p>
+          <p className="role">
+            Cofounder and COO
+          </p>
+        </div>
+        <div className="card">
+          <img
+            src={Alireza}
+            alt="Alireza"
+          />
+          <p className="name">
+            Alireza Arabi
+          </p>
+          <p className="role">
+            Cofounder and CTO
+          </p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="card">
+          <img
+            src={Bahareh}
+            alt="Bahareh"
+          />
+          <p className="name">
+            Bahareh Tavakoli
+          </p>
+          <p className="role">
+            Art Director
+          </p>
+        </div>
+        <div className="card">
+          <img
+            src={Shivam}
+            alt="Shivam"
+          />
+          <p className="name">
+            Shivam Dhawan
+          </p>
+          <p className="role">
+            Strategy Advisor
+          </p>
+        </div>
+        <div className="card">
+          <img
+            src={Saeed}
+            alt="Saeed"
+          />
+          <p className="name">
+            Saeed Khoshbakht
+          </p>
+          <p className="role">
+            Blockchain Advisor
+          </p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="card">
+          <img
+            src={Negar}
+            alt="Negar"
+          />
+          <p className="name">
+            Negar Ekrami
+          </p>
+          <p className="role">
+            Climate Researcher
+          </p>
+        </div>
+        <div className="card">
+          <img
+            src={John}
+            alt="John"
+          />
+          <p className="name">
+            John Doe
+          </p>
+          <p className="role">
+            CMO
+          </p>
+        </div>
+        <div className="card">
+          <img
+            src={Nora}
+            alt="Nora"
+          />
+          <p className="name">
+            Nora
+          </p>
+          <p className="role">
+            Chief Happiness Officer
+          </p>
+        </div>
+      </div>
     </div>
 
     <Footer />
