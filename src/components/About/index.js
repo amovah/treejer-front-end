@@ -230,6 +230,24 @@ export default () => (
       </p>
     </div>
 
+    <div className={styles.cards}>
+      <div className="row">
+        <p>Community</p>
+        <p>Technology</p>
+        <p>Creativity</p>
+      </div>
+      <div className="row">
+        <p>Futurism</p>
+        <p>Empathy</p>
+        <p>Transparency</p>
+      </div>
+      <div className="row">
+        <p>Sustainablity</p>
+        <p>Partnership</p>
+        <p>Diversity</p>
+      </div>
+    </div>
+
     <Footer />
   </Layout>
 );
