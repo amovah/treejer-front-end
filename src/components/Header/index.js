@@ -6,11 +6,15 @@ import styles from './index.less';
 export default () => (
   <div className={styles.header}>
     <div>
-      <img
-        className="logo"
-        src={Logo}
-        alt="logo"
-      />
+      <Link
+        to="/"
+      >
+        <img
+          className="logo"
+          src={Logo}
+          alt="logo"
+        />
+      </Link>
 
       <Link
         to="/for-startups"
