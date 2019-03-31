@@ -195,6 +195,41 @@ export default () => (
       </div>
     </div>
 
+    <div className={styles.section}>
+      <p className="title">
+        Our Mission
+      </p>
+
+      <p className="content">
+        We are introducing an inclusive and diverse ecosystem to facilitate climate action in the
+        society. Pivoting around tree plantation, we aim to help various community groups to benefit
+        from it, both financially and non-financially. Treejer helps people, businesses and public
+        sectors gain as much as they invest in a better future.
+      </p>
+    </div>
+
+    <div className={styles.section}>
+      <p className="title">
+        Our Vision
+      </p>
+
+      <p className="content">
+        We envision to become the top community that is admired for their action on
+        climate change.
+      </p>
+    </div>
+
+    <div className={styles.section}>
+      <p className="title">
+        Our Values
+      </p>
+
+      <p className="content">
+        As we step in this journey, we make sure that we are in line with our values. We value the
+        future but we never forget our roots
+      </p>
+    </div>
+
     <Footer />
   </Layout>
 );
