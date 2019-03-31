@@ -1,10 +1,10 @@
 import React from 'react';
-import linkedin from './linkedin-black.png';
-import instagram from './instagram-black.png';
-import twitter from './twitter-black.png';
-import medium from './medium-black.png';
-import facebook from './facebook-black.png';
-import telegram from './telegram-black.png';
+import linkedin from 'Root/assets/linkedin-black.png';
+import instagram from 'Root/assets/instagram-black.png';
+import twitter from 'Root/assets/twitter-black.png';
+import medium from 'Root/assets/medium-black.png';
+import facebook from 'Root/assets/facebook-black.png';
+import telegram from 'Root/assets/telegram-black.png';
 import styles from './index.less';
 
 export default () => (
