@@ -61,6 +61,12 @@ export default props => (
       </div>
       <div className="rightSide">
         {props.children}
+        <Link
+          to="/"
+          className="return"
+        >
+          ―   Return to Home Page
+        </Link>
       </div>
     </div>
   </div>
