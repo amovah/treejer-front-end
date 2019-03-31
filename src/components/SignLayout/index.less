@@ -2,4 +2,74 @@
 
 :local(.container) {
   background-image: url('./background.png');
+  min-height: 100vh;
+}
+
+:local(.content) {
+  width: 670px + 430px;
+  height: 690px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .inARow();
+
+  > div {
+    box-sizing: border-box;
+    height: 690px;
+  }
+
+  .leftSide {
+    background-color: #faf8f1;
+    box-shadow: 0 13px 32px rgba(0, 0, 0, 0.16);
+    border-radius: 16px 0 0 16px;
+    width: 430px;
+    opacity: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .logo {
+      margin-bottom: 25px;
+      margin-top: 100px;
+    }
+
+    .description {
+      font-size: 16px;
+      letter-spacing: 0.62px;
+      width: 308px;
+      line-height: 33px;
+      text-align: center;
+      color: black;
+    }
+
+    .knowMore {
+      color: #e66317;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .socials {
+      margin: 50px 0;
+
+      > * {
+        margin-bottom: 20px;
+        .inARow();
+
+        > * {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+  .rightSide {
+    width: 670px;
+    background-color: #faf8f1;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 13px 32px rgba(0, 0, 0, 0.16);
+  }
 }
