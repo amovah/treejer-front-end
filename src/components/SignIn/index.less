@@ -1,3 +1,5 @@
+@import '~Root/styles/mixins';
+
 :local(.container) {
   padding: 100px;
 
@@ -41,5 +43,29 @@
       letter-spacing: 1.8px;
       color: black;
     }
+  }
+}
+
+:local(.warning) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 670px + 430px;
+  border-radius: 16px 16px 0 0;
+  background-color: #ff6e6e;
+  padding: 20px 75px;
+  box-sizing: border-box;
+  .inARow();
+  justify-content: flex-start;
+  color: white;
+  font-size: 14px;
+  display: none;
+
+  .title {
+    font-weight: bold;
+  }
+
+  &:local(.active) {
+    display: block;
   }
 }
