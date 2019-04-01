@@ -4,7 +4,7 @@ import Header from 'Root/components/Header';
 
 export default () => (
   <Layout>
-    <Header />
+    <Header less />
     a
   </Layout>
 );

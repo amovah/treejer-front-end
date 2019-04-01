@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from 'Root/assets/logo.png';
 import styles from './index.less';
 
-export default () => (
+export default props => (
   <div className={styles.header}>
     <div>
       <Link
@@ -16,27 +16,34 @@ export default () => (
         />
       </Link>
 
-      <Link
-        to="/for-startups"
-      >
-        for startups
-      </Link>
-      <Link
-        to="/about"
-      >
-        about
-      </Link>
-      <Link
-        to="/contact"
-      >
-        contact
-      </Link>
-      <Link
-        to="/become-a-planter"
-        className="unique"
-      >
-        become a planter
-      </Link>
+      {
+        !props.less
+        && (
+          <Fragment>
+            <Link
+              to="/for-startups"
+            >
+              for startups
+            </Link>
+            <Link
+              to="/about"
+            >
+              about
+            </Link>
+            <Link
+              to="/contact"
+            >
+              contact
+            </Link>
+            <Link
+              to="/become-a-planter"
+              className="unique"
+            >
+              become a planter
+            </Link>
+          </Fragment>
+        )
+      }
     </div>
 
     <div>
@@ -46,12 +53,17 @@ export default () => (
       >
         Sign In
       </Link>
-      <Link
-        to="/adopt-a-tree"
-        className="adopt"
-      >
-        adopt a tree
-      </Link>
+      {
+        !props.less
+        && (
+          <Link
+            to="/adopt-a-tree"
+            className="adopt"
+          >
+            adopt a tree
+          </Link>
+        )
+      }
     </div>
   </div>
 );
