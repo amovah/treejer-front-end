@@ -24,8 +24,11 @@
     font-weight: 700;
     letter-spacing: 1.8px;
     color: white;
-    padding: 20px 70px;
+    padding: 20px;
     margin-bottom: 50px;
+    width: 192px;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .notMember {
@@ -42,6 +45,14 @@
       font-weight: 700;
       letter-spacing: 1.8px;
       color: black;
+    }
+  }
+
+  .row {
+    .inARow();
+
+    > *:first-child {
+      margin-right: 20px;
     }
   }
 }
