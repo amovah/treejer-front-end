@@ -15,6 +15,12 @@ export default class extends Component {
     this.setState({
       showWarning: true,
     });
+
+    setTimeout(() => {
+      this.setState({
+        showWarning: false,
+      });
+    }, 2000);
   }
 
   render() {
