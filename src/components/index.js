@@ -16,7 +16,7 @@ export default () => (
     <Route path="/contact" exact component={Contact} />
     <Route path="/sign-in" exact component={SignIn} />
     <Route path="/sign-up" exact component={SignUp} />
-    <Route path="/confirm/:id" exact component={Confirm} />
+    <Route path="/confirm/:code" exact component={Confirm} />
     <Route path="/404-notfound" component={NotFound} />
   </Switch404>
 );
