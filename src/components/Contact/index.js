@@ -3,6 +3,7 @@ import Layout from 'Root/components/Layout';
 import Header from 'Root/components/Header';
 import Socials from 'Root/components/Socials';
 import Input from 'Root/components/Input';
+import TopPadding from 'Root/components/Header/TopPadding';
 import styles from './index.less';
 
 export default class extends Component {
@@ -24,6 +25,7 @@ export default class extends Component {
     return (
       <Layout>
         <Header />
+        <TopPadding />
 
         <Socials />
 

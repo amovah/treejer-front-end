@@ -3,6 +3,7 @@ import Layout from 'Root/components/Layout';
 import Footer from 'Root/components/Footer';
 import Socials from 'Root/components/Socials';
 import Header from 'Root/components/Header';
+import TopPadding from 'Root/components/Header/TopPadding';
 import styles from './index.less';
 import forest from './forest.png';
 import Ermia from './Ermia.png';
@@ -18,6 +19,7 @@ import Nora from './Nora.png';
 export default () => (
   <Layout>
     <Header />
+    <TopPadding />
 
     <Socials />
 

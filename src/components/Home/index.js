@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from 'Root/components/Layout';
 import Footer from 'Root/components/Footer';
 import Header from 'Root/components/Header';
+import TopPadding from 'Root/components/Header/TopPadding';
 import styles from './index.less';
 import adoptATree from './adopt-a-tree.png';
 import earnOxygen from './earn-oxygen.png';
@@ -17,6 +18,7 @@ import getboarded from './getboarded.png';
 export default () => (
   <Layout>
     <Header />
+    <TopPadding />
     <div className={styles.tellingStory}>
       <p className="head">
         Telling the Story of One Planet
