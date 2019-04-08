@@ -7,6 +7,7 @@ import logo from 'Root/assets/logo.png';
 import Button from 'Root/shared/Button';
 import Table from 'Root/shared/Table';
 import acacia from 'Root/assets/acacia.png';
+import NumberInput from 'Root/shared/NumberInput';
 import Steper from './Steper';
 import styles from './index.less';
 
@@ -44,23 +45,24 @@ export default class extends Component {
           ]}
           data={[
             [
-              <div className={styles.treeRow}>
-                <img
-                  src={acacia}
-                  alt="acacia"
-                />
-                <div>
-                  <p className="title">
+            <div className={styles.treeRow}>
+              <img
+                src={acacia}
+                alt="acacia"
+              />
+              <div>
+                <p className="title">
                   Acacia Tree
-                  </p>
-                  <p className="desc">
+                </p>
+                <p className="desc">
                   Via <span className="green">Gulf Green</span> in Oman
-                  </p>
-                </div>
-              </div>,
-              <p className={styles.treeValue}>
+                </p>
+              </div>
+            </div>,
+            <p className={styles.treeValue}>
               $17
-              </p>,
+            </p>,
+            <NumberInput min={0} />
             ],
           ]}
         />
