@@ -5,6 +5,7 @@ export default (state = { logged: false }, action) => {
     case types.user.LOGIN: {
       return {
         logged: true,
+        name: 'Ali',
       };
     }
 
