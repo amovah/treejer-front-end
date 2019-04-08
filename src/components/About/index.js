@@ -4,8 +4,8 @@ import Footer from 'Root/shared/Footer';
 import Socials from 'Root/shared/Socials';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
+import maple from 'Root/assets/maple.png';
 import styles from './index.less';
-import forest from './forest.png';
 import Ermia from './Ermia.png';
 import Ali from './Ali.png';
 import Alireza from './Alireza.png';
@@ -72,14 +72,14 @@ export default () => (
     <div className={styles.ourTeam}>
       <div className="title">
         <img
-          src={forest}
+          src={maple}
           alt="forest"
         />
         <p>
           Meet Our Team
         </p>
         <img
-          src={forest}
+          src={maple}
           alt="forest"
         />
       </div>

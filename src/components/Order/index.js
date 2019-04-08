@@ -5,6 +5,8 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import logo from 'Root/assets/logo.png';
 import Button from 'Root/shared/Button';
+import Table from 'Root/shared/Table';
+import acacia from 'Root/assets/acacia.png';
 import Steper from './Steper';
 import styles from './index.less';
 
@@ -31,18 +33,39 @@ export default class extends Component {
 
   collectPage = () => (
     <Fragment>
-      <div>
-        <p>
-          a
-        </p>
-        <p>
-          a
-        </p>
-        <p>
-          a
-        </p>
+      <div className={styles.treeShow}>
+        <Table
+          heads={[
+            'collected tree',
+            'value',
+            'qty',
+            'total',
+            '',
+          ]}
+          data={[
+            [
+              <div className={styles.treeRow}>
+                <img
+                  src={acacia}
+                  alt="acacia"
+                />
+                <div>
+                  <p className="title">
+                  Acacia Tree
+                  </p>
+                  <p className="desc">
+                  Via <span className="green">Gulf Green</span> in Oman
+                  </p>
+                </div>
+              </div>,
+              <p className={styles.treeValue}>
+              $17
+              </p>,
+            ],
+          ]}
+        />
       </div>
-      <div className={styles.rightSide}>
+      <div className={styles.rightNextInfo}>
         <div className="box">
           <img
             src={logo}

@@ -4,11 +4,11 @@ import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
+import acacia from 'Root/assets/acacia.png';
 import styles from './index.less';
 import adoptATree from './adopt-a-tree.png';
 import earnOxygen from './earn-oxygen.png';
 import tradeYourOxygens from './trade-your-oxygens.png';
-import tree from './tree.png';
 import unicube from './unicube.png';
 import flashback from './flashback.png';
 import areatak from './areatak.png';
@@ -143,8 +143,8 @@ export default () => (
             India
           </p>
           <img
-            src={tree}
-            alt="tree"
+            src={acacia}
+            alt="acacia"
           />
         </div>
         <div className="location middle">
@@ -152,8 +152,8 @@ export default () => (
             Middle East
           </p>
           <img
-            src={tree}
-            alt="tree"
+            src={acacia}
+            alt="acacia"
           />
         </div>
         <div className="location africa">
@@ -161,8 +161,8 @@ export default () => (
             Africa
           </p>
           <img
-            src={tree}
-            alt="tree"
+            src={acacia}
+            alt="acacia"
           />
         </div>
         <div className="location southAmerica">
@@ -170,8 +170,8 @@ export default () => (
             South America
           </p>
           <img
-            src={tree}
-            alt="tree"
+            src={acacia}
+            alt="acacia"
           />
         </div>
       </div>

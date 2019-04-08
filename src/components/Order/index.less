@@ -15,7 +15,7 @@
   color: #999999;
 }
 
-:local(.rightSide) {
+:local(.rightNextInfo) {
   > .box {
     width: 398px;
     height: 560px;
@@ -80,4 +80,44 @@
       color: #67b68c;
     }
   }
+}
+
+:local(.treeShow) {
+  width: 800px;
+  height: 560px;
+  margin-right: 60px;
+  overflow-y: auto;
+}
+
+:local(.treeRow) {
+  .inARow();
+
+  img {
+    margin-right: 50px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .title {
+    color: #707070;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .desc {
+    color: #999999;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    .green {
+      color: #67b68c;
+    }
+  }
+}
+
+:local(.treeValue) {
+  color: #707070;
+  font-size: 24px;
+  font-weight: 700;
 }
