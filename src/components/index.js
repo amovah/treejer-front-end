@@ -8,6 +8,7 @@ import Contact from './Contact';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Confirm from './Confirm';
+import Order from './Order';
 
 export default () => (
   <Switch404>
@@ -17,6 +18,7 @@ export default () => (
     <Route path="/sign-in" exact component={SignIn} />
     <Route path="/sign-up" exact component={SignUp} />
     <Route path="/confirm/:code" exact component={Confirm} />
+    <Route path="/order" exact component={Order} />
     <Route path="/404-notfound" component={NotFound} />
   </Switch404>
 );
