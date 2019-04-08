@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from 'Root/shared/Layout';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
@@ -86,13 +87,20 @@ export default class extends Component {
     return (
       <Layout>
         <Header less />
-        <TopPadding />
+        <TopPadding top={160} />
 
         <Steper current={this.state.current} />
 
         <div className={styles.container}>
           {this.handlePage()}
         </div>
+
+        <Link
+          to="/planet"
+          className={styles.return}
+        >
+          ―   Return to the Planet
+        </Link>
       </Layout>
     );
   }

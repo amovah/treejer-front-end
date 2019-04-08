@@ -6,5 +6,12 @@ export default (props) => {
     return <div className={styles.less} />;
   }
 
-  return <div className={styles.topPadding} />;
+  return (
+    <div
+      className={styles.topPadding}
+      style={{
+        paddingTop: props.top || 0,
+      }}
+    />
+  );
 };
