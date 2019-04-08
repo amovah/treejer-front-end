@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Layout from 'Root/components/Layout';
-import Footer from 'Root/components/Footer';
-import Header from 'Root/components/Header';
-import TopPadding from 'Root/components/Header/TopPadding';
+import Layout from 'Root/shared/Layout';
+import Footer from 'Root/shared/Footer';
+import Header from 'Root/shared/Header';
+import TopPadding from 'Root/shared/Header/TopPadding';
 import styles from './index.less';
 import adoptATree from './adopt-a-tree.png';
 import earnOxygen from './earn-oxygen.png';

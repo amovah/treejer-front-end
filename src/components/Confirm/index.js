@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Layout from 'Root/components/Layout';
-import Header from 'Root/components/Header';
+import Layout from 'Root/shared/Layout';
+import Header from 'Root/shared/Header';
 import styles from './index.less';
 import email from './email.png';
 

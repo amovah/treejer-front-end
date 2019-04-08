@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import SignLayout from 'Root/components/SignLayout';
-import Input from 'Root/components/Input';
+import SignLayout from 'Root/shared/SignLayout';
+import Input from 'Root/shared/Input';
+import Button from 'Root/shared/Button';
 import styles from './index.less';
 
 export default class extends Component {
@@ -35,13 +36,15 @@ export default class extends Component {
           marginBottom: 30,
         }}
       />
-      <button
-        type="button"
-        className="button"
+      <Button
         onClick={this.goToStepTwo}
+        style={{
+          marginBottom: 50,
+          minWidth: 192,
+        }}
       >
         Next
-      </button>
+      </Button>
     </Fragment>
   )
 
@@ -73,13 +76,15 @@ export default class extends Component {
           marginBottom: 30,
         }}
       />
-      <button
-        type="button"
-        className="button"
+      <Button
         onClick={this.goToStepTwo}
+        style={{
+          marginBottom: 50,
+          minWidth: 192,
+        }}
       >
         Sign Up
-      </button>
+      </Button>
     </Fragment>
   );
 

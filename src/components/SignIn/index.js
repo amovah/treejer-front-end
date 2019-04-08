@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
-import SignLayout from 'Root/components/SignLayout';
-import Input from 'Root/components/Input';
+import SignLayout from 'Root/shared/SignLayout';
+import Input from 'Root/shared/Input';
+import Button from 'Root/shared/Button';
 import warningSign from './warningSign.png';
 import styles from './index.less';
 
@@ -64,13 +65,15 @@ export default class extends Component {
               marginBottom: 30,
             }}
           />
-          <button
-            type="button"
-            className="button"
+          <Button
             onClick={this.onSignIn}
+            style={{
+              marginBottom: 50,
+              minWidth: 192,
+            }}
           >
             Next
-          </button>
+          </Button>
 
           <div className="notMember">
             <span>

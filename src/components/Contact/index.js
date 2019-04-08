@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Layout from 'Root/components/Layout';
-import Header from 'Root/components/Header';
-import Socials from 'Root/components/Socials';
-import Input from 'Root/components/Input';
-import TopPadding from 'Root/components/Header/TopPadding';
+import Layout from 'Root/shared/Layout';
+import Header from 'Root/shared/Header';
+import Socials from 'Root/shared/Socials';
+import Input from 'Root/shared/Input';
+import TopPadding from 'Root/shared/Header/TopPadding';
 import styles from './index.less';
 
 export default class extends Component {

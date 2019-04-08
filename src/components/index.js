@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Switch404 from 'Root/components/Switch404';
+import Switch404 from 'Root/shared/Switch404';
 import Home from './Home';
 import NotFound from './NotFound';
 import About from './About';

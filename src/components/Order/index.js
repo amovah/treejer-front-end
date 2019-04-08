@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Layout from 'Root/components/Layout';
-import Header from 'Root/components/Header';
-import TopPadding from 'Root/components/Header/TopPadding';
+import Layout from 'Root/shared/Layout';
+import Header from 'Root/shared/Header';
+import TopPadding from 'Root/shared/Header/TopPadding';
 import logo from 'Root/assets/logo.png';
 import Button from 'Root/shared/Button';
 import Steper from './Steper';
