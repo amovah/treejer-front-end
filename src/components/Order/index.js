@@ -10,6 +10,37 @@ import acacia from 'Root/assets/acacia.png';
 import NumberInput from 'Root/shared/NumberInput';
 import Steper from './Steper';
 import styles from './index.less';
+import removeIcon from './remove.png';
+
+const stepOneData = [
+  [
+    <div className={styles.treeRow}>
+      <img
+        src={acacia}
+        alt="acacia"
+      />
+      <div>
+        <p className="title">
+          Acacia Tree
+        </p>
+        <p className="desc">
+          Via <span className="green">Gulf Green</span> in Oman
+        </p>
+      </div>
+    </div>,
+    <p className={styles.treeValue}>
+      $17
+    </p>,
+    <NumberInput min={0} />,
+    <p className={styles.treeValue}>
+      $170
+    </p>,
+    <img
+      src={removeIcon}
+      alt="remove"
+    />,
+  ],
+];
 
 export default class extends Component {
   state = {
@@ -43,28 +74,7 @@ export default class extends Component {
             'total',
             '',
           ]}
-          data={[
-            [
-            <div className={styles.treeRow}>
-              <img
-                src={acacia}
-                alt="acacia"
-              />
-              <div>
-                <p className="title">
-                  Acacia Tree
-                </p>
-                <p className="desc">
-                  Via <span className="green">Gulf Green</span> in Oman
-                </p>
-              </div>
-            </div>,
-            <p className={styles.treeValue}>
-              $17
-            </p>,
-            <NumberInput min={0} />
-            ],
-          ]}
+          data={[...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData]}
         />
       </div>
       <div className={styles.rightNextInfo}>
