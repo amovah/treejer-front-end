@@ -15,7 +15,7 @@ export default props => (
     </div>
     <div className={classnames('step', props.current > 1 && 'active')}>
       <span className="title">
-        Credit
+        Review
       </span>
       <p className="number">
         2
@@ -24,7 +24,7 @@ export default props => (
     </div>
     <div className={classnames('step', props.current > 2 && 'active')}>
       <span className="title">
-        Claim
+        Select Owner
       </span>
       <p className="number">
         3
@@ -33,7 +33,7 @@ export default props => (
     </div>
     <div className={classnames('step', props.current > 4 && 'active')}>
       <span className="title">
-        Payment
+        Checkout
       </span>
       <p className="number">
         4
