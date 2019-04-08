@@ -69,6 +69,7 @@ export default class extends Component {
             onClick={this.onSignIn}
             style={{
               marginBottom: 50,
+              marginTop: 20,
               minWidth: 192,
             }}
           >

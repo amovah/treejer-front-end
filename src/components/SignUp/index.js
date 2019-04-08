@@ -40,6 +40,7 @@ export default class extends Component {
         onClick={this.goToStepTwo}
         style={{
           marginBottom: 50,
+          marginTop: 20,
           minWidth: 192,
         }}
       >
@@ -80,6 +81,7 @@ export default class extends Component {
         onClick={this.goToStepTwo}
         style={{
           marginBottom: 50,
+          marginTop: 20,
           minWidth: 192,
         }}
       >
