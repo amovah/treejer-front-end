@@ -41,31 +41,37 @@ export default class extends Component {
           a
         </p>
       </div>
-      <div className="box">
-        <img
-          src={logo}
-          alt="logo"
-        />
+      <div className={styles.rightSide}>
+        <div className="box">
+          <img
+            src={logo}
+            alt="logo"
+          />
+          <p>
+            Did you know that your new trees can produce the oxygen needed for
+            <span className="green">&nbsp;50 people</span> per year over time?
+          </p>
+          <div className="divider" />
+          <p className="title">
+            Cash Total
+          </p>
+          <p className="price">
+            $173.00
+          </p>
+          <Button
+            onClick={() => {
+              this.setState({
+                current: 2,
+              });
+            }}
+          >
+            NEXT
+          </Button>
+        </div>
         <p>
-          Did you know that your new trees can produce the oxygen needed for
-          <span className="green">&nbsp;50 people</span> per year over time?
+          By proceeding I agree to <span className="green">terms</span> and
+          <span className="green"> conditions</span>.
         </p>
-        <div className="divider" />
-        <p className="title">
-          Cash Total
-        </p>
-        <p className="price">
-          $173.00
-        </p>
-        <Button
-          onClick={() => {
-            this.setState({
-              current: 2,
-            });
-          }}
-        >
-          NEXT
-        </Button>
       </div>
     </Fragment>
   )
