@@ -8,7 +8,7 @@ import Button from 'Root/shared/Button';
 import Table from 'Root/shared/Table';
 import acacia from 'Root/assets/acacia.png';
 import NumberInput from 'Root/shared/NumberInput';
-import Input from 'Root/shared/Input';
+import CustomizedInput from './CustomizedInput';
 import Steper from './Steper';
 import styles from './index.less';
 import removeIcon from './remove.png';
@@ -221,16 +221,12 @@ export default class extends Component {
         <p className="pay">
           Please pay for the invoice online via the following link:
         </p>
-        <Input
+        <CustomizedInput
           type="text"
           readonly
           value="https://treejer.paymentgateway.com"
           style={{
-            width: '100%',
             textAlign: 'center',
-            border: '2px solid #999999',
-            marginBottom: 25,
-            color: '#52575d',
           }}
         />
         <p className="text">
