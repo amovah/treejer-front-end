@@ -186,14 +186,9 @@
 :local(.credit) {
   .inARow();
   justify-content: space-between;
-
-  > div {
-    margin-right: 230px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  width: 100%;
+  padding: 0 200px;
+  box-sizing: border-box;
 
   > .help {
     width: 270px;
@@ -236,12 +231,44 @@
         height: 125px;
         border-radius: 6px;
         border: 1px solid #999999;
+        box-sizing: border-box;
+        padding: 20px;
+
+        p {
+          white-space: nowrap;
+        }
       }
+    }
+
+    > .pay {
+      margin: 0 auto;
+      text-align: center;
+      width: 600px;
+      height: 71px;
+      color: #52575d;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 42px;
+      padding: 50px 0;
+    }
+
+    > .text {
+      color: #52575d;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    > .orderId {
+      color: #3a9c08;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
     }
   }
 
   > .total {
-    width: 190px;
+    width: 270px;
     text-align: center;
 
     p {

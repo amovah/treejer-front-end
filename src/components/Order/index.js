@@ -8,9 +8,14 @@ import Button from 'Root/shared/Button';
 import Table from 'Root/shared/Table';
 import acacia from 'Root/assets/acacia.png';
 import NumberInput from 'Root/shared/NumberInput';
+import Input from 'Root/shared/Input';
 import Steper from './Steper';
 import styles from './index.less';
 import removeIcon from './remove.png';
+import etherWhite from './ether-white.png';
+import etherBlack from './ether-black.png';
+import visaWhite from './visa-white.png';
+import visaBlack from './visa-black.png';
 
 const stepOneData = [
   [
@@ -195,12 +200,48 @@ export default class extends Component {
       <div className="selectCredit">
         <div className="credits">
           <div className="card">
-            sf
+            <img
+              src={visaBlack}
+              alt="visa"
+            />
+            <p>
+              Credit Card
+            </p>
           </div>
           <div className="card">
-            sfs
+            <img
+              src={etherBlack}
+              alt="ether"
+            />
+            <p>
+              Etherium
+            </p>
           </div>
         </div>
+        <p className="pay">
+          Please pay for the invoice online via the following link:
+        </p>
+        <Input
+          type="text"
+          readonly
+          value="https://treejer.paymentgateway.com"
+          style={{
+            width: '100%',
+            textAlign: 'center',
+            border: '2px solid #999999',
+            marginBottom: 25,
+            color: '#52575d',
+          }}
+        />
+        <p className="text">
+          Your order number is:
+        </p>
+        <p className="orderId">
+          #123456789
+        </p>
+        <p className="text">
+          You can track your order using the above number.
+        </p>
       </div>
       <div className="total">
         <div className="breaker" />
