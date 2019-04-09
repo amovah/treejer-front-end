@@ -5,6 +5,7 @@ import Socials from 'Root/shared/Socials';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import maple from 'Root/assets/maple.png';
+import Box from 'Root/shared/Box';
 import styles from './index.less';
 import Ermia from './Ermia.png';
 import Ali from './Ali.png';
@@ -85,7 +86,7 @@ export default () => (
       </div>
 
       <div className="row">
-        <div className="card">
+        <Box className="card">
           <img
             src={Ermia}
             alt="Ermia"
@@ -96,8 +97,8 @@ export default () => (
           <p className="role">
             Cofounder and CEO
           </p>
-        </div>
-        <div className="card">
+        </Box>
+        <Box className="card">
           <img
             src={Ali}
             alt="Ali"
@@ -108,8 +109,8 @@ export default () => (
           <p className="role">
             Cofounder and COO
           </p>
-        </div>
-        <div className="card">
+        </Box>
+        <Box className="card">
           <img
             src={Alireza}
             alt="Alireza"
@@ -120,10 +121,10 @@ export default () => (
           <p className="role">
             Cofounder and CTO
           </p>
-        </div>
+        </Box>
       </div>
       <div className="row">
-        <div className="card">
+        <Box className="card">
           <img
             src={Bahareh}
             alt="Bahareh"
@@ -134,8 +135,8 @@ export default () => (
           <p className="role">
             Art Director
           </p>
-        </div>
-        <div className="card">
+        </Box>
+        <Box className="card">
           <img
             src={Shivam}
             alt="Shivam"
@@ -146,8 +147,8 @@ export default () => (
           <p className="role">
             Strategy Advisor
           </p>
-        </div>
-        <div className="card">
+        </Box>
+        <Box className="card">
           <img
             src={Saeed}
             alt="Saeed"
@@ -158,10 +159,10 @@ export default () => (
           <p className="role">
             Blockchain Advisor
           </p>
-        </div>
+        </Box>
       </div>
       <div className="row">
-        <div className="card">
+        <Box className="card">
           <img
             src={Negar}
             alt="Negar"
@@ -172,8 +173,8 @@ export default () => (
           <p className="role">
             Climate Researcher
           </p>
-        </div>
-        <div className="card">
+        </Box>
+        <Box className="card">
           <img
             src={John}
             alt="John"
@@ -184,8 +185,8 @@ export default () => (
           <p className="role">
             CMO
           </p>
-        </div>
-        <div className="card">
+        </Box>
+        <Box className="card">
           <img
             src={Nora}
             alt="Nora"
@@ -196,7 +197,7 @@ export default () => (
           <p className="role">
             Chief Happiness Officer
           </p>
-        </div>
+        </Box>
       </div>
     </div>
 
