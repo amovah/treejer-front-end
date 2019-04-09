@@ -9,6 +9,7 @@ import Button from 'Root/shared/Button';
 import Table from 'Root/shared/Table';
 import acacia from 'Root/assets/acacia.png';
 import NumberInput from 'Root/shared/NumberInput';
+import Box from 'Root/shared/Box';
 import CustomizedInput from './CustomizedInput';
 import Steper from './Steper';
 import styles from './index.less';
@@ -89,32 +90,34 @@ export default class extends Component {
         />
       </div>
       <div className={styles.rightNextInfo}>
-        <div className="box">
-          <img
-            src={logo}
-            alt="logo"
-          />
-          <p>
-            Did you know that your new trees can produce the oxygen needed for
-            <span className="green">&nbsp;50 people</span> per year over time?
-          </p>
-          <div className="divider" />
-          <p className="title">
-            Cash Total
-          </p>
-          <p className="price">
-            $173.00
-          </p>
-          <Button
-            onClick={() => {
-              this.setState({
-                current: 2,
-              });
-            }}
-          >
-            NEXT
-          </Button>
-        </div>
+        <Box>
+          <div className="box">
+            <img
+              src={logo}
+              alt="logo"
+            />
+            <p>
+              Did you know that your new trees can produce the oxygen needed for
+              <span className="green">&nbsp;50 people</span> per year over time?
+            </p>
+            <div className="divider" />
+            <p className="title">
+              Cash Total
+            </p>
+            <p className="price">
+              $173.00
+            </p>
+            <Button
+              onClick={() => {
+                this.setState({
+                  current: 2,
+                });
+              }}
+            >
+              NEXT
+            </Button>
+          </div>
+        </Box>
         <p>
           By proceeding I agree to <span className="green">terms</span> and
           <span className="green"> conditions</span>.
