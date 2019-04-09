@@ -169,7 +169,9 @@ export default class extends Component {
       </div>
 
       <div className="btn">
-        <Button>
+        <Button
+          onClick={() => { this.setState({ current: 3 }); }}
+        >
           Checkout
         </Button>
       </div>
