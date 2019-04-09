@@ -90,33 +90,31 @@ export default class extends Component {
         />
       </div>
       <div className={styles.rightNextInfo}>
-        <Box>
-          <div className="box">
-            <img
-              src={logo}
-              alt="logo"
-            />
-            <p>
-              Did you know that your new trees can produce the oxygen needed for
-              <span className="green">&nbsp;50 people</span> per year over time?
-            </p>
-            <div className="divider" />
-            <p className="title">
-              Cash Total
-            </p>
-            <p className="price">
-              $173.00
-            </p>
-            <Button
-              onClick={() => {
-                this.setState({
-                  current: 2,
-                });
-              }}
-            >
-              NEXT
-            </Button>
-          </div>
+        <Box className="box">
+          <img
+            src={logo}
+            alt="logo"
+          />
+          <p>
+            Did you know that your new trees can produce the oxygen needed for
+            <span className="green">&nbsp;50 people</span> per year over time?
+          </p>
+          <div className="divider" />
+          <p className="title">
+            Cash Total
+          </p>
+          <p className="price">
+            $173.00
+          </p>
+          <Button
+            onClick={() => {
+              this.setState({
+                current: 2,
+              });
+            }}
+          >
+            NEXT
+          </Button>
         </Box>
         <p>
           By proceeding I agree to <span className="green">terms</span> and
@@ -133,7 +131,7 @@ export default class extends Component {
       </p>
 
       <div className="boxes">
-        <div className="box">
+        <Box className="box">
           <p className="title">
             Myself
           </p>
@@ -147,9 +145,9 @@ export default class extends Component {
             exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-        </div>
+        </Box>
 
-        <div className="box">
+        <Box className="box">
           <p className="title">
             Another Person
           </p>
@@ -163,9 +161,9 @@ export default class extends Component {
             collection will be added to forest as
             soon as the owner claims the Trees.
           </p>
-        </div>
+        </Box>
 
-        <div className="box">
+        <Box className="box">
           <p className="title">
             My Customers
           </p>
@@ -179,7 +177,7 @@ export default class extends Component {
             being usable 20 and 40 times
             respectively.
           </p>
-        </div>
+        </Box>
       </div>
 
       <div className="btn">
