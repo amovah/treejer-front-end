@@ -113,9 +113,67 @@ export default class extends Component {
   )
 
   reviewPage = () => (
-    <p>
-      review
-    </p>
+    <div className={styles.selectOwner}>
+      <p className="title">
+        I&apos;m collecting trees for
+      </p>
+
+      <div className="boxes">
+        <div className="box">
+          <p className="title">
+            Myself
+          </p>
+          <div className="divider" />
+          <p className="desc">
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <div className="box">
+          <p className="title">
+            Another Person
+          </p>
+          <div className="divider" />
+          <p className="desc">
+            You will be provided with <b>one voucher</b>
+            . So if you have collected 20
+            maples from one planter and 40
+            from another, only one voucher will
+            be given to you. However, the entire
+            collection will be added to forest as
+            soon as the owner claims the Trees.
+          </p>
+        </div>
+
+        <div className="box">
+          <p className="title">
+            My Customers
+          </p>
+          <div className="divider" />
+          <p className="desc">
+            You will be provided with <b>one voucher per group of trees</b>
+            . So if you
+            have collected 20 maples from one
+            planter and 40 from another, two
+            vouchers will be given to you each
+            being usable 20 and 40 times
+            respectively.
+          </p>
+        </div>
+      </div>
+
+      <div className="btn">
+        <Button>
+          Checkout
+        </Button>
+      </div>
+    </div>
   )
 
   render() {

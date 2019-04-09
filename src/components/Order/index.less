@@ -122,3 +122,63 @@
   font-size: 24px;
   font-weight: 700;
 }
+
+:local(.selectOwner) {
+  > .title {
+    text-align: center;
+    color: #52575d;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  > .boxes {
+    margin-top: 70px;
+    .inARow();
+
+    .box {
+      width: 300px;
+      height: 380px;
+      box-shadow: 0 13px 32px rgba(0, 0, 0, 0.16);
+      border-radius: 16px;
+      background-color: #ffffff;
+      opacity: 0.95;
+      padding: 30px;
+      box-sizing: border-box;
+      margin-right: 90px;
+
+      .title {
+        text-align: center;
+        color: #52575d;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-top: 0;
+      }
+
+      .divider {
+        width: 72px;
+        height: 0;
+        border: 2px solid #dfd8c8;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      .desc {
+        color: #52575d;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.42px;
+        line-height: 28px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .btn {
+    .inARow();
+    margin-top: 50px;
+  }
+}
