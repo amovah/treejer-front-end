@@ -57,6 +57,10 @@ export default class extends Component {
         return this.reviewPage();
       }
 
+      case 3: {
+        return this.creditPage();
+      }
+
       default: {
         return this.collectPage();
       }
@@ -174,6 +178,39 @@ export default class extends Component {
         >
           Checkout
         </Button>
+      </div>
+    </div>
+  )
+
+  creditPage = () => (
+    <div className={styles.credit}>
+      <div className="help">
+        <p>
+          Need Help?
+        </p>
+        <p>
+          support@treejer.com
+        </p>
+      </div>
+      <div className="selectCredit">
+        <div className="credits">
+          <div className="card">
+            sf
+          </div>
+          <div className="card">
+            sfs
+          </div>
+        </div>
+      </div>
+      <div className="total">
+        <div className="breaker" />
+        <p className="title">
+          Cash Total
+        </p>
+        <p className="price">
+          $173.00
+        </p>
+        <div className="breaker" />
       </div>
     </div>
   )

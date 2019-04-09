@@ -182,3 +182,89 @@
     margin-top: 50px;
   }
 }
+
+:local(.credit) {
+  .inARow();
+  justify-content: space-between;
+
+  > div {
+    margin-right: 230px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  > .help {
+    width: 270px;
+
+    p {
+      text-align: center;
+      color: #52575d;
+      font-weight: 700;
+      margin: 0;
+
+      &:first-child {
+        font-size: 18px;
+        letter-spacing: 0.63px;
+        line-height: 36px;
+      }
+
+      &:last-child {
+        font-size: 24px;
+      }
+    }
+  }
+
+  > .selectCredit {
+    width: 600px;
+    text-align: center;
+
+    .credits {
+      .inARow();
+
+      > div {
+        margin-right: 50px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      > .card {
+        width: 125px;
+        height: 125px;
+        border-radius: 6px;
+        border: 1px solid #999999;
+      }
+    }
+  }
+
+  > .total {
+    width: 190px;
+    text-align: center;
+
+    p {
+      color: #52575d;
+      font-weight: 700;
+      margin: 0;
+
+      &.title {
+        font-size: 18px;
+        letter-spacing: 0.63px;
+        margin-bottom: 15px;
+      }
+
+      &.price {
+        font-size: 48px;
+      }
+    }
+
+    .breaker {
+      width: 71px;
+      height: 0;
+      border: 2px solid #dfd8c8;
+      margin: 30px auto;
+    }
+  }
+}
