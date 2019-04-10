@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TopPadding.less';
+import styles from './index.less';
 
 export default (props) => {
   if (props.less) {
