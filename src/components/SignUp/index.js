@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { generate } from 'shortid';
 import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
 import Button from 'Root/shared/Button';
@@ -27,6 +28,7 @@ export default class extends Component {
           width: '100%',
           marginBottom: 30,
         }}
+        key={generate()}
       />
       <Input
         placeholder="Password"
@@ -35,6 +37,7 @@ export default class extends Component {
           width: '100%',
           marginBottom: 30,
         }}
+        key={generate()}
       />
       <Button
         onClick={this.goToStepTwo}
@@ -43,6 +46,7 @@ export default class extends Component {
           marginTop: 20,
           minWidth: 192,
         }}
+        key={generate()}
       >
         Next
       </Button>
@@ -59,6 +63,7 @@ export default class extends Component {
             width: 'calc(50% - 10px)',
             marginBottom: 30,
           }}
+          key={generate()}
         />
         <Input
           placeholder="Last Name"
@@ -67,6 +72,7 @@ export default class extends Component {
             width: 'calc(50% - 10px)',
             marginBottom: 30,
           }}
+          key={generate()}
         />
       </div>
       <Input
@@ -76,6 +82,7 @@ export default class extends Component {
           width: '100%',
           marginBottom: 30,
         }}
+        key={generate()}
       />
       <Button
         onClick={this.goToStepTwo}
@@ -84,6 +91,7 @@ export default class extends Component {
           marginTop: 20,
           minWidth: 192,
         }}
+        key={generate()}
       >
         Sign Up
       </Button>
