@@ -7,3 +7,45 @@
     margin-bottom: 40px;
   }
 }
+
+:local(.table) {
+  .text {
+    color: #707070;
+    font-size: 14px;
+
+    &.pending {
+      color: #fb8e4f;
+    }
+
+    &.confirmed {
+      color: #3a9c08;
+    }
+  }
+
+  .value {
+    .text;
+    font-weight: bold;
+  }
+
+  .moreWidth {
+    width: 50%;
+  }
+
+  thead {
+    th:first-child {
+      width: 30%;
+    }
+    th {
+      padding: 0px 20px;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 45px 20px 0 20px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

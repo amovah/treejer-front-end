@@ -5,16 +5,30 @@ import styles from './index.less';
 
 const sampleData = [
   [
-    <span className={styles.text}>
+    <span className="text">
       #123456789
     </span>,
-    <span className={classnames(styles.text, styles.pending)}>
+    <span className={classnames('text', 'pending')}>
       Pending
     </span>,
-    <span className={styles.text}>
+    <span className="text">
       22/12/2017, 6:39 PM
     </span>,
-    <span className={styles.value}>
+    <span className="value">
+      $170.00
+    </span>,
+  ],
+  [
+    <span className="text">
+      #123456789
+    </span>,
+    <span className={classnames('text', 'confirmed')}>
+      Confirmed
+    </span>,
+    <span className="text">
+      22/12/2017, 6:39 PM
+    </span>,
+    <span className="value">
       $170.00
     </span>,
   ],
@@ -28,7 +42,7 @@ export default () => (
     <Table
       data={sampleData}
       heads={['Order', 'Status', 'Date/Time', 'Payment']}
-      gap="20px 10px"
+      className={styles.table}
     />
   </div>
 );
