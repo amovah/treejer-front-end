@@ -34,15 +34,27 @@ const sampleData = [
   ],
 ];
 
+const data = [];
+
+for (let i = 0; i < 10; i = i + 1) {
+  data.push(...sampleData);
+}
+
 export default () => (
   <div className={styles.container}>
     <p className="title">
       Payment History
     </p>
-    <Table
-      data={sampleData}
-      heads={['Order', 'Status', 'Date/Time', 'Payment']}
-      className={styles.table}
-    />
+    <div className="tableContainer">
+      <Table
+        data={data}
+        heads={['Order', 'Status', 'Date/Time', 'Payment']}
+        className={styles.table}
+      />
+    </div>
+    <p className="tip">
+      <b>Tip</b>: After a payment&apos;s status is confirmed, the Trees are added to user&apos;s
+      forest.
+    </p>
   </div>
 );
