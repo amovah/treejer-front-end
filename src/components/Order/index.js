@@ -79,6 +79,7 @@ export default class extends Component {
     <Fragment>
       <div className={styles.treeShow}>
         <Table
+          className={styles.table}
           heads={[
             'collected tree',
             'value',
@@ -87,7 +88,6 @@ export default class extends Component {
             '',
           ]}
           data={[...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData]}
-          gap={30}
         />
       </div>
       <div className={styles.rightNextInfo}>
