@@ -4,11 +4,17 @@ import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import Box from 'Root/shared/Box';
 import logout from 'Root/actions/user/logout';
+import openModal from 'Root/actions/modal/open';
 import styles from './index.less';
+import PaymentHistory from './PaymentHistory';
 
 class User extends Component {
   state = {
     show: false,
+  }
+
+  openPaymentHistory = () => {
+    openModal(<PaymentHistory />);
   }
 
   loggedView = () => (
@@ -31,6 +37,7 @@ class User extends Component {
           </button>
           <button
             type="button"
+            onClick={this.openPaymentHistory}
           >
             Payment History
           </button>

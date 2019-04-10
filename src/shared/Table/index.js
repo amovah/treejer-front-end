@@ -5,9 +5,8 @@ import styles from './index.less';
 
 export default props => (
   <table className={styles.table}>
-    <thead>
-      <tr>
-        {
+    <tr>
+      {
           props.heads.map(i => (
             <th
               key={i}
@@ -16,28 +15,26 @@ export default props => (
             </th>
           ))
         }
-      </tr>
-    </thead>
-    <tbody
-      className={styles.body}
-    >
-      {
-        props.data.map(i => (
-          <tr
-            key={generate()}
-          >
-            {
-              i.map(x => (
-                <td
-                  key={generate()}
-                >
-                  {x}
-                </td>
-              ))
-            }
-          </tr>
-        ))
-      }
-    </tbody>
+    </tr>
+    {
+      props.data.map(i => (
+        <tr
+          key={generate()}
+        >
+          {
+            i.map(x => (
+              <td
+                key={generate()}
+                style={{
+                  padding: props.gap,
+                }}
+              >
+                {x}
+              </td>
+            ))
+          }
+        </tr>
+      ))
+    }
   </table>
 );

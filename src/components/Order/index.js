@@ -87,6 +87,7 @@ export default class extends Component {
             '',
           ]}
           data={[...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData]}
+          gap={30}
         />
       </div>
       <div className={styles.rightNextInfo}>
