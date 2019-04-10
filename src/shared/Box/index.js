@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './index.less';
 
-export default props => (
+export default ({ className, ...rest }) => (
   <div
-    className={classnames(styles.box, props.className)}
-    styles={props.styles}
+    className={classnames(styles.box, className)}
+    {...rest}
   >
-    {props.children}
+    {rest.children}
   </div>
 );

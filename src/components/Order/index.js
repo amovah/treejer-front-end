@@ -53,6 +53,7 @@ export default class extends Component {
   state = {
     current: 1,
     paymentMethod: 'credit',
+    chosenOwner: 0,
   };
 
   handlePage = () => {
@@ -125,6 +126,12 @@ export default class extends Component {
     </Fragment>
   )
 
+  changeOwner = (owner) => {
+    this.setState({
+      chosenOwner: owner,
+    });
+  }
+
   reviewPage = () => (
     <div className={styles.selectOwner}>
       <p className="title">
@@ -132,7 +139,10 @@ export default class extends Component {
       </p>
 
       <div className="boxes">
-        <Box className="box">
+        <Box
+          className={classnames('box', this.state.chosenOwner === 0 && 'active')}
+          onClick={() => this.changeOwner(0)}
+        >
           <p className="title">
             Myself
           </p>
@@ -148,7 +158,10 @@ export default class extends Component {
           </p>
         </Box>
 
-        <Box className="box">
+        <Box
+          className={classnames('box', this.state.chosenOwner === 1 && 'active')}
+          onClick={() => this.changeOwner(1)}
+        >
           <p className="title">
             Another Person
           </p>
@@ -164,7 +177,10 @@ export default class extends Component {
           </p>
         </Box>
 
-        <Box className="box">
+        <Box
+          className={classnames('box', this.state.chosenOwner === 2 && 'active')}
+          onClick={() => this.changeOwner(2)}
+        >
           <p className="title">
             My Customers
           </p>
