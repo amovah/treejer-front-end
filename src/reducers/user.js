@@ -11,6 +11,12 @@ export default (state = { logged: false }, action) => {
       };
     }
 
+    case types.user.LOGOUT: {
+      return {
+        logged: false,
+      };
+    }
+
     default: {
       return state;
     }

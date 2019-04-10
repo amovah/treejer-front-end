@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Box from 'Root/shared/Box';
+import logout from 'Root/actions/user/logout';
 import styles from './index.less';
 
 class User extends Component {
@@ -34,6 +35,7 @@ class User extends Component {
           <div className="divider" />
           <button
             type="button"
+            onClick={logout}
           >
             Sign Out
           </button>
