@@ -1,4 +1,5 @@
 import types from 'Root/actions';
+import pp from './profile-picture.png';
 
 export default (state = { logged: false }, action) => {
   switch (action.type) {
@@ -6,6 +7,7 @@ export default (state = { logged: false }, action) => {
       return {
         logged: true,
         name: 'Ali',
+        avatar: pp,
       };
     }
 

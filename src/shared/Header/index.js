@@ -3,27 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Logo from 'Root/assets/logo.png';
 import styles from './index.less';
+import User from './User';
 
 class Header extends PureComponent {
-  UserSectionView = () => {
-    if (this.props.user.logged) {
-      return (
-        <p>
-          Hello {this.props.user.name}!
-        </p>
-      );
-    }
-
-    return (
-      <Link
-        to="/sign-in"
-        className="login"
-      >
-        Sign In
-      </Link>
-    );
-  }
-
   render() {
     return (
       <div className={styles.header}>
@@ -69,9 +51,9 @@ class Header extends PureComponent {
         </div>
 
         <div>
-          {this.UserSectionView()}
+          <User />
           {
-            !this.props.less
+            (!this.props.less && !this.props.user.logged)
             && (
               <Link
                 to="/adopt-a-tree"
