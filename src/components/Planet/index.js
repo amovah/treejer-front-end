@@ -7,6 +7,9 @@ import styles from './index.less';
 export default () => (
   <Layout>
     <Header />
+
+    <div className={styles.background} />
+
     <Footer />
   </Layout>
 );

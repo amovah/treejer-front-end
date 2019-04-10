@@ -3,4 +3,8 @@ export default {
     LOGIN: 'user/LOGIN',
     LOGOUT: 'user/LOGOUT',
   },
+  modal: {
+    OPEN: 'modal/OPEN',
+    CLOSE: 'modal/CLOSE',
+  },
 };
