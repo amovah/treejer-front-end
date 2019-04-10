@@ -1,6 +1,5 @@
 import React from 'react';
 import { generate } from 'shortid';
-// import Scrollbars from 'react-custom-scrollbars';
 import styles from './index.less';
 
 export default props => (
