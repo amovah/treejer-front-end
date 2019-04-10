@@ -52,6 +52,7 @@ export default () => (
         className={styles.table}
       />
     </div>
+    <div className="divider" />
     <p className="tip">
       <b>Tip</b>: After a payment&apos;s status is confirmed, the Trees are added to user&apos;s
       forest.
