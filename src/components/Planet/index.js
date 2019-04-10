@@ -2,13 +2,49 @@ import React from 'react';
 import Header from 'Root/shared/Header';
 import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
+import Box from 'Root/shared/Box';
 import styles from './index.less';
+import TreeBox from './TreeBox';
 
 export default () => (
   <Layout>
     <Header />
 
-    <div className={styles.background} />
+    <div className={styles.sectionOne}>
+      <div className="padding" />
+      <div className="userSection">
+        a
+      </div>
+      <Box className="box">
+        <p>
+          Collect Trees
+        </p>
+        <div className="divider" />
+        <p>
+          Earn Oxygens
+        </p>
+        <div className="divider" />
+        <p>
+          Trade Trees<span>SOON</span>
+        </p>
+        <div className="divider" />
+        <p>
+          Trade Oxygens<span>SOON</span>
+        </p>
+      </Box>
+    </div>
+
+    <div className={styles.addToTree}>
+      <p className="title">
+        Add A Tree to Your Forest
+      </p>
+      <div className="boxes">
+        <TreeBox />
+        <TreeBox />
+        <TreeBox />
+        <TreeBox />
+      </div>
+    </div>
 
     <Footer />
   </Layout>

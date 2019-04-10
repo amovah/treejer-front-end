@@ -1,4 +1,71 @@
-:local(.background) {
-  height: 1300px;
+@import '~Root/styles/mixins';
+
+:local(.sectionOne) {
+  height: 1000px;
   background-color: black;
+  box-sizing: border-box;
+
+  > .userSection {
+    border: 2px solid red;
+    height: 700px;
+  }
+
+  > .padding {
+    padding-top: 150px;
+  }
+
+  > .box {
+    .inARow();
+    width: 1250px;
+    height: 130px;
+    margin: 0 auto;
+
+    > p {
+      color: #142535;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.84px;
+      position: relative;
+
+      span {
+        font-size: 10px;
+        color: #fb8e4f;
+        position: absolute;
+        top: -10px;
+        right: -20px;
+      }
+    }
+
+    > .divider {
+      width: 0;
+      height: 65px;
+      border: 1px solid #707070;
+      margin: 20px 50px;
+    }
+  }
+}
+
+:local(.addToTree) {
+  padding-top: 150px;
+  margin-bottom: 150px;
+
+  > .title {
+    font-size: 48px;
+    letter-spacing: 2.4px;
+    line-height: 54px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  > .boxes {
+    .inARow();
+
+    > * {
+      margin-right: 75px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
