@@ -53,4 +53,4 @@ export default props => (
       Add to Forest
     </button>
   </Box>
-)
+);
