@@ -5,6 +5,7 @@ import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
 import styles from './index.less';
 import TreeBox from './TreeBox';
+import SeedBox from './SeedBox';
 
 export default () => (
   <Layout>
@@ -43,6 +44,19 @@ export default () => (
         <TreeBox />
         <TreeBox />
         <TreeBox />
+      </div>
+    </div>
+
+    <div className={styles.addToTree}>
+      <p className="title">
+        Plantation Drives
+      </p>
+      <div className="boxes">
+        <SeedBox />
+        <SeedBox />
+        <SeedBox />
+        <SeedBox />
+        <SeedBox />
       </div>
     </div>
 

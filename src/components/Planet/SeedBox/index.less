@@ -1,0 +1,46 @@
+@import '~Root/styles/mixins';
+
+:local(.box) {
+  width: 175px;
+  height: 130px;
+  position: relative;
+  text-align: center;
+
+  > .detail {
+    margin: 0;
+    color: #646464;
+    font-size: 11px;
+    line-height: 15px;
+
+    span {
+      color: #67b68c;
+    }
+  }
+
+  > .title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #646464;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+
+  > .padding {
+    padding-top: 65px;
+  }
+
+  > .circle {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 110px;
+    height: 110px;
+
+    img {
+      width: 110px;
+      height: 110px;
+    }
+  }
+}
