@@ -1,4 +1,5 @@
 import React from 'react';
+import history from 'Root/history';
 import Header from 'Root/shared/Header';
 import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
@@ -107,6 +108,7 @@ export default () => (
         </p>
         <button
           type="button"
+          onClick={() => history.push('/sign-up')}
         >
           SIGN UP
         </button>
