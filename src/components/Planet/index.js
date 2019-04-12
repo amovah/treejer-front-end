@@ -9,6 +9,7 @@ import TreeBox from './TreeBox';
 import SeedBox from './SeedBox';
 import PadDivider from './PadDivider';
 import VouchView from './VouchView';
+import WaitWarning from './WaitWarning';
 
 export default () => (
   <Layout>
@@ -38,7 +39,7 @@ export default () => (
       </Box>
     </div>
 
-    <PadDivider gap={150} />
+    <WaitWarning />
 
     <div className={styles.addToTree}>
       <p className="title">

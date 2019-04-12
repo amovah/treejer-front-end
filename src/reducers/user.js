@@ -8,6 +8,7 @@ export default (state = { logged: false }, action) => {
         logged: true,
         name: 'Ali',
         avatar: pp,
+        invited: false,
       };
     }
 
