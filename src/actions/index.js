@@ -7,4 +7,7 @@ export default {
     OPEN: 'modal/OPEN',
     CLOSE: 'modal/CLOSE',
   },
+  claim: {
+    CLAIM: 'claim/CLAIM',
+  },
 };
