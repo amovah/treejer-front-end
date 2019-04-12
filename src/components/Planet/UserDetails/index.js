@@ -8,8 +8,7 @@ const UserDetails = (props) => {
   if (props.user.logged) {
     return (
       <div className={styles.container}>
-        <Box
-          className="left">
+        <Box className="left">
           <div
             className="avatar"
           >
@@ -48,10 +47,10 @@ const UserDetails = (props) => {
             </p>
           </div>
         </Box>
-        <Box
-          className="right"
-        >
-
+        <Box className="right">
+          <p className="title">
+            My Forest on the Planet
+          </p>
         </Box>
       </div>
     );
