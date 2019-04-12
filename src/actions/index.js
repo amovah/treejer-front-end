@@ -8,6 +8,6 @@ export default {
     CLOSE: 'modal/CLOSE',
   },
   claim: {
-    CLAIM: 'claim/CLAIM',
+    ON: 'claim/ON',
   },
 };

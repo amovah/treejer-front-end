@@ -1,9 +1,17 @@
 import types from 'Root/actions';
 
-export default (state = false, action) => {
+const defaults = {
+  status: false,
+  trees: [],
+};
+
+export default (state = defaults, action) => {
   switch (action.type) {
     case types.claim.CLAIM: {
-      return true;
+      return {
+        ...state,
+        status: true,
+      };
     }
 
     default: {
