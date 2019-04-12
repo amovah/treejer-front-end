@@ -1,5 +1,4 @@
 import React from 'react';
-import history from 'Root/history';
 import Header from 'Root/shared/Header';
 import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
@@ -10,6 +9,7 @@ import SeedBox from './SeedBox';
 import PadDivider from './PadDivider';
 import VouchView from './VouchView';
 import WaitWarning from './WaitWarning';
+import JoinView from './JoinView';
 
 export default () => (
   <Layout>
@@ -74,30 +74,7 @@ export default () => (
 
     <PadDivider gap={150} />
 
-    <Box className={styles.waitlist}>
-      <div className="left">
-        <p className="title">
-          Join the Planet Waitlist!
-        </p>
-        <p className="desc">
-          Planet is an Invite-Only ecosystem where likeminded people can have collectible trees.
-          If you know someone who cares for the environment you can invite her/him to join us :)
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button
-          type="button"
-          onClick={() => history.push('/sign-up')}
-        >
-          SIGN UP
-        </button>
-      </div>
-      <div className="right">
-        Illustrator
-      </div>
-    </Box>
-
-    <PadDivider gap={300} />
+    <JoinView />
 
     <Footer />
   </Layout>

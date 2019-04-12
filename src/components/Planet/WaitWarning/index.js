@@ -13,7 +13,7 @@ const WaitWarning = (props) => {
           className={styles.box}
         >
           <p>
-            You are on the waitlist. After being invited, you&apost;ll be able to collect Trees!
+            You are on the waitlist. After being invited, you&apos;ll be able to collect Trees!
           </p>
         </Box>
         <PadDivider gap={100} />
