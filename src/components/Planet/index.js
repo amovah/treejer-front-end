@@ -11,6 +11,7 @@ import VouchView from './VouchView';
 import WaitWarning from './WaitWarning';
 import JoinView from './JoinView';
 import UserDetails from './UserDetails';
+import ForestView from './ForestView';
 
 export default () => (
   <Layout>
@@ -73,6 +74,7 @@ export default () => (
 
     <PadDivider gap={150} />
 
+    <ForestView />
     <JoinView />
 
     <Footer />
