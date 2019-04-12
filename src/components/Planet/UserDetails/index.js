@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Box from 'Root/shared/Box';
+import earth from 'Root/assets/earth.png';
 import addSign from './add.png';
 import styles from './index.less';
 
@@ -51,6 +52,12 @@ const UserDetails = (props) => {
           <p className="title">
             My Forest on the Planet
           </p>
+          <div className="earth">
+            <img
+              src={earth}
+              alt="earth"
+            />
+          </div>
         </Box>
       </div>
     );
