@@ -16,6 +16,7 @@ const WaitWarning = (props) => {
             You are on the waitlist. After being invited, you&apos;ll be able to collect Trees!
           </p>
         </Box>
+
         <PadDivider gap={100} />
       </Fragment>
     );
