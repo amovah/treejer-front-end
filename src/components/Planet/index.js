@@ -10,6 +10,7 @@ import PadDivider from './PadDivider';
 import VouchView from './VouchView';
 import WaitWarning from './WaitWarning';
 import JoinView from './JoinView';
+import UserDetails from './UserDetails';
 
 export default () => (
   <Layout>
@@ -17,9 +18,7 @@ export default () => (
 
     <div className={styles.sectionOne}>
       <div className="padding" />
-      <div className="userSection">
-        a
-      </div>
+      <UserDetails />
       <Box className="box">
         <p>
           Collect Trees

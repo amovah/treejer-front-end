@@ -1,0 +1,86 @@
+@import '~Root/styles/mixins';
+
+:local(.container) {
+  height: 700px;
+  .inARow();
+
+  > .left {
+    height: 600px;
+    width: 340px;
+    margin-right: 80px;
+    padding: 45px;
+
+    > .avatar {
+      position: relative;
+      width: 250px;
+      height: 250px;
+
+      > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+      }
+
+      > span {
+        position: absolute;
+        left: 75%;
+        top: 75%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: #41444b;
+        .inARow();
+
+        > img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+
+    > .name {
+      color: #52575d;
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    > .username {
+      margin-top: 0;
+      color: #aeb5bc;
+      font-size: 16px;
+    }
+
+    > .provide {
+      margin: 50px 0;
+
+      > .value {
+        color: #52575d;
+        font-size: 28px;
+        margin: 5px 0;
+      }
+
+      > .desc {
+        color: #aeb5bc;
+        font-size: 16px;
+        margin: 0;
+      }
+
+      > .divider {
+        width: 71px;
+        height: 0px;
+        border: 2px solid #dfd8c8;
+        background-color: #dfd8c8;
+        margin: 15px auto;
+      }
+    }
+  }
+
+  > .right {
+    height: 600px;
+    width: 830px;
+  }
+}
