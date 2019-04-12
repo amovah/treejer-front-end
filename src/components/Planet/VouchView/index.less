@@ -1,0 +1,109 @@
+@import '~Root/styles/mixins';
+
+:local(.vouchBox) {
+  padding: 64px;
+  width: 1500px;
+  margin: 0 auto;
+  .inARow();
+  align-items: flex-start;
+  justify-content: space-between;
+
+  > .left {
+    width: 800px;
+    height: 385px;
+    border: 1px solid #707070;
+    background-color: #f3f0f0;
+    .inARow();
+  }
+
+  > .right {
+    margin-right: 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    > .have {
+      text-align: center;
+      color: #142535;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.63px;
+    }
+
+    > .claim {
+      text-align: center;
+      color: #142535;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 1.26px;
+      margin-top: 10px;
+      margin-bottom: 60px;
+    }
+
+    > input {
+      width: 401px;
+      height: 80px;
+      border-radius: 9px;
+      border: 1px solid #707070;
+      background-color: #f2f2f2;
+      color: #707070;
+      font-size: 18px;
+      padding: 0 25px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    > button {
+      margin-top: 60px;
+    }
+  }
+}
+
+:local(.collectBox) {
+  padding: 64px;
+  width: 1500px;
+  margin: 0 auto;
+  .inARow();
+  // align-items: flex-start;
+  justify-content: flex-start;
+
+  > .divider {
+    width: 0;
+    height: 385px;
+    border: 1px solid #707070;
+    margin: 0 90px;
+    margin-right: 45px;
+  }
+
+  > .left {
+    width: 370px;
+    align-self: start;
+
+    > .title {
+      color: #142535;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 1.26px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    > .desc {
+      color: #707070;
+      font-size: 18px;
+      margin-bottom: 70px;
+    }
+  }
+
+  > .right {
+    .inARow();
+
+    > div {
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

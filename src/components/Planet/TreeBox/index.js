@@ -1,10 +1,11 @@
 import React from 'react';
+import classnames from 'classnames';
 import Box from 'Root/shared/Box';
 import acacia from 'Root/assets/acacia.png';
 import styles from './index.less';
 
 export default props => (
-  <Box className={styles.box}>
+  <Box className={classnames(styles.box, props.withoutButton && styles.without)}>
     <div className="circle">
       <img
         src={acacia}
@@ -46,11 +47,16 @@ export default props => (
         </p>
       </div>
     </div>
-    <button
-      type="button"
-      className="btn"
-    >
-      Add to Forest
-    </button>
+    {
+      !props.withoutButton
+      && (
+        <button
+          type="button"
+          className="btn"
+        >
+          Add to Forest
+        </button>
+      )
+    }
   </Box>
 );

@@ -4,11 +4,11 @@ import Header from 'Root/shared/Header';
 import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
-import Button from 'Root/shared/Button';
 import styles from './index.less';
 import TreeBox from './TreeBox';
 import SeedBox from './SeedBox';
 import PadDivider from './PadDivider';
+import VouchView from './VouchView';
 
 export default () => (
   <Layout>
@@ -69,29 +69,7 @@ export default () => (
 
     <PadDivider gap={150} />
 
-    <Box className={styles.vouchBox}>
-      <div className="left">
-        Illustrator
-      </div>
-      <div className="right">
-        <p className="have">
-          Have a voucher?
-        </p>
-        <p className="claim">
-          Claim Your Tree!
-        </p>
-        <input
-          placeholder="Voucher Code"
-        />
-        <Button
-          style={{
-            width: '100%',
-          }}
-        >
-          SUBMIT
-        </Button>
-      </div>
-    </Box>
+    <VouchView />
 
     <PadDivider gap={150} />
 

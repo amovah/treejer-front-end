@@ -7,7 +7,7 @@ const defaults = {
 
 export default (state = defaults, action) => {
   switch (action.type) {
-    case types.claim.CLAIM: {
+    case types.claim.ON: {
       return {
         ...state,
         status: true,
