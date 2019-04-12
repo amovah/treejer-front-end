@@ -57,6 +57,9 @@ const UserDetails = (props) => {
               src={earth}
               alt="earth"
             />
+            <div className="circle iran" />
+            <div className="circle india" />
+            <div className="circle africa" />
           </div>
         </Box>
       </div>
