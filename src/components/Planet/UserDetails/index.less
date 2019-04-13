@@ -136,10 +136,15 @@
   box-sizing: border-box;
 
   > div {
-    background-color: white;
-    padding: 20px;
+    padding: 13px 20px;
     margin-right: 25px;
     text-align: center;
+    width: 260px;
+    height: 80px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    border: 2px solid #dfdfdf;
+    box-sizing: border-box;
 
     &:last-child {
       margin: 0;
@@ -147,6 +152,21 @@
 
     p {
       margin: 0;
+    }
+
+    > .title {
+      color: #2dd393;
+      font-size: 28px;
+      font-weight: 700;
+
+      span {
+        font-size: 18px;
+      }
+    }
+
+    > .desc {
+      color: #a8a8a8;
+      font-size: 12px;
     }
   }
 }
