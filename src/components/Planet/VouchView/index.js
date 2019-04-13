@@ -3,11 +3,20 @@ import { connect } from 'react-redux';
 import claimOnAction from 'Root/actions/claim/on';
 import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
+import redirectChange from 'Root/actions/redirect/change';
+import history from 'Root/history';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
 import claim from './claim.png';
 
 class VouchView extends PureComponent {
+  collect = () => {
+    if (!this.props.user.logged) {
+      redirectChange('/planet');
+      history.push('/sign-in');
+    }
+  }
+
   vouchView = () => (
     <Box className={styles.vouchBox}>
       <img
@@ -53,6 +62,7 @@ class VouchView extends PureComponent {
             minWidth: 335,
             height: 80,
           }}
+          onClick={this.collect}
         >
           COLLECT
         </Button>

@@ -1,4 +1,4 @@
-import types from 'Root/types/actions';
+import types from 'Root/actions';
 import store from 'Root/store';
 
 export default (url) => {
