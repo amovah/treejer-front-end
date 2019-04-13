@@ -5,13 +5,16 @@ import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
+import claim from './claim.png';
 
 class VouchView extends PureComponent {
   vouchView = () => (
     <Box className={styles.vouchBox}>
-      <div className="left">
-        Illustrator
-      </div>
+      <img
+        src={claim}
+        alt="claim"
+        className="left"
+      />
       <div className="right">
         <p className="have">
           Have a voucher?
