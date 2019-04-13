@@ -1,12 +1,20 @@
 @import '~Root/styles/mixins';
 
-:local(.sectionOne) {
-  height: 1000px;
-  background-color: rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+:local(.planetImage) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1140px;
+    background-image: url('./planet.png');
+  }
 
   > .padding {
-    padding-top: 150px;
+    padding-top: 190px;
   }
 
   > .box {

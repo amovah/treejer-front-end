@@ -343,7 +343,7 @@ export default class extends Component {
     return (
       <Layout>
         <Header less />
-        <TopPadding top={160} />
+        <TopPadding gap={160} />
 
         <Steper current={this.state.current} />
 

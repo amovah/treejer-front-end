@@ -10,7 +10,7 @@ export default (props) => {
     <div
       className={styles.topPadding}
       style={{
-        paddingTop: props.top ? props.top : '',
+        paddingTop: props.gap ? props.gap : '',
       }}
     />
   );
