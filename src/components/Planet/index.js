@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from 'Root/shared/Header';
+import TopPadding from 'Root/shared/Header/TopPadding';
 import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
@@ -12,32 +13,39 @@ import WaitWarning from './WaitWarning';
 import JoinView from './JoinView';
 import UserDetails from './UserDetails';
 import ForestView from './ForestView';
+import planet from './planet.png';
 
 export default () => (
   <Layout>
-    <div className={styles.planetHeader}>
-      <div className="padding" />
-      <UserDetails />
-      <Box className="box">
-        <p>
-          Collect Trees
-        </p>
-        <div className="divider" />
-        <p>
-          Earn Oxygens
-        </p>
-        <div className="divider" />
-        <p>
-          Trade Trees<span>SOON</span>
-        </p>
-        <div className="divider" />
-        <p>
-          Trade Oxygens<span>SOON</span>
-        </p>
-      </Box>
-    </div>
+    <img
+      className={styles.planetImage}
+      src={planet}
+      alt="planet"
+    />
 
     <Header />
+    <TopPadding gap={190} />
+
+    <UserDetails />
+
+    <Box className={styles.collectTreeBoxes}>
+      <p>
+        Collect Trees
+      </p>
+      <div className="divider" />
+      <p>
+        Earn Oxygens
+      </p>
+      <div className="divider" />
+      <p>
+        Trade Trees<span>SOON</span>
+      </p>
+      <div className="divider" />
+      <p>
+        Trade Oxygens<span>SOON</span>
+      </p>
+    </Box>
+
 
     <WaitWarning />
 

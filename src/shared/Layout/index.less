@@ -2,7 +2,17 @@
 @import '~Root/styles/mixins';
 
 :local(.container) {
-  background-color: @background-color;
   min-height: 100vh;
   box-sizing: border-box;
+  position: relative;
+}
+
+:local(.background) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @background-color;
+  z-index: -2;
 }

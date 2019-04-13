@@ -4,5 +4,6 @@ import styles from './index.less';
 export default props => (
   <div className={styles.container}>
     {props.children}
+    <div className={styles.background} />
   </div>
 );

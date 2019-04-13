@@ -1,50 +1,42 @@
 @import '~Root/styles/mixins';
 
-:local(.planetHeader) {
-  position: relative;
+:local(.planetImage) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1140px;
+  z-index: -1;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1140px;
-    background-image: url('./planet.png');
+:local(.collectTreeBoxes) {
+  .inARow();
+  width: 1250px;
+  height: 130px;
+  margin: 0 auto;
+
+  > p {
+    color: #142535;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+    position: relative;
+
+    span {
+      font-size: 10px;
+      color: #fb8e4f;
+      position: absolute;
+      top: -10px;
+      right: -20px;
+    }
   }
 
-  > .padding {
-    padding-top: 190px;
-  }
-
-  > .box {
-    .inARow();
-    width: 1250px;
-    height: 130px;
-    margin: 0 auto;
-
-    > p {
-      color: #142535;
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: 0.84px;
-      position: relative;
-
-      span {
-        font-size: 10px;
-        color: #fb8e4f;
-        position: absolute;
-        top: -10px;
-        right: -20px;
-      }
-    }
-
-    > .divider {
-      width: 0;
-      height: 65px;
-      border: 1px solid #707070;
-      margin: 20px 50px;
-    }
+  > .divider {
+    width: 0;
+    height: 65px;
+    border: 1px solid #707070;
+    margin: 20px 50px;
   }
 }
 

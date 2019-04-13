@@ -66,7 +66,15 @@ const UserDetails = (props) => {
     );
   }
 
-  return <p>unlogged</p>;
+  return (
+    <div className={styles.unlogged}>
+      <div className="boxes">
+        <div className="box">
+          O2 here
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default connect(
