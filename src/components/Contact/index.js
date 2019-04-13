@@ -5,6 +5,7 @@ import Socials from 'Root/shared/Socials';
 import Input from 'Root/shared/Input';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import styles from './index.less';
+import ContactImage from './ContactImage.png';
 
 export default class extends Component {
   state = {
@@ -84,7 +85,10 @@ export default class extends Component {
             </button>
           </div>
           <div className="ill">
-            Illustration
+            <img
+              src={ContactImage}
+              alt="contact"
+            />
           </div>
         </div>
       </Layout>
