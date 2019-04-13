@@ -1,19 +1,14 @@
 @import '~Root/styles/mixins';
 
 :local(.vouchBox) {
-  padding: 64px;
   width: 1500px;
   margin: 0 auto;
   .inARow();
   align-items: flex-start;
   justify-content: space-between;
 
-  > .left {
-    width: 800px;
-    height: 385px;
-  }
-
   > .right {
+    padding: 64px;
     margin-right: 30px;
     width: 400px;
     display: flex;
@@ -25,6 +20,7 @@
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.63px;
+      margin-bottom: 4px;
     }
 
     > .claim {
@@ -34,7 +30,7 @@
       font-weight: 700;
       letter-spacing: 1.26px;
       margin-top: 10px;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     > input {
