@@ -15,7 +15,7 @@ import ForestView from './ForestView';
 
 export default () => (
   <Layout>
-    <div className={styles.planetImage}>
+    <div className={styles.planetHeader}>
       <div className="padding" />
       <UserDetails />
       <Box className="box">
