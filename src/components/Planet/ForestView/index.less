@@ -58,13 +58,21 @@
     th:first-child {
       width: 30%;
     }
+
     th {
-      padding: 0px 20px;
+      padding: 25px 20px;
+      background-color: white;
     }
   }
 
   tbody {
     tr {
+      &:first-child {
+        td {
+          padding: 20px 20px 0 20px;
+        }
+      }
+
       td {
         padding: 45px 20px 0 20px;
         white-space: nowrap;
