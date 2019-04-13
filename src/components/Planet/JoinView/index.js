@@ -5,7 +5,8 @@ import Input from 'Root/shared/Input';
 import history from 'Root/history';
 import styles from './index.less';
 import PadDivider from '../PadDivider';
-import waiting from './wating.png';
+import waitingImage from './wating.png';
+import inviteImage from './invite.png';
 
 const JoinView = (props) => {
   if (!props.user.logged) {
@@ -31,7 +32,7 @@ const JoinView = (props) => {
           </div>
           <img
             className="right"
-            src={waiting}
+            src={waitingImage}
             alt="waiting"
           />
         </Box>
@@ -75,9 +76,11 @@ const JoinView = (props) => {
             </button>
           </div>
         </div>
-        <div className="right">
-          Illustrator
-        </div>
+        <img
+          src={inviteImage}
+          alt="invite"
+          className="right"
+        />
       </Box>
 
       <PadDivider gap={250} />
