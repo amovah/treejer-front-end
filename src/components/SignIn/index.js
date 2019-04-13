@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
 import Button from 'Root/shared/Button';
+import login from 'Root/actions/user/login';
 import warningSign from './warningSign.png';
 import styles from './index.less';
 
@@ -21,6 +22,8 @@ export default class extends Component {
       this.setState({
         showWarning: false,
       });
+
+      login();
     }, 2000);
   }
 
