@@ -68,10 +68,21 @@ const UserDetails = (props) => {
 
   return (
     <div className={styles.unlogged}>
-      <div className="boxes">
-        <div className="box">
-          O2 here
-        </div>
+      <div>
+        <p className="title">
+          1500 Trees
+        </p>
+        <p className="desc">
+          adopted by Treejer users
+        </p>
+      </div>
+      <div>
+        <p className="title">
+          1500 Trees
+        </p>
+        <p className="desc">
+          adopted by Treejer users
+        </p>
       </div>
     </div>
   );

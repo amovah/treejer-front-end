@@ -133,11 +133,18 @@
   height: 700px;
   .inARow();
 
-  .box {
+  > div {
     background-color: white;
     padding: 20px;
-    display: block;
-    height: 100px;
-    width: 100px;
+    margin-right: 25px;
+    text-align: center;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }
