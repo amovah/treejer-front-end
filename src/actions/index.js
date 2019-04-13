@@ -10,4 +10,7 @@ export default {
   claim: {
     ON: 'claim/ON',
   },
+  redirect: {
+    CHANGE: 'redirect/CHANGE',
+  },
 };
