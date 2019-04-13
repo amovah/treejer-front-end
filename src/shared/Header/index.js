@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
 import Logo from 'Root/assets/logo.png';
 import styles from './index.less';
 import User from './User';
@@ -57,7 +58,7 @@ class Header extends PureComponent {
             && (
               <Link
                 to="/adopt-a-tree"
-                className="adopt"
+                className={classnames('adopt', this.props.white && 'white')}
               >
                 adopt a tree
               </Link>

@@ -23,7 +23,7 @@ export default () => (
       alt="planet"
     />
 
-    <Header />
+    <Header white />
     <TopPadding gap={190} />
 
     <UserDetails />
