@@ -16,6 +16,7 @@ import Saeed from './Saeed.png';
 import Negar from './Negar.png';
 import John from './John.png';
 import Nora from './Nora.png';
+import AboutIll from './AboutIll.png';
 
 export default class extends PureComponent {
   componentDidMount() {
@@ -30,9 +31,11 @@ export default class extends PureComponent {
 
         <Socials />
 
-        <div className={styles.illustrate}>
-          illustrate
-        </div>
+        <img
+          className={styles.illustrate}
+          src={AboutIll}
+          alt="about"
+        />
 
         <div className={styles.section}>
           <p className="title">
