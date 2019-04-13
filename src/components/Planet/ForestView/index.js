@@ -7,39 +7,37 @@ import PadDivider from '../PadDivider';
 
 const sampleData = [
   [
-    <span className="text">
-      #123456789
+    <span>
+      <b>
+        Acacia Tree
+      </b>
     </span>,
-    <span className="text">
-      Pending
+    <span>
+      Pending Payment
     </span>,
-    <span className="text">
-      22/12/2017, 6:39 PM
+    <span className="green">
+      Gulf Green
     </span>,
-    <span className="value">
-      $170.00
+    <span className="green">
+      Gulf Green
     </span>,
-  ],
-  [
-    <span className="text">
-      #123456789
+    <span className="green">
+      Gulf Green
     </span>,
-    <span className="text">
-      Confirmed
+    <span>
+      15
     </span>,
-    <span className="text">
-      22/12/2017, 6:39 PM
-    </span>,
-    <span className="value">
-      $170.00
+    <span>
+      #1234567
     </span>,
   ],
 ];
 const data = [];
-for (let i = 0; i < 10; i = i + 1) {
+for (let i = 0; i < 20; i = i + 1) {
   data.push(...sampleData);
 }
 
+const heads = ['collected tree', 'status', 'planter', 'conserver', 'ranger', 'o2/day', 'tree id'];
 
 const ForestView = (props) => {
   if (!props.user.logged) {
@@ -50,18 +48,18 @@ const ForestView = (props) => {
     return (
       <Box className={styles.container}>
         <p className="title">
-          Payment History
+          My Forest
         </p>
         <div className="tableContainer">
           <Table
             data={data}
-            heads={['Order', 'Status', 'Date/Time', 'Payment']}
+            heads={heads}
             className={styles.table}
           />
         </div>
         <div className="highShow">
           <p>
-            Not Invited Yet
+            You should have an invitation to create your first forest!
           </p>
         </div>
       </Box>
@@ -73,18 +71,18 @@ const ForestView = (props) => {
       <Fragment>
         <Box className={styles.container}>
           <p className="title">
-            Payment History
+            My Forest
           </p>
           <div className="tableContainer">
             <Table
               data={data}
-              heads={['Order', 'Status', 'Date/Time', 'Payment']}
+              heads={heads}
               className={styles.table}
             />
           </div>
           <div className="highShow">
             <p>
-              You dont have tree mate
+              You have no Trees in your Forest! Add one!
             </p>
           </div>
         </Box>
@@ -98,12 +96,12 @@ const ForestView = (props) => {
     <Fragment>
       <Box className={styles.container}>
         <p className="title">
-          Payment History
+          My Forest
         </p>
         <div className="tableContainer">
           <Table
             data={data}
-            heads={['Order', 'Status', 'Date/Time', 'Payment']}
+            heads={heads}
             className={styles.table}
           />
         </div>
