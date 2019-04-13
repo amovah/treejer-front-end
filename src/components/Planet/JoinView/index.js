@@ -5,6 +5,7 @@ import Input from 'Root/shared/Input';
 import history from 'Root/history';
 import styles from './index.less';
 import PadDivider from '../PadDivider';
+import waiting from './wating.png';
 
 const JoinView = (props) => {
   if (!props.user.logged) {
@@ -28,9 +29,11 @@ const JoinView = (props) => {
               SIGN UP
             </button>
           </div>
-          <div className="right">
-            Illustrator
-          </div>
+          <img
+            className="right"
+            src={waiting}
+            alt="waiting"
+          />
         </Box>
 
         <PadDivider gap={250} />
