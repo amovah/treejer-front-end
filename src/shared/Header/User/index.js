@@ -7,6 +7,7 @@ import logout from 'Root/actions/user/logout';
 import openModal from 'Root/actions/modal/open';
 import styles from './index.less';
 import PaymentHistory from './PaymentHistory';
+import badgeImage from './badge.png';
 
 class User extends Component {
   state = {
@@ -18,10 +19,11 @@ class User extends Component {
   }
 
   loggedView = () => (
-    <Fragment>
+    <div>
       <p className={styles.userName}>
         Hello {this.props.user.name}!
       </p>
+      <div className={styles.divider} />
       <div className={styles.container}>
         <img
           src={this.props.user.avatar}
@@ -50,16 +52,42 @@ class User extends Component {
           </button>
         </Box>
       </div>
-    </Fragment>
+      <div className={styles.divider} />
+      <div className={styles.badge}>
+        <img
+          src={badgeImage}
+          alt="badge"
+        />
+        <span>
+          5
+        </span>
+      </div>
+    </div>
   )
 
   signInView = () => (
-    <Link
-      to="/sign-in"
-      className="login"
-    >
-      Sign In
-    </Link>
+    <div>
+      <Link
+        to="/sign-in"
+        className={styles.login}
+      >
+        Sign In
+      </Link>
+      {
+        (!this.props.less && !this.props.user.logged)
+        && (
+          <Fragment>
+            <div className={styles.divider} />
+            <Link
+              to="/adopt-a-tree"
+              className={classnames(styles.adopt, this.props.white && 'white')}
+            >
+              adopt a tree
+            </Link>
+          </Fragment>
+        )
+      }
+    </div>
   )
 
   render() {

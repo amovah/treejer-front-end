@@ -19,37 +19,22 @@
   > div {
     .inARow();
 
-    > * {
-      margin: 0 25px;
-    }
-  }
-
-  a {
-    color: #999999;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
-
-    &.unique {
-      color: @green;
-    }
-
-    &.login {
-      text-transform: none;
-    }
-
-    &.adopt {
-      color: black;
-      font-size: 28px;
-      border: 2px solid @green;
-      border-radius: 10px;
-      padding: 7px 45px;
-      font-weight: 400;
-      margin: 0;
-
-      &.white {
+    &:first-child {
+      > a {
         color: #999999;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-right: 64px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.unique {
+          color: @green;
+        }
       }
     }
   }

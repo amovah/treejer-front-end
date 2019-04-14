@@ -1,3 +1,5 @@
+@import '~Root/styles/mixins';
+
 :local(.container) {
   position: relative;
 
@@ -46,4 +48,52 @@
   color: #999999;
   font-size: 18px;
   margin-right: 0 !important;
+}
+
+:local(.badge) {
+  position: relative;
+
+  span {
+    position: absolute;
+    right: -5px;
+    top: 0;
+    color: red;
+    background-color: white;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    font-size: 14px;
+    .inARow();
+  }
+}
+
+:local(.divider) {
+  margin-right: 20px;
+}
+
+:local(.login) {
+  color: #999999;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+:local(.adopt) {
+  text-transform: uppercase;
+  color: #999999;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  font-size: 28px;
+  border: 2px solid #67b68c;
+  border-radius: 10px;
+  padding: 7px 45px;
+  font-weight: 400;
+  margin: 0;
+
+  &.white {
+    color: #999999;
+  }
 }
