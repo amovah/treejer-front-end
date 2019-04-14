@@ -1,6 +1,7 @@
 import types from 'Root/actions';
 import store from 'Root/store';
 import history from 'Root/history';
+import clearRedirect from 'Root/actions/redirect/clear';
 
 export default () => {
   store.dispatch({
@@ -16,5 +17,6 @@ export default () => {
   const redirectURL = store.getState().redirect;
   if (redirectURL) {
     history.push(redirectURL);
+    clearRedirect();
   }
 };

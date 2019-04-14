@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import claimOnAction from 'Root/actions/claim/on';
 import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
-import redirectChange from 'Root/actions/redirect/change';
+import redirectSet from 'Root/actions/redirect/set';
 import history from 'Root/history';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
@@ -12,7 +12,7 @@ import claim from './claim.png';
 class VouchView extends PureComponent {
   collect = () => {
     if (!this.props.user.logged) {
-      redirectChange('/planet');
+      redirectSet('/planet');
       history.push('/sign-in');
     }
   }

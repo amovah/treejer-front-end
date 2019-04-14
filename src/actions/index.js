@@ -11,6 +11,7 @@ export default {
     ON: 'claim/ON',
   },
   redirect: {
-    CHANGE: 'redirect/CHANGE',
+    SET: 'redirect/SET',
+    CLEAR: 'redirect/CLEAR',
   },
 };
