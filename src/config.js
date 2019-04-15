@@ -1,13 +1,11 @@
 const config = {
-  prodCDN: '',
-  devCDN: 'http://localhost:8181/static',
-  port: 8180,
+  port: 8181,
 };
 
 if (process.env.NODE_ENV === 'development') {
-  config.cdn = config.devCDN;
+  config.cdn = `http://localhost:${config.port}`;
 } else {
-  config.cdn = config.prodCDN;
+  config.cdn = '';
 }
 
 module.exports = config;

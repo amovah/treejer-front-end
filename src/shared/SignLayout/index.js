@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from 'Root/assets/logo.png';
+import { cdn } from 'Root/config';
 import linkedin from 'Root/assets/linkedin-black.png';
 import instagram from 'Root/assets/instagram-black.png';
 import twitter from 'Root/assets/twitter-black.png';
@@ -14,7 +14,7 @@ export default props => (
     <div className={styles.content}>
       <div className="leftSide">
         <img
-          src={logo}
+          src={`${cdn}/assets/logo.png`}
           alt="logo"
           className="logo"
         />

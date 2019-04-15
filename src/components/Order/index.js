@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+import { cdn } from 'Root/config';
 import Layout from 'Root/shared/Layout';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
-import logo from 'Root/assets/logo.png';
 import Button from 'Root/shared/Button';
 import Table from 'Root/shared/Table';
 import acacia from 'Root/assets/acacia.png';
@@ -94,7 +94,7 @@ export default class extends Component {
       <div className={styles.rightNextInfo}>
         <Box className="box">
           <img
-            src={logo}
+            src={`${cdn}/assets/logo.png`}
             alt="logo"
           />
           <p>

@@ -19,7 +19,7 @@ gulp.task('dev:copy', gulp.series('clean', (cb) => {
   gulp.src(
     'src/static/**/*',
   )
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('build/assets'));
 
   gulp.src([
     'template/**',

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from 'Root/assets/logo.png';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 import User from './User';
 
@@ -12,7 +12,7 @@ export default props => (
         className="logo"
       >
         <img
-          src={Logo}
+          src={`${cdn}/assets/logo.png`}
           alt="logo"
         />
       </Link>
