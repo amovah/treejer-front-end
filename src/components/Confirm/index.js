@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from 'Root/shared/Layout';
 import Header from 'Root/shared/Header';
+import { cdn } from 'Root/config';
 import styles from './index.less';
-import email from './email.png';
 
 export default () => (
   <Layout>
     <Header less />
     <div className={styles.container}>
       <img
-        src={email}
+        src={`${cdn}/email.png`}
         alt="mail"
       />
       <p className="title">
