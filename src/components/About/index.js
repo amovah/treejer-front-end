@@ -7,16 +7,6 @@ import TopPadding from 'Root/shared/Header/TopPadding';
 import Box from 'Root/shared/Box';
 import { cdn } from 'Root/config';
 import styles from './index.less';
-import Ermia from './Ermia.png';
-import Ali from './Ali.png';
-import Alireza from './Alireza.png';
-import Bahareh from './Bahareh.png';
-import Shivam from './Shivam.png';
-import Saeed from './Saeed.png';
-import Negar from './Negar.png';
-import John from './John.png';
-import Nora from './Nora.png';
-import AboutIll from './AboutIll.png';
 
 export default class extends PureComponent {
   componentDidMount() {
@@ -33,7 +23,7 @@ export default class extends PureComponent {
 
         <img
           className={styles.illustrate}
-          src={AboutIll}
+          src={`${cdn}/about-illustrator.png`}
           alt="about"
         />
 
@@ -97,7 +87,7 @@ export default class extends PureComponent {
           <div className="row">
             <Box className="card">
               <img
-                src={Ermia}
+                src={`${cdn}/teams/Ermia.png`}
                 alt="Ermia"
               />
               <p className="name">
@@ -109,7 +99,7 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={Ali}
+                src={`${cdn}/teams/Ali.png`}
                 alt="Ali"
               />
               <p className="name">
@@ -121,7 +111,7 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={Alireza}
+                src={`${cdn}/teams/Alireza.png`}
                 alt="Alireza"
               />
               <p className="name">
@@ -135,7 +125,7 @@ export default class extends PureComponent {
           <div className="row">
             <Box className="card">
               <img
-                src={Bahareh}
+                src={`${cdn}/teams/Bahareh.png`}
                 alt="Bahareh"
               />
               <p className="name">
@@ -147,7 +137,7 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={Shivam}
+                src={`${cdn}/teams/Shivam.png`}
                 alt="Shivam"
               />
               <p className="name">
@@ -159,7 +149,7 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={Saeed}
+                src={`${cdn}/teams/Saeed.png`}
                 alt="Saeed"
               />
               <p className="name">
@@ -173,7 +163,7 @@ export default class extends PureComponent {
           <div className="row">
             <Box className="card">
               <img
-                src={Negar}
+                src={`${cdn}/teams/Negar.png`}
                 alt="Negar"
               />
               <p className="name">
@@ -185,7 +175,7 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={John}
+                src={`${cdn}/teams/John.png`}
                 alt="John"
               />
               <p className="name">
@@ -197,7 +187,7 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={Nora}
+                src={`${cdn}/teams/Nora.png`}
                 alt="Nora"
               />
               <p className="name">
