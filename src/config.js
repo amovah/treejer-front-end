@@ -3,7 +3,7 @@ const config = {
 };
 
 if (process.env.NODE_ENV === 'development') {
-  config.cdn = `http://localhost:${config.port}`;
+  config.cdn = `http://localhost:${config.port}/assets`;
 } else {
   config.cdn = '';
 }

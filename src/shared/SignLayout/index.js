@@ -14,7 +14,7 @@ export default props => (
     <div className={styles.content}>
       <div className="leftSide">
         <img
-          src={`${cdn}/assets/logo.png`}
+          src={`${cdn}/logo.png`}
           alt="logo"
           className="logo"
         />

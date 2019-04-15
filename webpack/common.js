@@ -33,6 +33,13 @@ const devMode = process.env.NODE_ENV !== 'production';
       }, {
         test: /\.(css|less)$/,
         use: [
+          {
+            loader: 'string-replace-loader',
+            options: {
+              search: '@@CDN@@',
+              replace: config.cdn,
+            },
+          },
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',

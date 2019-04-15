@@ -12,7 +12,7 @@ export default props => (
         className="logo"
       >
         <img
-          src={`${cdn}/assets/logo.png`}
+          src={`${cdn}/logo.png`}
           alt="logo"
         />
       </Link>

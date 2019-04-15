@@ -94,7 +94,7 @@ export default class extends Component {
       <div className={styles.rightNextInfo}>
         <Box className="box">
           <img
-            src={`${cdn}/assets/logo.png`}
+            src={`${cdn}/logo.png`}
             alt="logo"
           />
           <p>
