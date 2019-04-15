@@ -2,12 +2,12 @@ import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
 import logout from 'Root/actions/user/logout';
 import openModal from 'Root/actions/modal/open';
 import styles from './index.less';
 import PaymentHistory from './PaymentHistory';
-import badgeImage from './badge.png';
 
 class User extends Component {
   state = {
@@ -55,7 +55,7 @@ class User extends Component {
       <div className={styles.divider} />
       <div className={styles.badge}>
         <img
-          src={badgeImage}
+          src={`${cdn}/trees/badge.png`}
           alt="badge"
         />
         <span>
