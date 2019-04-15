@@ -6,14 +6,6 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
 import styles from './index.less';
-import adoptATree from './adopt-a-tree.png';
-import earnOxygen from './earn-oxygen.png';
-import tradeYourOxygens from './trade-your-oxygens.png';
-import unicube from './unicube.png';
-import flashback from './flashback.png';
-import areatak from './areatak.png';
-import aCircle from './a.png';
-import getboarded from './getboarded.png';
 
 export default () => (
   <Layout>
@@ -57,7 +49,7 @@ export default () => (
       <div className="threethere">
         <div className="content">
           <img
-            src={adoptATree}
+            src={`${cdn}/home/adopt-a-tree.png`}
             alt="adopt-a-tree"
           />
           <p className="title">
@@ -77,7 +69,7 @@ export default () => (
         <div className="verticalDivider" />
         <div className="content">
           <img
-            src={earnOxygen}
+            src={`${cdn}/home/earn-oxygen.png`}
             alt="earn-oxygen"
           />
           <p className="title">
@@ -97,7 +89,7 @@ export default () => (
         <div className="verticalDivider" />
         <div className="content">
           <img
-            src={tradeYourOxygens}
+            src={`${cdn}/home/trade-your-oxygens.png`}
             alt="trade-your-oxygens"
           />
           <p className="title">
@@ -194,23 +186,23 @@ export default () => (
 
       <div className="orgs">
         <img
-          src={unicube}
+          src={`${cdn}/org-logos/unicube.png`}
           alt="unicube"
         />
         <img
-          src={flashback}
+          src={`${cdn}/org-logos/flashback.png`}
           alt="flashback"
         />
         <img
-          src={areatak}
+          src={`${cdn}/org-logos/areatak.png`}
           alt="areatak"
         />
         <img
-          src={aCircle}
+          src={`${cdn}/org-logos/a.png`}
           alt="acircle"
         />
         <img
-          src={getboarded}
+          src={`${cdn}/org-logos/getboarded.png`}
           alt="getboarded"
         />
       </div>
