@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
-import earth from 'Root/assets/earth.png';
 import addSign from './add.png';
 import styles from './index.less';
 
@@ -54,7 +54,7 @@ const UserDetails = (props) => {
           </p>
           <div className="earth">
             <img
-              src={earth}
+              src={`${cdn}/earth.png`}
               alt="earth"
             />
             <div className="circle iran" />
