@@ -23,7 +23,7 @@ export default class extends PureComponent {
 
         <img
           className={styles.illustrate}
-          src={`${cdn}/about-illustrator.png`}
+          src={`${cdn}/about.png`}
           alt="about"
         />
 
