@@ -4,7 +4,7 @@ import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
-import acacia from 'Root/assets/acacia.png';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 import adoptATree from './adopt-a-tree.png';
 import earnOxygen from './earn-oxygen.png';
@@ -143,7 +143,7 @@ export default () => (
             India
           </p>
           <img
-            src={acacia}
+            src={`${cdn}/trees/acacia.png`}
             alt="acacia"
           />
         </div>
@@ -152,7 +152,7 @@ export default () => (
             Middle East
           </p>
           <img
-            src={acacia}
+            src={`${cdn}/trees/acacia.png`}
             alt="acacia"
           />
         </div>
@@ -161,7 +161,7 @@ export default () => (
             Africa
           </p>
           <img
-            src={acacia}
+            src={`${cdn}/trees/acacia.png`}
             alt="acacia"
           />
         </div>
@@ -170,7 +170,7 @@ export default () => (
             South America
           </p>
           <img
-            src={acacia}
+            src={`${cdn}/trees/acacia.png`}
             alt="acacia"
           />
         </div>

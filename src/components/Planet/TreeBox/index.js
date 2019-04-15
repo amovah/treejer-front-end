@@ -1,14 +1,14 @@
 import React from 'react';
 import classnames from 'classnames';
 import Box from 'Root/shared/Box';
-import acacia from 'Root/assets/acacia.png';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 
 export default props => (
   <Box className={classnames(styles.box, props.withoutButton && styles.without)}>
     <div className="circle">
       <img
-        src={acacia}
+        src={`${cdn}/trees/acacia.png`}
         alt="acacia"
       />
     </div>

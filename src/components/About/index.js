@@ -4,8 +4,8 @@ import Footer from 'Root/shared/Footer';
 import Socials from 'Root/shared/Socials';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
-import maple from 'Root/assets/maple.png';
 import Box from 'Root/shared/Box';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 import Ermia from './Ermia.png';
 import Ali from './Ali.png';
@@ -82,14 +82,14 @@ export default class extends PureComponent {
         <div className={styles.ourTeam}>
           <div className="title">
             <img
-              src={maple}
+              src={`${cdn}/trees/maple.png`}
               alt="forest"
             />
             <p>
               Meet Our Team
             </p>
             <img
-              src={maple}
+              src={`${cdn}/trees/maple.png`}
               alt="forest"
             />
           </div>

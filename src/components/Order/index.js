@@ -7,7 +7,6 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import Button from 'Root/shared/Button';
 import Table from 'Root/shared/Table';
-import acacia from 'Root/assets/acacia.png';
 import NumberInput from 'Root/shared/NumberInput';
 import Box from 'Root/shared/Box';
 import CustomizedInput from './CustomizedInput';
@@ -23,7 +22,7 @@ const stepOneData = [
   [
     <div className={styles.treeRow}>
       <img
-        src={acacia}
+        src={`${cdn}/tress/acacia.png`}
         alt="acacia"
       />
       <div>
