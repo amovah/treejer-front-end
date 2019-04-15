@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import facebook from 'Root/assets/facebook.png';
-import instagram from 'Root/assets/instagram.png';
-import twitter from 'Root/assets/twitter.png';
-import linkedin from 'Root/assets/linkedin.png';
-import telegram from 'Root/assets/telegram.png';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 
 export default () => (
@@ -87,29 +83,29 @@ export default () => (
     <div className="socials">
       <div>
         <img
-          src={facebook}
+          src={`${cdn}/socials/facebook.png`}
           alt="facebook"
         />
         <img
-          src={instagram}
+          src={`${cdn}/socials/instagram.png`}
           alt="instagram"
         />
         <img
-          src={twitter}
+          src={`${cdn}/socials/twitter.png`}
           alt="twitter"
         />
       </div>
       <div>
         <img
-          src={linkedin}
+          src={`${cdn}/socials/linkedin.png`}
           alt="linkedin"
         />
         <img
-          src={telegram}
+          src={`${cdn}/socials/telegram.png`}
           alt="telegram"
         />
         <img
-          src={telegram}
+          src={`${cdn}/socials/telegram.png`}
           alt="telegram"
         />
       </div>
