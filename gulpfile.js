@@ -30,7 +30,7 @@ gulp.task('dev:copy', gulp.series('clean', (cb) => {
   gulp.src(
     'template/index.html',
   )
-  .pipe(replace('@@CDN@@', config.cdn))
+  .pipe(replace('@@CDN@@', config.jsCDN))
   .pipe(gulp.dest('build'));
 
   cb();
@@ -51,7 +51,7 @@ gulp.task('prod:copy', gulp.series('clean', (cb) => {
   gulp.src(
     'template/index.html',
   )
-  .pipe(replace('@@CDN@@', config.cdn))
+  .pipe(replace('@@CDN@@', config.jsCDN))
   .pipe(gulp.dest('build'));
 
   cb();
