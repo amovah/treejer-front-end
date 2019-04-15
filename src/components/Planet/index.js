@@ -4,6 +4,7 @@ import TopPadding from 'Root/shared/Header/TopPadding';
 import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 import TreeBox from './TreeBox';
 import SeedBox from './SeedBox';
@@ -13,13 +14,12 @@ import WaitWarning from './WaitWarning';
 import JoinView from './JoinView';
 import UserDetails from './UserDetails';
 import ForestView from './ForestView';
-import planet from './planet.png';
 
 export default () => (
   <Layout>
     <img
       className={styles.planetImage}
-      src={planet}
+      src={`${cdn}/planet.png`}
       alt="planet"
     />
 

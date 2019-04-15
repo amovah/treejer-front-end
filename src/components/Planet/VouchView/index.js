@@ -4,10 +4,10 @@ import claimOnAction from 'Root/actions/claim/on';
 import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
 import redirectSet from 'Root/actions/redirect/set';
+import { cdn } from 'Root/config';
 import history from 'Root/history';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
-import claim from './claim.png';
 
 class VouchView extends PureComponent {
   collect = () => {
@@ -20,7 +20,7 @@ class VouchView extends PureComponent {
   vouchView = () => (
     <Box className={styles.vouchBox}>
       <img
-        src={claim}
+        src={`${cdn}/claim.png`}
         alt="claim"
         className="left"
       />

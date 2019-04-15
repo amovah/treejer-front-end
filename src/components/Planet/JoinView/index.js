@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import Box from 'Root/shared/Box';
 import Input from 'Root/shared/Input';
 import history from 'Root/history';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 import PadDivider from '../PadDivider';
-import waitingImage from './wating.png';
-import inviteImage from './invite.png';
 
 const JoinView = (props) => {
   if (!props.user.logged) {
@@ -32,7 +31,7 @@ const JoinView = (props) => {
           </div>
           <img
             className="right"
-            src={waitingImage}
+            src={`${cdn}/waiting.png`}
             alt="waiting"
           />
         </Box>
@@ -77,7 +76,7 @@ const JoinView = (props) => {
           </div>
         </div>
         <img
-          src={inviteImage}
+          src={`${cdn}/invite.png`}
           alt="invite"
           className="right"
         />
