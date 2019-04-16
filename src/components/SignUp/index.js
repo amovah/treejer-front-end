@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
 import Button from 'Root/shared/Button';
+import signupAction from 'Root/actions/user/signup';
 import styles from './index.less';
 
 export default class extends Component {
@@ -15,8 +16,16 @@ export default class extends Component {
     username: '',
   };
 
-  onSignUp = () => {
-    console.log(this.state);
+  onSignUp = async () => {
+    const res = await signupAction({
+      email: this.state.email,
+      password: this.state.password,
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      username: this.state.username,
+    });
+
+    console.log(res);
   }
 
   goToStepTwo = () => {
