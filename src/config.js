@@ -1,5 +1,6 @@
 const config = {
   port: 8180,
+  url: 'http://66.70.130.227:3000/api',
 };
 
 if (process.env.NODE_ENV === 'development') {
