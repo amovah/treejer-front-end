@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { generate } from 'shortid';
 import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
 import Button from 'Root/shared/Button';
@@ -9,14 +8,26 @@ import styles from './index.less';
 export default class extends Component {
   state = {
     step: 1,
+    email: '',
+    password: '',
+    firstname: '',
+    lastname: '',
+    username: '',
   };
 
-  onSignIn = () => {
+  onSignUp = () => {
+    console.log(this.state);
   }
 
   goToStepTwo = () => {
     this.setState({
       step: 2,
+    });
+  }
+
+  updateState = stateName => (e) => {
+    this.setState({
+      [stateName]: e.target.value,
     });
   }
 
@@ -28,7 +39,8 @@ export default class extends Component {
           width: '100%',
           marginBottom: 30,
         }}
-        key={generate()}
+        key="email"
+        onChange={this.updateState('email')}
       />
       <Input
         placeholder="Password"
@@ -37,7 +49,8 @@ export default class extends Component {
           width: '100%',
           marginBottom: 30,
         }}
-        key={generate()}
+        key="password"
+        onChange={this.updateState('password')}
       />
       <Button
         onClick={this.goToStepTwo}
@@ -46,7 +59,6 @@ export default class extends Component {
           marginTop: 20,
           minWidth: 192,
         }}
-        key={generate()}
       >
         Next
       </Button>
@@ -63,7 +75,8 @@ export default class extends Component {
             width: 'calc(50% - 10px)',
             marginBottom: 30,
           }}
-          key={generate()}
+          key="firstname"
+          onChange={this.updateState('firstname')}
         />
         <Input
           placeholder="Last Name"
@@ -72,7 +85,8 @@ export default class extends Component {
             width: 'calc(50% - 10px)',
             marginBottom: 30,
           }}
-          key={generate()}
+          key="lastname"
+          onChange={this.updateState('lastname')}
         />
       </div>
       <Input
@@ -82,16 +96,16 @@ export default class extends Component {
           width: '100%',
           marginBottom: 30,
         }}
-        key={generate()}
+        key="username"
+        onChange={this.updateState('username')}
       />
       <Button
-        onClick={this.goToStepTwo}
+        onClick={this.onSignUp}
         style={{
           marginBottom: 50,
           marginTop: 20,
           minWidth: 192,
         }}
-        key={generate()}
       >
         Sign Up
       </Button>
