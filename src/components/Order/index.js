@@ -44,7 +44,7 @@ class Order extends Component {
     } else if (owner === 1) {
       setOwner('giftToFriend');
     } else {
-      setOwner('bussiness');
+      setOwner('business');
     }
 
     this.setState({
