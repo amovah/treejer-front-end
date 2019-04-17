@@ -16,21 +16,21 @@ export default async (credentials) => {
   store.dispatch({
     type: types.user.LOGIN,
     data: {
-      username: 'AliTheGreat',
-      name: 'Ali Movahedi',
-      invited: false,
       token: res.data.id,
       id: res.data.userId,
     },
   });
 
-  // const trees = await fetch(`/clients/${res.data.userId}/trees`);
-  // store.dispatch({
-  //   type: types.user.CHANGE,
-  //   toChange: {
-  //     trees: trees.data,
-  //   },
-  // });
+  const details = await fetch(`/clients/${res.data.userId}`, {
+    filter: {
+      include: ['trees', 'receipts'],
+    },
+  });
+
+  store.dispatch({
+    type: types.user.CHANGE,
+    toChange: details.data,
+  });
 
   global.localStorage.token = res.data.id;
   global.localStorage.userId = res.data.userId;
