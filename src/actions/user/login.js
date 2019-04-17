@@ -23,6 +23,9 @@ export default async (credentials) => {
     },
   });
 
+  global.localStorage.token = res.data.id;
+  global.localStorage.userId = res.data.userId;
+
   const details = await fetch(`/clients/${res.data.userId}`, {
     filter: {
       include: ['trees', 'receipts'],
@@ -33,9 +36,6 @@ export default async (credentials) => {
     type: types.user.CHANGE,
     toChange: details.data,
   });
-
-  global.localStorage.token = res.data.id;
-  global.localStorage.userId = res.data.userId;
 
   const state = store.getState();
 
