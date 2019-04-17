@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import qs from 'querystring';
 import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
 import Button from 'Root/shared/Button';
 import signupAction from 'Root/actions/user/signup';
+import history from 'Root/history';
 import styles from './index.less';
 
 export default class extends Component {
@@ -14,7 +16,18 @@ export default class extends Component {
     firstname: '',
     lastname: '',
     username: '',
+    referral: null,
   };
+
+  componentDidMount() {
+    const parsed = qs.parse(history.location.search.slice(1));
+
+    if (parsed.referral) {
+      this.setState({
+        referral: parsed.referral,
+      });
+    }
+  }
 
   onSignUp = async () => {
     signupAction({
