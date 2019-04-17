@@ -44,7 +44,7 @@ const PaymentHistory = props => (
 export default lazy(loadReceipts)(
   connect(
     state => ({
-      receipts: state.receipts,
+      receipts: state.user.receipts,
     }),
   )(PaymentHistory),
 );
