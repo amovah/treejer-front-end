@@ -72,7 +72,7 @@ const ForestView = (props) => {
     );
   }
 
-  if (props.trees.length === 0) {
+  if (props.user.trees.length === 0) {
     return (
       <Fragment>
         <Box className={styles.container}>
@@ -106,7 +106,7 @@ const ForestView = (props) => {
         </p>
         <div className="tableContainer">
           <Table
-            data={props.trees.map(generateData)}
+            data={props.user.trees.map(generateData)}
             heads={heads}
             className={styles.table}
           />
@@ -121,6 +121,5 @@ const ForestView = (props) => {
 export default connect(
   state => ({
     user: state.user,
-    trees: state.trees,
   }),
 )(ForestView);
