@@ -20,4 +20,7 @@ export default {
   treeModels: {
     LOAD: 'treeModels/LOAD',
   },
+  order: {
+    ADD: 'order/ADD',
+  },
 };

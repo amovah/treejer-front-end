@@ -5,6 +5,7 @@ import claim from './claim';
 import trees from './trees';
 import receipts from './receipts';
 import treeModels from './treeModels';
+import order from './order';
 
 export default combineReducers({
   user,
@@ -13,4 +14,5 @@ export default combineReducers({
   trees,
   receipts,
   treeModels,
+  order,
 });
