@@ -29,4 +29,8 @@ export default {
     SET: 'redirect/SET',
     CLEAR: 'redirect/CLEAR',
   },
+  lazy: {
+    ON: 'lazy/ON',
+    OFF: 'lazy/OFF',
+  },
 };

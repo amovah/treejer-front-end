@@ -5,6 +5,7 @@ import claim from './claim';
 import trees from './trees';
 import order from './order';
 import redirect from './redirect';
+import lazy from './lazy';
 
 export default combineReducers({
   user,
@@ -13,4 +14,5 @@ export default combineReducers({
   trees,
   order,
   redirect,
+  lazy,
 });
