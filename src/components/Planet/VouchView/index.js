@@ -2,22 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { generate } from 'shortid';
 import validateClaim from 'Root/actions/claim/validate';
+import claimAction from 'Root/actions/claim/claim';
 import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
 import { cdn } from 'Root/config';
-import history from 'Root/history';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
 
 class VouchView extends Component {
   state = {
     code: '',
-  }
-
-  collect = () => {
-    if (!this.props.user.logged) {
-      history.push('/sign-in');
-    }
   }
 
   vouchView = () => (
@@ -70,7 +64,7 @@ class VouchView extends Component {
             minWidth: 335,
             height: 80,
           }}
-          onClick={this.collect}
+          onClick={claimAction}
         >
           COLLECT
         </Button>
