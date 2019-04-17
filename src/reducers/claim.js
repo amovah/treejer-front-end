@@ -2,7 +2,6 @@ import types from 'Root/actions';
 
 const defaults = {
   status: false,
-  trees: [],
 };
 
 export default (state = defaults, action) => {
@@ -11,6 +10,7 @@ export default (state = defaults, action) => {
       return {
         status: true,
         trees: action.trees,
+        code: action.code,
       };
     }
 

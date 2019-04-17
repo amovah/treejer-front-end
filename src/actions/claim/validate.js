@@ -17,6 +17,7 @@ export default async (code) => {
     store.dispatch({
       type: types.claim.ON,
       trees,
+      code,
     });
   }
 };
