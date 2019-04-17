@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import setMethodOrder from 'Root/actions/order/setMethod';
 import CustomizedInput from './CustomizedInput';
+import Button from 'Root/shared/Button';
 import styles from './index.less';
 import etherWhite from './ether-white.png';
 import etherBlack from './ether-black.png';
@@ -30,6 +31,30 @@ class Payment extends Component {
     setMethodOrder(method);
   }
 
+  logView = () => {
+    if (!this.props.user.logged) {
+      return (
+        <Button>
+          SUBMIT INVOICE
+        </Button>
+      );
+    }
+
+    return (
+      <Fragment>
+        <p className="text">
+          Your order number is:
+        </p>
+        <p className="orderId">
+          {this.state.orderId}
+        </p>
+        <p className="text">
+          You can track your order using the above number.
+        </p>
+      </Fragment>
+    );
+  }
+
   paymentMethodView = () => {
     if (this.state.paymentMethod === 'fiat') {
       return (
@@ -45,15 +70,7 @@ class Payment extends Component {
               textAlign: 'center',
             }}
           />
-          <p className="text">
-            Your order number is:
-          </p>
-          <p className="orderId">
-            #123456789
-          </p>
-          <p className="text">
-            You can track your order using the above number.
-          </p>
+          {this.logView()}
         </Fragment>
       );
     }
@@ -71,15 +88,7 @@ class Payment extends Component {
             textAlign: 'center',
           }}
         />
-        <p className="text">
-          Your order number is:
-        </p>
-        <p className="orderId">
-          #123456789
-        </p>
-        <p className="text">
-          You can track your order using the above number.
-        </p>
+        {this.logView()}
       </Fragment>
     );
   }
