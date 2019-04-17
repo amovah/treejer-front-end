@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+import { connect } from 'react-redux';
 import { cdn } from 'Root/config';
 import Layout from 'Root/shared/Layout';
 import Header from 'Root/shared/Header';
@@ -18,37 +19,35 @@ import etherBlack from './ether-black.png';
 import visaWhite from './visa-white.png';
 import visaBlack from './visa-black.png';
 
-const stepOneData = [
-  [
-    <div className={styles.treeRow}>
-      <img
-        src={`${cdn}/trees/acacia.png`}
-        alt="acacia"
-      />
-      <div>
-        <p className="title">
-          Acacia Tree
-        </p>
-        <p className="desc">
-          Via <span className="green">Gulf Green</span> in Oman
-        </p>
-      </div>
-    </div>,
-    <p className={styles.treeValue}>
-      $17
-    </p>,
-    <NumberInput min={1} />,
-    <p className={styles.treeValue}>
-      $170
-    </p>,
+const generateData = item => [
+  <div className={styles.treeRow}>
     <img
-      src={removeIcon}
-      alt="remove"
-    />,
-  ],
+      src={`${cdn}/trees/acacia.png`}
+      alt="acacia"
+    />
+    <div>
+      <p className="title">
+        {item.type} Tree
+      </p>
+      <p className="desc">
+        Via <span className="green">{item.drive}</span> in {item.region}
+      </p>
+    </div>
+  </div>,
+  <p className={styles.treeValue}>
+    ${item.price}
+  </p>,
+  <NumberInput min={1} defaultValue={item.qty} />,
+  <p className={styles.treeValue}>
+    ${item.price * item.qty}
+  </p>,
+  <img
+    src={removeIcon}
+    alt="remove"
+  />,
 ];
 
-export default class extends Component {
+class Order extends Component {
   state = {
     current: 1,
     paymentMethod: 'credit',
@@ -87,7 +86,7 @@ export default class extends Component {
             'total',
             '',
           ]}
-          data={[...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData, ...stepOneData]}
+          data={this.props.order.trees.map(generateData)}
         />
       </div>
       <div className={styles.rightNextInfo}>
@@ -360,3 +359,9 @@ export default class extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    order: state.order,
+  }),
+)(Order);

@@ -3,7 +3,7 @@ import styles from './index.less';
 
 export default class extends Component {
   state = {
-    value: this.props.value || this.props.min || 0,
+    value: this.props.defaultValue || 0,
   }
 
   input = React.createRef();
@@ -20,6 +20,7 @@ export default class extends Component {
     this.setState({
       value,
     });
+    e.target.value = value;
 
     if (this.props.onChange) {
       this.props.onChange(value);
@@ -55,6 +56,7 @@ export default class extends Component {
   }
 
   render() {
+    const { defaultValue, ...rest } = this.props;
     return (
       <div className={styles.container}>
         <button
@@ -66,9 +68,9 @@ export default class extends Component {
         <input
           type="number"
           ref={this.input}
-          onChange={this.onChange}
           value={this.state.value}
-          {...this.props}
+          {...rest}
+          onChange={this.onChange}
         />
         <button
           type="button"
