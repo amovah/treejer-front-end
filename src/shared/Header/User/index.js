@@ -52,16 +52,23 @@ class User extends Component {
           </button>
         </Box>
       </div>
-      <div className={styles.divider} />
-      <div className={styles.badge}>
-        <img
-          src={`${cdn}/trees/badge.png`}
-          alt="badge"
-        />
-        <span>
-          5
-        </span>
-      </div>
+      {
+        !this.props.less
+        && (
+          <Fragment>
+            <div className={styles.divider} />
+            <div className={styles.badge}>
+              <img
+                src={`${cdn}/trees/badge.png`}
+                alt="badge"
+              />
+              <span>
+                5
+              </span>
+            </div>
+          </Fragment>
+        )
+      }
     </div>
   )
 
@@ -74,7 +81,7 @@ class User extends Component {
         Sign In
       </Link>
       {
-        (!this.props.less && !this.props.user.logged)
+        !this.props.less
         && (
           <Fragment>
             <div className={styles.divider} />
