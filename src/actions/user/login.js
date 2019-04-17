@@ -2,6 +2,7 @@ import types from 'Root/actions';
 import store from 'Root/store';
 import history from 'Root/history';
 import fetch from 'Root/fetch';
+import clearRedirect from 'Root/actions/redirect/clear';
 
 export default async (credentials) => {
   const res = await fetch('/clients/login', {
@@ -35,5 +36,11 @@ export default async (credentials) => {
   global.localStorage.token = res.data.id;
   global.localStorage.userId = res.data.userId;
 
-  history.push('/planet');
+  const redirectURL = store.getState().redirect;
+  if (redirectURL !== '') {
+    history.push(redirectURL);
+    clearRedirect();
+  } else {
+    history.push('/planet');
+  }
 };
