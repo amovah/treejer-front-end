@@ -54,7 +54,7 @@ class User extends Component {
         </Box>
       </div>
       {
-        !this.props.less
+        (!this.props.less && this.props.basket)
         && (
           <Fragment>
             <div className={styles.divider} />
@@ -67,7 +67,7 @@ class User extends Component {
                 alt="badge"
               />
               <span>
-                5
+                {this.props.basket}
               </span>
             </div>
           </Fragment>
@@ -113,5 +113,6 @@ class User extends Component {
 export default connect(
   state => ({
     user: state.user,
+    basket: state.order.count,
   }),
 )(User);
