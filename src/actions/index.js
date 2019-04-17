@@ -17,4 +17,7 @@ export default {
   receipts: {
     LOAD: 'reciepts/LOAD',
   },
+  treeModels: {
+    LOAD: 'treeModels/LOAD',
+  },
 };

@@ -4,6 +4,7 @@ import modal from './modal';
 import claim from './claim';
 import trees from './trees';
 import receipts from './receipts';
+import treeModels from './treeModels';
 
 export default combineReducers({
   user,
@@ -11,4 +12,5 @@ export default combineReducers({
   claim,
   trees,
   receipts,
+  treeModels,
 });
