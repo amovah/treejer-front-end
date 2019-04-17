@@ -1,4 +1,5 @@
 import fetch from 'Root/fetch';
+import login from './login';
 
 export default async (credentials) => {
   const res = await fetch('/clients', {
@@ -9,6 +10,8 @@ export default async (credentials) => {
   if (res.data.error) {
     return null;
   }
+
+  await login(credentials);
 
   return res.data;
 };
