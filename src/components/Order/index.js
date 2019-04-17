@@ -22,7 +22,7 @@ const stepOneData = [
   [
     <div className={styles.treeRow}>
       <img
-        src={`${cdn}/tress/acacia.png`}
+        src={`${cdn}/trees/acacia.png`}
         alt="acacia"
       />
       <div>
