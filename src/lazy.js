@@ -29,14 +29,14 @@ class Lazy extends Component {
       return null;
     }
 
-    const { component, ...rest } = this.props;
-    return <component {...rest} />;
+    const { SoBeIT, action, ...rest } = this.props;
+    return <SoBeIT {...rest} />;
   }
 }
 
 export default action => component => () => (
   <Lazy
     action={action}
-    component={component}
+    SoBeIT={component}
   />
 );

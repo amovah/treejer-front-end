@@ -5,6 +5,8 @@ import Layout from 'Root/shared/Layout';
 import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
 import { cdn } from 'Root/config';
+import lazy from 'Root/lazy';
+import loadTrees from 'Root/actions/trees/load';
 import styles from './index.less';
 import TreeBox from './TreeBox';
 import SeedBox from './SeedBox';
@@ -15,7 +17,7 @@ import JoinView from './JoinView';
 import UserDetails from './UserDetails';
 import ForestView from './ForestView';
 
-export default () => (
+const Planet = () => (
   <Layout>
     <img
       className={styles.planetImage}
@@ -88,3 +90,5 @@ export default () => (
     <Footer />
   </Layout>
 );
+
+export default lazy(loadTrees)(Planet);
