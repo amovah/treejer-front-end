@@ -2,6 +2,7 @@ import history from 'Root/history';
 import store from 'Root/store';
 import setRedirect from 'Root/actions/redirect/set';
 import fetch from 'Root/fetch';
+import clear from './clear';
 
 export default async () => {
   const state = store.getState();
@@ -20,7 +21,7 @@ export default async () => {
     method: 'POST',
     body: JSON.stringify({
       clientId: state.user.id,
-      type: state.order.owner,
+      type: state.order.owner || 'personalForest',
       price: state.order.trees.map(i => i.qty * i.price).reduce((a, b) => a + b, 0),
       items: state.order.trees.map(i => ({
         identifier: i.id,
@@ -29,6 +30,8 @@ export default async () => {
       method: state.order.method,
     }),
   });
+
+  clear();
 
   return res.data;
 };

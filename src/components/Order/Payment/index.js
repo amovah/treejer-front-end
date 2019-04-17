@@ -35,12 +35,17 @@ class Payment extends Component {
   onSubmit = async () => {
     const res = await submitOrder();
 
+    console.log('here', res);
+
     if (res === 'uninvited') {
       console.log('kheili khari');
       return;
     }
 
-    console.log(res);
+    console.log('here', res.id);
+    this.setState({
+      orderId: res.id,
+    });
   }
 
   logView = () => {

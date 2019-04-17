@@ -23,6 +23,7 @@ export default {
     REMOVE: 'order/REMOVE',
     SET_OWNER: 'order/SET_OWNER',
     SET_METHOD: 'order/SET_METHOD',
+    CLEAR: 'order/CLEAR',
   },
   redirect: {
     SET: 'redirect/SET',

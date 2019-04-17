@@ -1,6 +1,8 @@
 import types from 'Root/actions';
 
-export default (state = { count: 0, trees: [], owner: 'personalForest' }, action) => {
+const defaults = { count: 0, trees: [], owner: 'personalForest' };
+
+export default (state = defaults, action) => {
   switch (action.type) {
     case types.order.ADD: {
       const index = state.trees.findIndex(i => i.id === action.tree.id);
@@ -69,6 +71,10 @@ export default (state = { count: 0, trees: [], owner: 'personalForest' }, action
         ...state,
         method: action.method,
       };
+    }
+
+    case types.order.CLEAR: {
+      return defaults;
     }
 
     case 'a': {

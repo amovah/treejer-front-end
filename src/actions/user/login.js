@@ -3,6 +3,7 @@ import store from 'Root/store';
 import history from 'Root/history';
 import fetch from 'Root/fetch';
 import clearRedirect from 'Root/actions/redirect/clear';
+import claim from 'Root/actions/claim/claim';
 
 export default async (credentials) => {
   const res = await fetch('/clients/login', {
@@ -36,9 +37,14 @@ export default async (credentials) => {
   global.localStorage.token = res.data.id;
   global.localStorage.userId = res.data.userId;
 
-  const redirectURL = store.getState().redirect;
-  if (redirectURL !== '') {
-    history.push(redirectURL);
+  const state = store.getState();
+
+  if (state.claim.status) {
+    await claim();
+  }
+
+  if (state.redirect !== '') {
+    history.push(state.redirect);
     clearRedirect();
   } else {
     history.push('/planet');
