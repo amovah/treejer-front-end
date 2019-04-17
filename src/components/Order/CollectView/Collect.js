@@ -33,11 +33,11 @@ const generateData = item => [
     </div>
   </div>,
   <p className={styles.treeValue}>
-    ${item.price}
+    €{item.price}
   </p>,
   <NumberInput min={1} defaultValue={item.qty} onChange={changeQty(item.id)} />,
   <p className={styles.treeValue}>
-    $<Total id={item.id} />
+    €<Total id={item.id} />
   </p>,
   <img
     src={removeIcon}

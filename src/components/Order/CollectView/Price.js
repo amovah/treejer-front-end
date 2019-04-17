@@ -21,7 +21,7 @@ const Price = props => (
         Cash Total
       </p>
       <p className="price">
-        ${props.trees.map(i => i.qty * i.price).reduce((a, b) => a + b, 0)}
+        €{props.trees.map(i => i.qty * i.price).reduce((a, b) => a + b, 0)}
       </p>
       <Button
         onClick={props.goNext}

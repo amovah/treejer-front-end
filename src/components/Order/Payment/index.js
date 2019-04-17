@@ -161,7 +161,7 @@ class Payment extends Component {
             Cash Total
           </p>
           <p className="price">
-            $<Price />
+            €<Price />
           </p>
           <div className="breaker" />
         </div>
