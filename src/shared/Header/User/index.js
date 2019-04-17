@@ -54,7 +54,7 @@ class User extends Component {
         </Box>
       </div>
       {
-        (!this.props.less && this.props.basket)
+        (!this.props.less && this.props.basket !== 0)
         && (
           <Fragment>
             <div className={styles.divider} />

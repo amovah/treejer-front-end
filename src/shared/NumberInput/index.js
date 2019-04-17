@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import styles from './index.less';
 
 export default class extends Component {
-  state = {
-    value: this.props.defaultValue || 0,
-  }
-
   input = React.createRef();
 
   onChange = (e) => {
@@ -17,9 +13,6 @@ export default class extends Component {
       value = this.props.max;
     }
 
-    this.setState({
-      value,
-    });
     e.target.value = value;
 
     if (this.props.onChange) {
@@ -28,35 +21,33 @@ export default class extends Component {
   }
 
   minus = () => {
+    const currentValue = parseInt(this.input.current.value, 10);
     if (typeof this.props.min !== 'undefined') {
-      if (this.state.value - 1 >= this.props.min) {
-        this.setState(prev => ({
-          value: prev.value - 1,
-        }));
+      if (currentValue - 1 >= this.props.min) {
+        this.props.onChange(currentValue - 1);
+        this.input.current.value = currentValue - 1;
       }
     } else {
-      this.setState(prev => ({
-        value: prev.value - 1,
-      }));
+      this.props.onChange(currentValue - 1);
+      this.input.current.value = currentValue - 1;
     }
   }
 
   plus = () => {
+    const currentValue = parseInt(this.input.current.value, 10);
     if (typeof this.props.max !== 'undefined') {
-      if (this.state.value + 1 >= this.props.max) {
-        this.setState(prev => ({
-          value: prev.value + 1,
-        }));
+      if (currentValue + 1 >= this.props.max) {
+        this.props.onChange(currentValue + 1);
+        this.input.current.value = currentValue + 1;
       }
     } else {
-      this.setState(prev => ({
-        value: prev.value + 1,
-      }));
+      this.props.onChange(currentValue + 1);
+      this.input.current.value = currentValue + 1;
     }
   }
 
   render() {
-    const { defaultValue, ...rest } = this.props;
+    const { defaultalue, ...rest } = this.props;
     return (
       <div className={styles.container}>
         <button
@@ -68,7 +59,7 @@ export default class extends Component {
         <input
           type="number"
           ref={this.input}
-          value={this.state.value}
+          // value={this.state.value}
           {...rest}
           onChange={this.onChange}
         />

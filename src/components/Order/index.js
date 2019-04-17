@@ -1,61 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
-import { connect } from 'react-redux';
-import { cdn } from 'Root/config';
 import Layout from 'Root/shared/Layout';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import Button from 'Root/shared/Button';
-import Table from 'Root/shared/Table';
-import NumberInput from 'Root/shared/NumberInput';
 import Box from 'Root/shared/Box';
 import CustomizedInput from './CustomizedInput';
 import Steper from './Steper';
 import styles from './index.less';
-import removeIcon from './remove.png';
 import etherWhite from './ether-white.png';
 import etherBlack from './ether-black.png';
 import visaWhite from './visa-white.png';
 import visaBlack from './visa-black.png';
-
-const changeQty = id => (qty) => {
-  console.log(id, qty);
-};
-
-const removeTree = id => () => {
-  console.log('remove', id);
-};
-
-const generateData = item => [
-  <div className={styles.treeRow}>
-    <img
-      src={`${cdn}/trees/acacia.png`}
-      alt="acacia"
-    />
-    <div>
-      <p className="title">
-        {item.type} Tree
-      </p>
-      <p className="desc">
-        Via <span className="green">{item.drive}</span> in {item.region}
-      </p>
-    </div>
-  </div>,
-  <p className={styles.treeValue}>
-    ${item.price}
-  </p>,
-  <NumberInput min={1} defaultValue={item.qty} onChange={changeQty(item.id)} />,
-  <p className={styles.treeValue}>
-    ${item.price * item.qty}
-  </p>,
-  <img
-    src={removeIcon}
-    alt="remove"
-    className="removeIcon"
-    onClick={removeTree(item.id)}
-  />,
-];
+import CollectView from './CollectView';
+import Price from './Price';
 
 class Order extends Component {
   state = {
@@ -67,7 +26,7 @@ class Order extends Component {
   handlePage = () => {
     switch (this.state.current) {
       case 1: {
-        return this.collectPage();
+        return <CollectView goNext={() => { this.setState({ current: 2 }); }} />;
       }
 
       case 2: {
@@ -83,56 +42,6 @@ class Order extends Component {
       }
     }
   }
-
-  collectPage = () => (
-    <Fragment>
-      <div className={styles.treeShow}>
-        <Table
-          className={styles.table}
-          heads={[
-            'collected tree',
-            'value',
-            'qty',
-            'total',
-            '',
-          ]}
-          data={this.props.order.trees.map(generateData)}
-        />
-      </div>
-      <div className={styles.rightNextInfo}>
-        <Box className="box">
-          <img
-            src={`${cdn}/logo.png`}
-            alt="logo"
-          />
-          <p>
-            Did you know that your new trees can produce the oxygen needed for
-            <span className="green">&nbsp;50 people</span> per year over time?
-          </p>
-          <div className="divider" />
-          <p className="title">
-            Cash Total
-          </p>
-          <p className="price">
-            $173.00
-          </p>
-          <Button
-            onClick={() => {
-              this.setState({
-                current: 2,
-              });
-            }}
-          >
-            NEXT
-          </Button>
-        </Box>
-        <p>
-          By proceeding I agree to <span className="green">terms</span> and
-          <span className="green"> conditions</span>.
-        </p>
-      </div>
-    </Fragment>
-  )
 
   changeOwner = (owner) => {
     this.setState({
@@ -340,7 +249,7 @@ class Order extends Component {
           Cash Total
         </p>
         <p className="price">
-          $173.00
+          $<Price />
         </p>
         <div className="breaker" />
       </div>
@@ -370,8 +279,4 @@ class Order extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    order: state.order,
-  }),
-)(Order);
+export default Order;

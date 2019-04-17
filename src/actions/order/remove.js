@@ -3,7 +3,7 @@ import store from 'Root/store';
 
 export default (id) => {
   store.dispatch({
-    type: types.order.remove,
+    type: types.order.REMOVE,
     id,
   });
 };
