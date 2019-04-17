@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import lazy from 'Root/lazy';
 import loadReceipts from 'Root/actions/user/loadReceipts';
 import Table from 'Root/shared/Table';
@@ -10,14 +11,14 @@ const generateData = item => [
   <span className="text">
     {item.id}
   </span>,
-  <span className={classnames('text', item.status === 'pending' ? 'pending' : 'confirmed')}>
+  <span className={classnames('text', item.status === 'Pending' ? 'pending' : 'confirmed')}>
     {item.status ? 'Pending' : 'Confirmed'}
   </span>,
   <span className="text">
-    {item.date}
+    {moment(item.date).format('DD/MM/YYYY, h:m A')}
   </span>,
   <span className="value">
-    {item.payment}
+    €{item.price}
   </span>,
 ];
 

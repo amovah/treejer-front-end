@@ -27,7 +27,7 @@ const generateData = item => [
     {item.type.o2RatePerDay}
   </span>,
   <span>
-    {item.id}
+    {item.treeHashId}
   </span>,
 ];
 
@@ -99,7 +99,7 @@ const ForestView = (props) => {
       </Fragment>
     );
   }
-  console.log(props.user.trees);
+
   return (
     <Fragment>
       <Box className={styles.container}>
