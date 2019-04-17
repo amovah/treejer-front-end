@@ -32,11 +32,22 @@ class Payment extends Component {
     setMethodOrder(method);
   }
 
+  onSubmit = async () => {
+    const res = await submitOrder();
+
+    if (res === 'uninvited') {
+      console.log('kheili khari');
+      return;
+    }
+
+    console.log(res);
+  }
+
   logView = () => {
     if (!this.state.orderId) {
       return (
         <Button
-          onClick={submitOrder}
+          onClick={this.onSubmit}
         >
           SUBMIT INVOICE
         </Button>
