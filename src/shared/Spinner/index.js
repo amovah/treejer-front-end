@@ -6,7 +6,7 @@ const Spinner = props => (
   <BarLoader
     loading={props.lazy}
     color="#67b68c"
-    width={global.window.screen.width}
+    width="100%"
     height={6}
   />
 );
