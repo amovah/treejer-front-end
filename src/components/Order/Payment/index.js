@@ -44,7 +44,7 @@ class Payment extends Component {
   }
 
   logView = () => {
-    if (this.state.orderId) {
+    if (!this.state.orderId) {
       return (
         <Button
           onClick={this.onSubmit}
