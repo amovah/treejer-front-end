@@ -5,6 +5,7 @@ import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
 import Button from 'Root/shared/Button';
 import signupAction from 'Root/actions/user/signup';
+import signupReferral from 'Root/actions/user/signupReferral';
 import history from 'Root/history';
 import styles from './index.less';
 
@@ -30,13 +31,23 @@ export default class extends Component {
   }
 
   onSignUp = async () => {
-    signupAction({
-      email: this.state.email,
-      password: this.state.password,
-      firstname: this.state.firstname,
-      lastname: this.state.lastname,
-      username: this.state.username,
-    });
+    if (this.state.referral) {
+      signupReferral({
+        email: this.state.email,
+        password: this.state.password,
+        firstname: this.state.firstname,
+        lastname: this.state.lastname,
+        username: this.state.username,
+      }, this.state.referral);
+    } else {
+      signupAction({
+        email: this.state.email,
+        password: this.state.password,
+        firstname: this.state.firstname,
+        lastname: this.state.lastname,
+        username: this.state.username,
+      });
+    }
   }
 
   goToStepTwo = () => {
