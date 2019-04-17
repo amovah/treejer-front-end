@@ -44,7 +44,7 @@ class Payment extends Component {
   }
 
   logView = () => {
-    if (!this.state.orderId) {
+    if (this.state.orderId) {
       return (
         <Button
           onClick={this.onSubmit}
@@ -63,7 +63,10 @@ class Payment extends Component {
           {this.state.orderId}
         </p>
         <p className="text">
-          You can track your order using the above number.
+          your invoice has been submited, after completing the payment process send your
+          receipt
+          information including your order number to<b> support@treejer.com </b>
+          to complete your receiption.
         </p>
       </Fragment>
     );
