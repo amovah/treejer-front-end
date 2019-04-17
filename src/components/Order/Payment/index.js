@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import setMethodOrder from 'Root/actions/order/setMethod';
 import Button from 'Root/shared/Button';
+import submitOrder from 'Root/actions/order/submit';
 import CustomizedInput from './CustomizedInput';
 import styles from './index.less';
 import etherWhite from './ether-white.png';
@@ -32,9 +33,11 @@ class Payment extends Component {
   }
 
   logView = () => {
-    if (!this.props.user.logged) {
+    if (!this.state.orderId) {
       return (
-        <Button>
+        <Button
+          onClick={submitOrder}
+        >
           SUBMIT INVOICE
         </Button>
       );
