@@ -1,53 +1,34 @@
 import React from 'react';
 import classnames from 'classnames';
+import { connect } from 'react-redux';
+import lazy from 'Root/lazy';
+import loadReceipts from 'Root/actions/receipts/load';
 import Table from 'Root/shared/Table';
 import styles from './index.less';
 
-const sampleData = [
-  [
-    <span className="text">
-      #123456789
-    </span>,
-    <span className={classnames('text', 'pending')}>
-      Pending
-    </span>,
-    <span className="text">
-      22/12/2017, 6:39 PM
-    </span>,
-    <span className="value">
-      $170.00
-    </span>,
-  ],
-  [
-    <span className="text">
-      #123456789
-    </span>,
-    <span className={classnames('text', 'confirmed')}>
-      Confirmed
-    </span>,
-    <span className="text">
-      22/12/2017, 6:39 PM
-    </span>,
-    <span className="value">
-      $170.00
-    </span>,
-  ],
+const generateData = item => [
+  <span className="text">
+    {item.id}
+  </span>,
+  <span className={classnames('text', item.status === 'pending' ? 'pending' : 'confirmed')}>
+    {item.status ? 'Pending' : 'Confirmed'}
+  </span>,
+  <span className="text">
+    {item.date}
+  </span>,
+  <span className="value">
+    {item.payment}
+  </span>,
 ];
 
-const data = [];
-
-for (let i = 0; i < 10; i = i + 1) {
-  data.push(...sampleData);
-}
-
-export default () => (
+const PaymentHistory = props => (
   <div className={styles.container}>
     <p className="title">
       Payment History
     </p>
     <div className="tableContainer">
       <Table
-        data={data}
+        data={props.receipts.map(generateData)}
         heads={['Order', 'Status', 'Date/Time', 'Payment']}
         className={styles.table}
       />
@@ -58,4 +39,12 @@ export default () => (
       forest.
     </p>
   </div>
+);
+
+export default lazy(loadReceipts)(
+  connect(
+    state => ({
+      receipts: state.receipts,
+    }),
+  )(PaymentHistory),
 );

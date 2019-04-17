@@ -7,6 +7,7 @@ export default () => {
       type: types.user.LOGIN,
       data: {
         token: global.localStorage.token,
+        id: global.localStorage.userId,
       },
     });
   }

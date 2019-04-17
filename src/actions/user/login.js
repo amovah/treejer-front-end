@@ -33,6 +33,7 @@ export default async (credentials) => {
   // });
 
   global.localStorage.token = res.data.id;
+  global.localStorage.userId = res.data.userId;
 
   history.push('/planet');
 };
