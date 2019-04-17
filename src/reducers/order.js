@@ -3,16 +3,16 @@ import types from 'Root/actions';
 export default (state = { count: 0, trees: [] }, action) => {
   switch (action.type) {
     case types.order.ADD: {
-      const treeIndex = state.trees.findIndex(i => i.id === action.tree.id);
+      const index = state.trees.findIndex(i => i.id === action.tree.id);
       const trees = [
-        ...state.trees.slice(0, treeIndex),
-        ...state.trees.slice(treeIndex + 1),
+        ...state.trees.slice(0, index),
+        ...state.trees.slice(index + 1),
       ];
 
-      if (treeIndex > -1) {
+      if (index > -1) {
         trees.push({
-          ...state.trees[treeIndex],
-          qty: state.trees[treeIndex].qty + 1,
+          ...state.trees[index],
+          qty: state.trees[index].qty + 1,
         });
       } else {
         trees.push({
@@ -24,6 +24,36 @@ export default (state = { count: 0, trees: [] }, action) => {
       return {
         count: state.count + 1,
         trees,
+      };
+    }
+
+    case types.order.REMOVE: {
+      const index = state.trees.findIndex(i => i.id === action.id);
+      const count = state.count - state.trees[index].qty;
+
+      return {
+        count,
+        trees: [
+          ...state.trees.slice(0, index),
+          ...state.trees.slice(index + 1),
+        ],
+      };
+    }
+
+    case types.order.CHANGE_QTY: {
+      const index = state.trees.findIndex(i => i.id === action.id);
+      const count = state.count + (action.qty - state.trees[index].count);
+
+      return {
+        count,
+        trees: [
+          ...state.trees.slice(0, index),
+          {
+            ...state.trees[index],
+            qty: action.qty,
+          },
+          ...state.trees.slice(index + 1),
+        ],
       };
     }
 

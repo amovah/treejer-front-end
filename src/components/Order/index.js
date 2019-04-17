@@ -19,6 +19,14 @@ import etherBlack from './ether-black.png';
 import visaWhite from './visa-white.png';
 import visaBlack from './visa-black.png';
 
+const changeQty = id => (qty) => {
+  console.log(id, qty);
+};
+
+const removeTree = id => () => {
+  console.log('remove', id);
+};
+
 const generateData = item => [
   <div className={styles.treeRow}>
     <img
@@ -37,13 +45,15 @@ const generateData = item => [
   <p className={styles.treeValue}>
     ${item.price}
   </p>,
-  <NumberInput min={1} defaultValue={item.qty} />,
+  <NumberInput min={1} defaultValue={item.qty} onChange={changeQty(item.id)} />,
   <p className={styles.treeValue}>
     ${item.price * item.qty}
   </p>,
   <img
     src={removeIcon}
     alt="remove"
+    className="removeIcon"
+    onClick={removeTree(item.id)}
   />,
 ];
 

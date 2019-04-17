@@ -18,5 +18,7 @@ export default {
   },
   order: {
     ADD: 'order/ADD',
+    CHANGE_QTY: 'order/CHANGE_QTY',
+    REMOVE: 'order/REMOVE',
   },
 };
