@@ -20,5 +20,7 @@ export default {
     ADD: 'order/ADD',
     CHANGE_QTY: 'order/CHANGE_QTY',
     REMOVE: 'order/REMOVE',
+    SET_OWNER: 'order/SET_OWNER',
+    SET_METHOD: 'order/SET_METHOD',
   },
 };
