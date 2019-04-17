@@ -17,15 +17,13 @@ export default class extends Component {
   };
 
   onSignUp = async () => {
-    const res = await signupAction({
+    signupAction({
       email: this.state.email,
       password: this.state.password,
       firstname: this.state.firstname,
       lastname: this.state.lastname,
       username: this.state.username,
     });
-
-    console.log(res);
   }
 
   goToStepTwo = () => {
