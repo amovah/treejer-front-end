@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import claimOnAction from 'Root/actions/claim/on';
 import Box from 'Root/shared/Box';
@@ -8,7 +8,11 @@ import history from 'Root/history';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
 
-class VouchView extends PureComponent {
+class VouchView extends Component {
+  state = {
+    code: '',
+  }
+
   collect = () => {
     if (!this.props.user.logged) {
       history.push('/sign-in');
@@ -31,12 +35,17 @@ class VouchView extends PureComponent {
         </p>
         <input
           placeholder="Voucher Code"
+          onChange={(e) => {
+            this.setState({
+              code: e.target.value,
+            });
+          }}
         />
         <Button
           style={{
             width: '100%',
           }}
-          onClick={claimOnAction}
+          onClick={() => { claimOnAction(this.state.code); }}
         >
           SUBMIT
         </Button>
