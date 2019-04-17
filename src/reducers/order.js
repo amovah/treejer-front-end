@@ -3,7 +3,7 @@ import types from 'Root/actions';
 export default (state = { count: 0, trees: [] }, action) => {
   switch (action.type) {
     case types.order.ADD: {
-      const treeIndex = state.trees.findIndex(i => i.name === action.tree.name);
+      const treeIndex = state.trees.findIndex(i => i.id === action.tree.id);
       const trees = [
         ...state.trees.slice(0, treeIndex),
         ...state.trees.slice(treeIndex + 1),
