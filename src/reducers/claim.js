@@ -9,9 +9,13 @@ export default (state = defaults, action) => {
   switch (action.type) {
     case types.claim.ON: {
       return {
-        ...state,
         status: true,
+        trees: action.trees,
       };
+    }
+
+    case types.claim.OFF: {
+      return defaults;
     }
 
     default: {

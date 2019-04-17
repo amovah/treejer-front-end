@@ -12,6 +12,7 @@ export default {
   },
   claim: {
     ON: 'claim/ON',
+    OFF: 'claim/OFF',
   },
   trees: {
     LOAD: 'trees/LOAD',

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import claimOnAction from 'Root/actions/claim/on';
+import { generate } from 'shortid';
+import validateClaim from 'Root/actions/claim/validate';
 import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
 import { cdn } from 'Root/config';
@@ -45,7 +46,7 @@ class VouchView extends Component {
           style={{
             width: '100%',
           }}
-          onClick={() => { claimOnAction(this.state.code); }}
+          onClick={() => { validateClaim(this.state.code); }}
         >
           SUBMIT
         </Button>
@@ -76,9 +77,19 @@ class VouchView extends Component {
       </div>
       <div className="divider" />
       <div className="right">
-        <TreeBox withoutButton />
-        <TreeBox withoutButton />
-        <TreeBox withoutButton />
+        {
+          this.props.claim.trees.map(i => (
+            <TreeBox
+              name={i.type}
+              region={i.region}
+              price={i.price}
+              rate={i.o2RatePerDay}
+              drive={i.drive}
+              key={generate()}
+              withoutButton
+            />
+          ))
+        }
       </div>
     </Box>
   )
