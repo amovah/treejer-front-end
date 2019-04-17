@@ -37,7 +37,7 @@ export default props => (
               contact
             </Link>
             <Link
-              to="/become-a-planter"
+              to="/planet"
               className="unique"
             >
               become a planter
