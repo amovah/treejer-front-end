@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
 import addSign from './add.png';
@@ -39,7 +40,11 @@ const UserDetails = (props) => {
             </p>
             <div className="divider" />
             <p className="value">
-              45,644
+              {props.user.trees.map((i) => {
+                const start = moment(i.createDate);
+                const end = moment();
+                return Math.floor(moment.duration(end.diff(start)).as('days'));
+              }).reduce((a, b) => a + b, 0)}
             </p>
             <p className="desc">
               <b>
