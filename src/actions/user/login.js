@@ -19,9 +19,16 @@ export default async (credentials) => {
       username: 'AliTheGreat',
       name: 'Ali Movahedi',
       invited: false,
-      trees: false,
       token: res.data.id,
-      id: res.data.id,
+      id: res.data.userId,
+    },
+  });
+
+  const trees = await fetch(`/clients/${res.data.userId}/trees`);
+  store.dispatch({
+    type: types.user.CHANGE,
+    toChange: {
+      trees: trees.data,
     },
   });
 

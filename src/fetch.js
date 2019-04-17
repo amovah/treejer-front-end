@@ -2,7 +2,7 @@ import qs from 'querystring';
 import { url as serverURL } from 'Root/config';
 import store from 'Root/store';
 
-export default async (url, options, token = true, query = {}) => {
+export default async (url, options = {}, token = true, query = {}) => {
   try {
     const toQS = {
       ...query,
@@ -16,14 +16,13 @@ export default async (url, options, token = true, query = {}) => {
     let modifiedUrl = `${serverURL}${url}`;
     let next = '?';
     if (qsified) {
-      modifiedUrl = `${url}?${qsified}`;
+      modifiedUrl = `${serverURL}${url}?${qsified}`;
       next = '&';
     }
 
     if (options.filter) {
       modifiedUrl = `${modifiedUrl}${next}filter=${JSON.stringify(options.filter)}`;
     }
-
 
     const res = await global.fetch(modifiedUrl, {
       headers: {

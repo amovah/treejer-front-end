@@ -17,6 +17,13 @@ export default (state = { logged: false }, action) => {
       };
     }
 
+    case types.user.CHANGE: {
+      return {
+        ...state,
+        ...action.toChange,
+      };
+    }
+
     default: {
       return state;
     }
