@@ -4,6 +4,7 @@ import modal from './modal';
 import claim from './claim';
 import trees from './trees';
 import order from './order';
+import redirect from './redirect';
 
 export default combineReducers({
   user,
@@ -11,4 +12,5 @@ export default combineReducers({
   claim,
   trees,
   order,
+  redirect,
 });
