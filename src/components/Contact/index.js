@@ -5,12 +5,13 @@ import Socials from 'Root/shared/Socials';
 import Input from 'Root/shared/Input';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
+import fetch from 'Root/fetch';
 import styles from './index.less';
 
 export default class extends Component {
   state = {
-    firstName: '',
-    lastName: '',
+    firstname: '',
+    lastname: '',
     username: '',
     email: '',
     message: '',
@@ -20,6 +21,17 @@ export default class extends Component {
     this.setState({
       [stateName]: e.target.value,
     });
+  }
+
+  sendMessage = async () => {
+    const res = await fetch('/comments', {
+      method: 'POST',
+      body: JSON.stringify(
+        this.state,
+      ),
+    }, false);
+
+    console.log(res);
   }
 
   render() {
@@ -35,14 +47,14 @@ export default class extends Component {
             <div className="row">
               <Input
                 placeholder="First Name"
-                onChange={this.updateState('firstName')}
+                onChange={this.updateState('firstname')}
                 style={{
                   width: 225,
                 }}
               />
               <Input
                 placeholder="Last Name"
-                onChange={this.updateState('lastName')}
+                onChange={this.updateState('lastname')}
                 style={{
                   width: 225,
                 }}
@@ -80,6 +92,7 @@ export default class extends Component {
             <button
               type="button"
               className="button"
+              onClick={this.sendMessage}
             >
               Submit
             </button>
