@@ -4,9 +4,14 @@ import { connect } from 'react-redux';
 
 const Spinner = props => (
   <BarLoader
+    css={{
+      position: 'fixed !important',
+      top: '0',
+      zIndex: 10000000,
+      width: '100% !important',
+    }}
     loading={props.lazy}
     color="#67b68c"
-    width="100%"
     height={6}
   />
 );
