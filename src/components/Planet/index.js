@@ -6,9 +6,10 @@ import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
 import { cdn } from 'Root/config';
 import lazy from 'Root/lazy';
-import loadTrees from 'Root/actions/user/loadTrees';
+import loadUserTrees from 'Root/actions/user/loadTrees';
+import loadTrees from 'Root/actions/trees/load';
 import styles from './index.less';
-import TreeBox from './TreeBox';
+import Trees from './Trees';
 import SeedBox from './SeedBox';
 import PadDivider from './PadDivider';
 import VouchView from './VouchView';
@@ -48,20 +49,9 @@ const Planet = () => (
       </p>
     </Box>
 
-
     <WaitWarning />
 
-    <div className={styles.addToTree}>
-      <p className="title">
-        Add A Tree to Your Forest
-      </p>
-      <div className="boxes">
-        <TreeBox />
-        <TreeBox />
-        <TreeBox />
-        <TreeBox />
-      </div>
-    </div>
+    <Trees />
 
     <PadDivider gap={150} />
 
@@ -91,4 +81,7 @@ const Planet = () => (
   </Layout>
 );
 
-export default lazy(loadTrees)(Planet);
+export default lazy(async () => {
+  const funcs = [loadUserTrees(), loadTrees()];
+  await Promise.all(funcs);
+})(Planet);

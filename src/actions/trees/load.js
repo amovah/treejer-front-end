@@ -7,8 +7,9 @@ export default async () => {
 
   if (user.logged) {
     const res = await fetch('/trees/treeModels');
+
     store.dispatch({
-      type: types.treeModels.LOAD,
+      type: types.trees.LOAD,
       trees: res.data,
     });
   }

@@ -1,0 +1,23 @@
+@import '~Root/styles/mixins';
+
+:local(.addToTree) {
+  > .title {
+    font-size: 48px;
+    letter-spacing: 2.4px;
+    line-height: 54px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  > .boxes {
+    .inARow();
+
+    > * {
+      margin-right: 90px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
