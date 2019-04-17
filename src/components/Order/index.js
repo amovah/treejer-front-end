@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import Layout from 'Root/shared/Layout';
@@ -6,20 +6,14 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import Button from 'Root/shared/Button';
 import Box from 'Root/shared/Box';
-import CustomizedInput from './CustomizedInput';
 import Steper from './Steper';
 import styles from './index.less';
-import etherWhite from './ether-white.png';
-import etherBlack from './ether-black.png';
-import visaWhite from './visa-white.png';
-import visaBlack from './visa-black.png';
 import CollectView from './CollectView';
-import Price from './Price';
+import Payment from './Payment';
 
 class Order extends Component {
   state = {
     current: 1,
-    paymentMethod: 'credit',
     chosenOwner: 0,
   };
 
@@ -34,7 +28,7 @@ class Order extends Component {
       }
 
       case 3: {
-        return this.creditPage();
+        return <Payment />;
       }
 
       default: {
@@ -124,137 +118,6 @@ class Order extends Component {
     </div>
   )
 
-  paymentMethodView = () => {
-    if (this.state.paymentMethod === 'credit') {
-      return (
-        <Fragment>
-          <p className="pay">
-            Please pay for the invoice online via the following link:
-          </p>
-          <CustomizedInput
-            type="text"
-            readOnly
-            value="https://treejer.paymentgateway.com"
-            style={{
-              textAlign: 'center',
-            }}
-          />
-          <p className="text">
-            Your order number is:
-          </p>
-          <p className="orderId">
-            #123456789
-          </p>
-          <p className="text">
-            You can track your order using the above number.
-          </p>
-        </Fragment>
-      );
-    }
-
-    return (
-      <Fragment>
-        <p className="pay">
-          Please pay for the invoice online via the following Ethereum address:
-        </p>
-        <CustomizedInput
-          type="text"
-          readOnly
-          value="0x2238C6F75DefFAd03f61537Ce40c434a7c23a7a2"
-          style={{
-            textAlign: 'center',
-          }}
-        />
-        <p className="text">
-          Your order number is:
-        </p>
-        <p className="orderId">
-          #123456789
-        </p>
-        <p className="text">
-          You can track your order using the above number.
-        </p>
-      </Fragment>
-    );
-  }
-
-  creditPage = () => (
-    <div className={styles.credit}>
-      <div className="help">
-        <p>
-          Need Help?
-        </p>
-        <p>
-          support@treejer.com
-        </p>
-      </div>
-      <div className="selectCredit">
-        <div className="credits">
-          <div
-            className={classnames('card', this.state.paymentMethod === 'credit' && 'active')}
-            onClick={() => {
-              this.setState({ paymentMethod: 'credit' });
-            }}
-          >
-            {
-              this.state.paymentMethod === 'credit'
-                ? (
-                  <img
-                    src={visaWhite}
-                    alt="visa"
-                  />
-                )
-                : (
-                  <img
-                    src={visaBlack}
-                    alt="visa"
-                  />
-                )
-            }
-            <p style={{ marginTop: 23 }}>
-              Credit Card
-            </p>
-          </div>
-          <div
-            className={classnames('card', this.state.paymentMethod === 'ether' && 'active')}
-            onClick={() => {
-              this.setState({ paymentMethod: 'ether' });
-            }}
-          >
-            {
-              this.state.paymentMethod === 'ether'
-                ? (
-                  <img
-                    src={etherWhite}
-                    alt="ether"
-                  />
-                )
-                : (
-                  <img
-                    src={etherBlack}
-                    alt="ether"
-                  />
-                )
-            }
-            <p>
-              Etherium
-            </p>
-          </div>
-        </div>
-        {this.paymentMethodView()}
-      </div>
-      <div className="total">
-        <div className="breaker" />
-        <p className="title">
-          Cash Total
-        </p>
-        <p className="price">
-          $<Price />
-        </p>
-        <div className="breaker" />
-      </div>
-    </div>
-  )
 
   render() {
     return (
