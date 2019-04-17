@@ -1,9 +1,13 @@
 import qs from 'querystring';
 import { url as serverURL } from 'Root/config';
 import store from 'Root/store';
+import lazyOn from 'Root/actions/lazy/on';
+import lazyOff from 'Root/actions/lazy/off';
 
 export default async (url, options = {}, token = true, query = {}) => {
   try {
+    lazyOn();
+
     const toQS = {
       ...query,
     };
@@ -32,11 +36,14 @@ export default async (url, options = {}, token = true, query = {}) => {
       ...options,
     });
 
+    lazyOff();
+
     return {
       res,
       data: await res.json(),
     };
   } catch (e) {
+    lazyOff();
     throw Error('url not found');
   }
 };
