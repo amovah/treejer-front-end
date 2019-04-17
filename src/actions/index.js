@@ -11,4 +11,10 @@ export default {
   claim: {
     ON: 'claim/ON',
   },
+  trees: {
+    LOAD: 'trees/LOAD',
+  },
+  receipts: {
+    LOAD: 'reciepts/LOAD',
+  },
 };

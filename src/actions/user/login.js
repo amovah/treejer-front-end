@@ -24,13 +24,13 @@ export default async (credentials) => {
     },
   });
 
-  const trees = await fetch(`/clients/${res.data.userId}/trees`);
-  store.dispatch({
-    type: types.user.CHANGE,
-    toChange: {
-      trees: trees.data,
-    },
-  });
+  // const trees = await fetch(`/clients/${res.data.userId}/trees`);
+  // store.dispatch({
+  //   type: types.user.CHANGE,
+  //   toChange: {
+  //     trees: trees.data,
+  //   },
+  // });
 
   global.localStorage.token = res.data.id;
 
