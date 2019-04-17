@@ -6,6 +6,7 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import Button from 'Root/shared/Button';
 import Box from 'Root/shared/Box';
+import setOwner from 'Root/actions/order/setOwner';
 import Steper from './Steper';
 import styles from './index.less';
 import CollectView from './CollectView';
@@ -38,6 +39,14 @@ class Order extends Component {
   }
 
   changeOwner = (owner) => {
+    if (owner === 0) {
+      setOwner('personalForest');
+    } else if (owner === 1) {
+      setOwner('giftToFriend');
+    } else {
+      setOwner('bussiness');
+    }
+
     this.setState({
       chosenOwner: owner,
     });
