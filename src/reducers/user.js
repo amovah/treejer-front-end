@@ -24,6 +24,20 @@ export default (state = { logged: false }, action) => {
       };
     }
 
+    case types.user.LOAD_RECEIPTS: {
+      return {
+        ...state,
+        receipts: action.receipts,
+      };
+    }
+
+    case types.user.LOAD_TREES: {
+      return {
+        ...state,
+        trees: action.trees,
+      };
+    }
+
     default: {
       return state;
     }

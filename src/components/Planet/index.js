@@ -6,7 +6,7 @@ import Footer from 'Root/shared/Footer';
 import Box from 'Root/shared/Box';
 import { cdn } from 'Root/config';
 import lazy from 'Root/lazy';
-import loadTrees from 'Root/actions/trees/load';
+import loadTrees from 'Root/actions/user/loadTrees';
 import styles from './index.less';
 import TreeBox from './TreeBox';
 import SeedBox from './SeedBox';

@@ -3,6 +3,8 @@ export default {
     LOGIN: 'user/LOGIN',
     LOGOUT: 'user/LOGOUT',
     CHANGE: 'user/CHANGE',
+    LOAD_TREES: 'user/LOAD_TREES',
+    LOAD_RECEIPTS: 'user/LOAD_RECEIPTS',
   },
   modal: {
     OPEN: 'modal/OPEN',
@@ -13,12 +15,6 @@ export default {
   },
   trees: {
     LOAD: 'trees/LOAD',
-  },
-  receipts: {
-    LOAD: 'reciepts/LOAD',
-  },
-  treeModels: {
-    LOAD: 'treeModels/LOAD',
   },
   order: {
     ADD: 'order/ADD',

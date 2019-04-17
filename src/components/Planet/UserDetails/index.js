@@ -32,7 +32,7 @@ const UserDetails = (props) => {
           </p>
           <div className="provide">
             <p className="value">
-              483
+              {props.user.trees.length}
             </p>
             <p className="desc">
               TREES

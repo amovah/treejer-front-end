@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import lazy from 'Root/lazy';
-import loadReceipts from 'Root/actions/receipts/load';
+import loadReceipts from 'Root/actions/user/loadReceipts';
 import Table from 'Root/shared/Table';
 import styles from './index.less';
 
