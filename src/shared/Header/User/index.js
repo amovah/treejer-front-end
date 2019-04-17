@@ -6,6 +6,7 @@ import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
 import logout from 'Root/actions/user/logout';
 import openModal from 'Root/actions/modal/open';
+import history from 'Root/history';
 import styles from './index.less';
 import PaymentHistory from './PaymentHistory';
 
@@ -57,7 +58,10 @@ class User extends Component {
         && (
           <Fragment>
             <div className={styles.divider} />
-            <div className={styles.badge}>
+            <div
+              className={styles.badge}
+              onClick={() => history.push('/order')}
+            >
               <img
                 src={`${cdn}/trees/badge.png`}
                 alt="badge"
