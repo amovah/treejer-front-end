@@ -5,7 +5,7 @@ import PadDivider from '../PadDivider';
 import styles from './index.less';
 
 const WaitWarning = (props) => {
-  if (props.user.logged && !props.user.invited) {
+  if (props.user.logged && props.user.status === 'WaitList') {
     return (
       <Fragment>
         <PadDivider gap={50} />

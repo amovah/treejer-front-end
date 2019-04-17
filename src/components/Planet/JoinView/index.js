@@ -41,7 +41,7 @@ const JoinView = (props) => {
     );
   }
 
-  if (props.user.logged && !props.user.invited) {
+  if (props.user.status === 'WaitList') {
     return <PadDivider gap={150} />;
   }
 

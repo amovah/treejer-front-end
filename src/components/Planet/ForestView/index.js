@@ -50,7 +50,7 @@ const ForestView = (props) => {
     return null;
   }
 
-  if (!props.user.invited) {
+  if (props.user.status === 'WaitList') {
     return (
       <Box className={styles.container}>
         <p className="title">
