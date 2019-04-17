@@ -2,13 +2,17 @@
 
 :local(.credit) {
   .inARow();
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: 0 200px;
   box-sizing: border-box;
 
   > .help {
     width: 270px;
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
 
     p {
       text-align: center;
@@ -93,6 +97,8 @@
   > .total {
     width: 270px;
     text-align: center;
+    position: absolute;
+    right: 150px;
 
     p {
       color: #52575d;
