@@ -25,7 +25,7 @@ const UserDetails = (props) => {
             </span>
           </div>
           <p className="name">
-            {props.user.name}
+            {props.user.firstname} {props.user.lastname}
           </p>
           <p className="username">
             {props.user.username}

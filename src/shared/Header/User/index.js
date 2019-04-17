@@ -22,7 +22,7 @@ class User extends Component {
   loggedView = () => (
     <div>
       <p className={styles.userName}>
-        Hello {this.props.user.name}!
+        Hello {this.props.user.firstname}!
       </p>
       <div className={styles.divider} />
       <div className={styles.container}>
