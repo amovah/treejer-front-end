@@ -53,6 +53,7 @@ export default props => (
         <button
           type="button"
           className="btn"
+          onClick={props.onClick}
         >
           Add to Forest
         </button>

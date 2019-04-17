@@ -1,8 +1,13 @@
 import React from 'react';
 import { generate } from 'shortid';
 import { connect } from 'react-redux';
+import add from 'Root/actions/order/add';
 import styles from './index.less';
 import TreeBox from '../TreeBox';
+
+const addToBasket = tree => () => {
+  add(tree);
+};
 
 const Trees = props => (
   <div className={styles.addToTree}>
@@ -19,6 +24,7 @@ const Trees = props => (
             rate={i.o2RatePerDay}
             drive={i.drive}
             key={generate()}
+            onClick={addToBasket(i)}
           />
         ))
       }
