@@ -1,13 +1,14 @@
 import qs from 'querystring';
 import { url as serverURL } from 'Root/config';
+import store from 'Root/store';
 
-export default async (url, options, token = null, query = {}) => {
+export default async (url, options, token = true, query = {}) => {
   try {
     const toQS = {
       ...query,
     };
     if (token) {
-      toQS.access_token = token;
+      toQS.access_token = store.getState().user.token;
     }
 
     const qsified = qs.stringify(toQS);

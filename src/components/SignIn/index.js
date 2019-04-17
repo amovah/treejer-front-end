@@ -11,20 +11,33 @@ import styles from './index.less';
 export default class extends Component {
   state = {
     showWarning: false,
+    password: '',
+    email: '',
   }
 
-  onSignIn = () => {
-    this.setState({
-      showWarning: true,
-    });
-
-    setTimeout(() => {
+  onSignIn = async () => {
+    try {
+      await login({
+        email: this.state.email,
+        password: this.state.password,
+      });
+    } catch (e) {
       this.setState({
-        showWarning: false,
+        showWarning: true,
       });
 
-      login();
-    }, 2000);
+      setTimeout(() => {
+        this.setState({
+          showWarning: false,
+        });
+      }, 2000);
+    }
+  }
+
+  updateState = stateName => (e) => {
+    this.setState({
+      [stateName]: e.target.value,
+    });
   }
 
   render() {
@@ -59,6 +72,7 @@ export default class extends Component {
               width: '100%',
               marginBottom: 30,
             }}
+            onChange={this.updateState('email')}
           />
           <Input
             placeholder="Password"
@@ -67,6 +81,7 @@ export default class extends Component {
               width: '100%',
               marginBottom: 30,
             }}
+            onChange={this.updateState('password')}
           />
           <Button
             onClick={this.onSignIn}

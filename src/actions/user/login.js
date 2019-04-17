@@ -1,9 +1,18 @@
 import types from 'Root/actions';
 import store from 'Root/store';
 import history from 'Root/history';
-import clearRedirect from 'Root/actions/redirect/clear';
+import fetch from 'Root/fetch';
 
-export default () => {
+export default async (credentials) => {
+  const res = await fetch('/clients/login', {
+    method: 'POST',
+    body: JSON.stringify(credentials),
+  }, false);
+
+  if (res.data.error) {
+    throw new Error();
+  }
+
   store.dispatch({
     type: types.user.LOGIN,
     data: {
@@ -11,12 +20,11 @@ export default () => {
       name: 'Ali Movahedi',
       invited: false,
       trees: false,
+      token: res.data.id,
     },
   });
 
-  const redirectURL = store.getState().redirect;
-  if (redirectURL) {
-    history.push(redirectURL);
-    clearRedirect();
-  }
+  global.localStorage.token = res.data.id;
+
+  history.push('/planet');
 };

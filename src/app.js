@@ -1,12 +1,17 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
+import relogin from 'Root/actions/user/relogin';
 import Treejer from './Treejer';
 
-render(
-  <Treejer />,
-  global.document.getElementById('root'),
-);
+(async () => {
+  await relogin();
+
+  render(
+    <Treejer />,
+    global.document.getElementById('root'),
+  );
+})();
 
 if (module.hot) {
   module.hot.accept();
