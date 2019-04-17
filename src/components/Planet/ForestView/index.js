@@ -8,7 +8,7 @@ import PadDivider from '../PadDivider';
 const generateData = item => [
   <span>
     <b>
-      {item.tree}
+      {item.type.type}
     </b>
   </span>,
   <span>
@@ -24,7 +24,7 @@ const generateData = item => [
     {item.ranger}
   </span>,
   <span>
-    {item.o2}
+    {item.type.o2RatePerDay}
   </span>,
   <span>
     {item.id}
@@ -34,13 +34,15 @@ const generateData = item => [
 const sampleData = [];
 for (let i = 0; i < 20; i = i + 1) {
   sampleData.push(generateData({
-    tree: 'Acacia Tree',
     status: 'Pending Payment',
     planter: 'Gulf Green',
     convserver: 'Gulf Green',
     ranger: 'Gulf Green',
-    o2: '15',
     id: '#4124124214',
+    type: {
+      type: 'Acacia',
+      o2RatePerDay: 15,
+    },
   }));
 }
 const heads = ['collected tree', 'status', 'planter', 'conserver', 'ranger', 'o2/day', 'tree id'];
@@ -97,7 +99,7 @@ const ForestView = (props) => {
       </Fragment>
     );
   }
-
+  console.log(props.user.trees);
   return (
     <Fragment>
       <Box className={styles.container}>
