@@ -3,18 +3,27 @@ import styles from './index.less';
 
 export default class extends Component {
   state = {
-    value: this.props.value || 0,
+    value: this.props.value || this.props.min || 0,
   }
 
   input = React.createRef();
 
   onChange = (e) => {
-    const value = e.target.value || 0;
+    let value = parseInt(e.target.value, 10) || this.props.min || 0;
+    if (this.props.min && value < this.props.min) {
+      value = this.props.min;
+    }
+    if (this.props.max && value > this.props.max) {
+      value = this.props.max;
+    }
+
     this.setState({
       value,
     });
 
-    this.props.onChange(value);
+    if (this.props.onChange) {
+      this.props.onChange(value);
+    }
   }
 
   minus = () => {

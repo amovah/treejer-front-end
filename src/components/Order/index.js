@@ -37,7 +37,7 @@ const stepOneData = [
     <p className={styles.treeValue}>
       $17
     </p>,
-    <NumberInput min={0} />,
+    <NumberInput min={1} />,
     <p className={styles.treeValue}>
       $170
     </p>,
