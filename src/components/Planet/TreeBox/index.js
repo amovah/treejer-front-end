@@ -14,10 +14,10 @@ export default props => (
     </div>
     <div className="padding" />
     <p className="title">
-      Acacia Tree
+      {props.name} Tree
     </p>
     <p className="detail">
-      Via <span>Gulf Green</span> in Oman
+      Via <span>{props.drive}</span> in {props.region}
     </p>
     <div className="details">
       <div className="detail">
@@ -34,7 +34,7 @@ export default props => (
           O2 Rate
         </p>
         <p className="info">
-          35<span>/Day</span>
+          {props.rate}<span>/Day</span>
         </p>
       </div>
       <div className="divider" />
@@ -43,7 +43,7 @@ export default props => (
           Value
         </p>
         <p className="info">
-          $12
+          ${props.price}
         </p>
       </div>
     </div>
