@@ -23,4 +23,8 @@ export default {
     SET_OWNER: 'order/SET_OWNER',
     SET_METHOD: 'order/SET_METHOD',
   },
+  redirect: {
+    SET: 'redirect/SET',
+    CLEAR: 'redirect/CLEAR',
+  },
 };
