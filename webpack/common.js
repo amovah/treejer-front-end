@@ -28,6 +28,7 @@ const devMode = process.env.NODE_ENV !== 'production';
           ],
           plugins: [
             '@babel/plugin-proposal-class-properties',
+            'emotion',
           ],
         }
       }, {
