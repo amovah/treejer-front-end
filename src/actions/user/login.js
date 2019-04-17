@@ -21,6 +21,7 @@ export default async (credentials) => {
       invited: false,
       trees: false,
       token: res.data.id,
+      id: res.data.id,
     },
   });
 
