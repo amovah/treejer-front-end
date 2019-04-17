@@ -1,9 +1,9 @@
 import types from 'Root/actions';
 import store from 'Root/store';
 
-export default (owner) => {
+export default (method) => {
   store.dispatch({
     type: types.order.SET_METHOD,
-    owner,
+    method,
   });
 };

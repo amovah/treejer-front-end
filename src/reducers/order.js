@@ -67,7 +67,7 @@ export default (state = { count: 0, trees: [] }, action) => {
     case types.order.SET_METHOD: {
       return {
         ...state,
-        owner: action.method,
+        method: action.method,
       };
     }
 

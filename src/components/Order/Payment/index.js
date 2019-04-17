@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
+import setMethodOrder from 'Root/actions/order/setMethod';
 import CustomizedInput from './CustomizedInput';
 import styles from './index.less';
 import etherWhite from './ether-white.png';
@@ -12,11 +13,25 @@ import Price from './Price';
 class Payment extends Component {
   state = {
     orderId: null,
-    paymentMethod: 'credit',
+    paymentMethod: 'fiat',
+  }
+
+  componentDidMount() {
+    setMethodOrder('fiat');
+    this.setState({
+      paymentMethod: 'fiat',
+    });
+  }
+
+  changeMethod = method => () => {
+    this.setState({
+      paymentMethod: method,
+    });
+    setMethodOrder(method);
   }
 
   paymentMethodView = () => {
-    if (this.state.paymentMethod === 'credit') {
+    if (this.state.paymentMethod === 'fiat') {
       return (
         <Fragment>
           <p className="pay">
@@ -83,13 +98,11 @@ class Payment extends Component {
         <div className="selectCredit">
           <div className="credits">
             <div
-              className={classnames('card', this.state.paymentMethod === 'credit' && 'active')}
-              onClick={() => {
-                this.setState({ paymentMethod: 'credit' });
-              }}
+              className={classnames('card', this.state.paymentMethod === 'fiat' && 'active')}
+              onClick={this.changeMethod('fiat')}
             >
               {
-                this.state.paymentMethod === 'credit'
+                this.state.paymentMethod === 'fiat'
                   ? (
                     <img
                       src={visaWhite}
@@ -108,13 +121,11 @@ class Payment extends Component {
               </p>
             </div>
             <div
-              className={classnames('card', this.state.paymentMethod === 'ether' && 'active')}
-              onClick={() => {
-                this.setState({ paymentMethod: 'ether' });
-              }}
+              className={classnames('card', this.state.paymentMethod === 'ethereum' && 'active')}
+              onClick={this.changeMethod('ethereum')}
             >
               {
-                this.state.paymentMethod === 'ether'
+                this.state.paymentMethod === 'ethereum'
                   ? (
                     <img
                       src={etherWhite}
