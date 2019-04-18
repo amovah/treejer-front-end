@@ -19,8 +19,19 @@ export default () => (
       />
     </div>
 
-    <p>
-      a
-    </p>
+    <div className={styles.container}>
+      <p
+        className="title"
+      >
+        This Earth Day pledge to plant a tree!
+      </p>
+
+      <div className="left">
+        a
+      </div>
+      <div className="right">
+        b
+      </div>
+    </div>
   </Layout>
 );
