@@ -209,6 +209,8 @@ export default class extends Component {
             </button>
           </form>
         </div>
+
+        <div className={styles.divider} />
       </Layout>
     );
   }
