@@ -29,7 +29,9 @@ export default class extends Component {
     }
   }
 
-  onSignIn = async () => {
+  onSignIn = async (target) => {
+    target.preventDefault();
+
     try {
       if (this.state.referral) {
         loginReferral({
@@ -78,7 +80,7 @@ export default class extends Component {
             Username or Password is incorrect.
           </span>
         </div>
-        <div className={styles.container}>
+        <form className={styles.container}>
           <p className="title">
             Sign In to Treejer
           </p>
@@ -111,6 +113,7 @@ export default class extends Component {
               marginTop: 20,
               minWidth: 192,
             }}
+            type="submit"
           >
             Next
           </Button>
@@ -126,7 +129,7 @@ export default class extends Component {
               Sign Up
             </Link>
           </div>
-        </div>
+        </form>
       </SignLayout>
     );
   }
