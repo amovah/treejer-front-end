@@ -77,10 +77,6 @@ export default (state = defaults, action) => {
       return defaults;
     }
 
-    case 'a': {
-      return JSON.parse("{\"count\":4,\"trees\":[{\"type\":\"Quercus\",\"price\":100,\"region\":\"Planet\",\"drive\":\"B Site\",\"o2RatePerDay\":25,\"id\":\"treeNo2\",\"qty\":3},{\"type\":\"Populus\",\"price\":100,\"region\":\"Planet\",\"drive\":\"A Site\",\"o2RatePerDay\":15,\"id\":\"treeNo1\",\"qty\":1}]}");
-    }
-
     default: {
       return state;
     }
