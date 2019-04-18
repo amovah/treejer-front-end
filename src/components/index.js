@@ -22,7 +22,7 @@ export default () => (
     <Route path="/confirm/:code" exact component={Confirm} />
     <Route path="/order" exact component={Order} />
     <Route path="/planet" exact component={Planet} />
-    <Route path="/earth" exact component={Earth} />
+    <Route path="/earth-day-2019" exact component={Earth} />
     <Route path="/404-notfound" component={NotFound} />
   </Switch404>
 );
