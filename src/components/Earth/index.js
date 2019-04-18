@@ -39,7 +39,7 @@ export default class extends Component {
 
         <div className={styles.aboutPic}>
           <img
-            src={`${cdn}/about.png`}
+            src={`${cdn}/earthday.png`}
             alt="about"
           />
         </div>
