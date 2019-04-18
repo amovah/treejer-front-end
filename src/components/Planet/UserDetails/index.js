@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
-import addSign from './add.png';
+// import addSign from './add.png';
 import styles from './index.less';
 
 const UserDetails = (props) => {
@@ -18,12 +18,12 @@ const UserDetails = (props) => {
               src={props.user.avatar}
               alt="avatar"
             />
-            <span>
+            {/* <span>
               <img
                 src={addSign}
                 alt="add"
               />
-            </span>
+            </span> */}
           </div>
           <p className="name">
             {props.user.firstname} {props.user.lastname}
