@@ -96,9 +96,23 @@ export default () => (
       </div>
 
       <div className="right">
-        <Box
-          className="box"
-        >
+        <Box className="box">
+          <div className="left">
+            <p className="title">
+              Invitation to Planet Ecosystem
+            </p>
+            <p className="desc">
+              Get a thank you card with digital assets of Treejer and invitation to Treejer&apos;s
+              Planet Ecosystem where you can create your personal forest.
+            </p>
+          </div>
+          <div className="divider" />
+          <p className="right">
+            €10
+          </p>
+        </Box>
+
+        <Box className="box">
           <div className="left">
             <p className="title">
               A Tree Planted Under Your Name
@@ -110,7 +124,55 @@ export default () => (
           </div>
           <div className="divider" />
           <p className="right">
-            $50
+            €50
+          </p>
+        </Box>
+
+        <Box className="box">
+          <div className="left">
+            <p className="title">
+              A Custom Designed T-Shirt
+            </p>
+            <p className="desc">
+              Get an ‘Earth Ambassador’ custom designed T-shirt shipped to your address worldwide
+              + EVERYTHING ABOVE
+            </p>
+          </div>
+          <div className="divider" />
+          <p className="right">
+            €200
+          </p>
+        </Box>
+
+        <Box className="box">
+          <div className="left">
+            <p className="title">
+              Complete Ambassador Kit
+            </p>
+            <p className="desc">
+              Early crypto tokens with a tree reserved in your name. A complete Ambassador Kit
+              from Treejer + EVERYTHING ABOVE
+            </p>
+          </div>
+          <div className="divider" />
+          <p className="right">
+            €500
+          </p>
+        </Box>
+
+        <Box className="box">
+          <div className="left">
+            <p className="title">
+              A Plantation Drive in Your Name
+            </p>
+            <p className="desc">
+              Plantation credits on site with your contribution. Ambassador Kit + all above
+              benefits.
+            </p>
+          </div>
+          <div className="divider" />
+          <p className="right">
+            €1000
           </p>
         </Box>
       </div>
