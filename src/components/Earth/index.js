@@ -242,6 +242,10 @@ export default class extends Component {
         </div>
 
         <div className={styles.padder} />
+
+        <p className={styles.copy}>
+          Copyright © 2019, Treejer
+        </p>
       </Layout>
     );
   }
