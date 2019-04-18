@@ -14,10 +14,7 @@ export default (state = [], action) => {
     }
 
     case types.notifications.POP: {
-      return [
-        ...state.slice(0, 1),
-        ...state.slice(1),
-      ];
+      return state.slice(1);
     }
 
     default: {
