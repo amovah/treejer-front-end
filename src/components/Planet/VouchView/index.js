@@ -55,6 +55,14 @@ class VouchView extends Component {
     </Box>
   )
 
+  collectText = () => {
+    if (this.props.user.logged) {
+      return 'COLLECT';
+    }
+
+    return 'SIGN IN FIRST';
+  }
+
   collectView = () => (
     <Box className={styles.collectBox}>
       <div className="left">
@@ -73,7 +81,7 @@ class VouchView extends Component {
           }}
           onClick={claimAction}
         >
-          COLLECT
+          {this.collectText()}
         </Button>
       </div>
       <div className="divider" />
