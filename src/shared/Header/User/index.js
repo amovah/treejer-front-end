@@ -38,6 +38,7 @@ class User extends Component {
         <Box className={classnames('menu', this.state.show && 'active')}>
           <button
             type="button"
+            onClick={() => { history.push('/planet'); }}
           >
             Profile
           </button>
