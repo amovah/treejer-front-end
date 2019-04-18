@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import qs from 'querystring';
 import SignLayout from 'Root/shared/SignLayout';
@@ -30,7 +30,9 @@ export default class extends Component {
     }
   }
 
-  onSignUp = async () => {
+  onSignUp = async (e) => {
+    e.preventDefault();
+
     if (this.state.referral) {
       signupReferral({
         email: this.state.email,
@@ -50,7 +52,9 @@ export default class extends Component {
     }
   }
 
-  goToStepTwo = () => {
+  goToStepTwo = (e) => {
+    e.preventDefault();
+
     this.setState({
       step: 2,
     });
@@ -63,7 +67,7 @@ export default class extends Component {
   }
 
   stepOne = () => (
-    <Fragment>
+    <form>
       <Input
         placeholder="Email Address"
         style={{
@@ -90,14 +94,15 @@ export default class extends Component {
           marginTop: 20,
           minWidth: 192,
         }}
+        type="submit"
       >
         Next
       </Button>
-    </Fragment>
+    </form>
   )
 
   stepTwo = () => (
-    <Fragment>
+    <form>
       <div className="row">
         <Input
           placeholder="First Name"
@@ -137,10 +142,11 @@ export default class extends Component {
           marginTop: 20,
           minWidth: 192,
         }}
+        type="submit"
       >
         Sign Up
       </Button>
-    </Fragment>
+    </form>
   );
 
   render() {
