@@ -116,17 +116,24 @@ export default class extends Component {
               </Link>
             </p>
 
-            <div className="ill">
-              Illustration
-            </div>
-
-            <div className="button">
-              <Button
-                className="button"
-              >
-                Visit GoFundMe Campaign
-              </Button>
-            </div>
+            <Box className="box">
+              <div className="heart">
+                <img
+                  src={`${cdn}/heart.png`}
+                  alt="heart"
+                />
+              </div>
+              <p>
+                Become An Earth Ambassador!
+              </p>
+              <div className="button">
+                <Button
+                  className="button"
+                >
+                  Contribute!
+                </Button>
+              </div>
+            </Box>
           </div>
 
           <div className="right">
