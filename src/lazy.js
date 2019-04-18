@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { MoonLoader } from 'react-spinners';
+import Layout from 'Root/shared/Layout';
 
 class Lazy extends Component {
   state = {
@@ -26,7 +28,22 @@ class Lazy extends Component {
     } = this.state;
 
     if (loading) {
-      return null;
+      return (
+        <Layout>
+          <div
+            style={{
+              height: '100vh',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <MoonLoader
+              color="#67b68c"
+            />
+          </div>
+        </Layout>
+      );
     }
 
     const { SoBeIT, action, ...rest } = this.props;
