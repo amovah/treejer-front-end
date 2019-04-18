@@ -54,7 +54,7 @@ class Payment extends Component {
         <Button
           onClick={this.onSubmit}
           style={{
-            marginTop: 80,
+            marginTop: 60,
           }}
         >
           SUBMIT INVOICE
