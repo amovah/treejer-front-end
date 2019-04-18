@@ -36,11 +36,22 @@ class Lazy extends Component {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
+              flexDirection: 'column',
             }}
           >
             <MoonLoader
               color="#67b68c"
             />
+            <br />
+            <p
+              style={{
+                fontSize: 16,
+                fontWeight: 600,
+                color: '#646464',
+              }}
+            >
+              Please Wait
+            </p>
           </div>
         </Layout>
       );
