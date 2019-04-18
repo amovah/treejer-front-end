@@ -10,7 +10,7 @@ const generateData = item => [
     {item.id}
   </span>,
   <span className={classnames('text', item.status === 'Pending' ? 'pending' : 'confirmed')}>
-    {item.status ? 'Pending' : 'Confirmed'}
+    {item.status === 'Pending' ? 'Pending' : 'Successful'}
   </span>,
   <span className="text">
     {moment(item.date).format('DD/MM/YYYY, h:m A')}
