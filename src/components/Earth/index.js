@@ -22,7 +22,7 @@ export default () => (
     <p
       className={styles.title}
     >
-        This Earth Day pledge to plant a tree!
+      This Earth Day pledge to plant a tree!
     </p>
     <div className={styles.container}>
       <div className="left">
