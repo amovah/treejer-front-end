@@ -6,11 +6,29 @@ import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
 import Button from 'Root/shared/Button';
+import fetch from 'Root/fetch';
 import styles from './index.less';
 
 export default class extends Component {
   state = {
-    mail: '',
+    email: '',
+  }
+
+  changeMail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  }
+
+  subscribe = async (e) => {
+    e.preventDefault();
+
+    await fetch('/subscribes', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.email,
+      }),
+    });
   }
 
   render() {
@@ -91,7 +109,7 @@ export default class extends Component {
               inclusive and sustainable model of tree plantation.
               <br />
               <Link
-                href="/read-more"
+                to="/read-more"
                 className="link"
               >
                 READ MORE
@@ -202,10 +220,12 @@ export default class extends Component {
           </p>
           <form className="group">
             <input
+              onChange={this.changeMail}
               placeholder="email@example.com"
             />
             <button
               type="submit"
+              onClick={this.subscribe}
             >
               SUBSCRIBE
             </button>
