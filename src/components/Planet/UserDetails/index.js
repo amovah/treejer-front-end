@@ -29,7 +29,7 @@ const UserDetails = (props) => {
             {props.user.firstname} {props.user.lastname}
           </p>
           <p className="username">
-            {props.user.username}
+            @{props.user.username}
           </p>
           <div className="provide">
             <p className="value">
