@@ -152,8 +152,24 @@
 }
 
 :local(.divider) {
-  margin: 130px auto;
   width: 1381px;
   height: 0;
   border: 1px solid #707070;
+  margin: 0 auto;
+}
+
+:local(.padder) {
+  height: 130px;
+}
+
+:local(.socials) {
+  .inARow();
+
+  > * {
+    margin-right: 65px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
