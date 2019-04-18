@@ -4,15 +4,19 @@
   height: 32px;
 }
 
-.load__icon-wrap {
-  margin: auto;
-}
-
 .load {
   height: calc(100vh - 16px);
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.load p {
+  padding-top: 50px;
+  font-family: arial;
+  font-size: 1.3em;
 }
 
 @keyframes load {
@@ -22,4 +26,8 @@
   to {
     transform: rotate(360deg) scale(2);
   }
+}
+
+body {
+  background-color: #faf8f1;
 }

@@ -39,7 +39,7 @@ export default class extends Component {
 
         <div className={styles.aboutPic}>
           <img
-            src={`${cdn}/about.png`}
+            src={`${cdn}/earthday.png`}
             alt="about"
           />
         </div>
@@ -116,17 +116,25 @@ export default class extends Component {
               </Link>
             </p>
 
-            <div className="ill">
-              Illustration
-            </div>
-
-            <div className="button">
-              <Button
-                className="button"
-              >
-                Visit GoFundMe Campaign
-              </Button>
-            </div>
+            <Box className="box">
+              <div className="heart">
+                <img
+                  src={`${cdn}/heart.png`}
+                  alt="heart"
+                />
+              </div>
+              <p>
+                Become An Earth Ambassador!
+              </p>
+              <div className="button">
+                <Button
+                  className="button"
+                  onClick={() => { global.window.location = 'https://www.gofundme.com/earth-day-treejer-reforestation-project-launch'; }}
+                >
+                  Contribute!
+                </Button>
+              </div>
+            </Box>
           </div>
 
           <div className="right">
@@ -147,6 +155,8 @@ export default class extends Component {
               </p>
             </Box>
 
+            <div className="connection" />
+
             <Box className="box">
               <div className="left">
                 <p className="title">
@@ -162,6 +172,8 @@ export default class extends Component {
                 €50
               </p>
             </Box>
+
+            <div className="connection" />
 
             <Box className="box">
               <div className="left">
@@ -180,6 +192,8 @@ export default class extends Component {
               </p>
             </Box>
 
+            <div className="connection" />
+
             <Box className="box">
               <div className="left">
                 <p className="title">
@@ -195,6 +209,8 @@ export default class extends Component {
                 €500
               </p>
             </Box>
+
+            <div className="connection" />
 
             <Box className="box">
               <div className="left">
