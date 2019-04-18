@@ -14,6 +14,7 @@
   color: #000000;
   font-size: 36px;
   letter-spacing: 1.8px;
+  margin-bottom: 100px;
 }
 
 :local(.container) {
@@ -28,6 +29,7 @@
       color: #707070;
       font-size: 16px;
       line-height: 28px;
+      margin: 0;
     }
 
     > .title {
@@ -43,5 +45,46 @@
 
   > .right {
     width: 480px;
+
+    > .box {
+      width: 480px;
+      box-sizing: border-box;
+      padding: 35px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      > .left {
+        width: 295px;
+
+        > .title {
+          margin: 0;
+          color: #52575d;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -0.45px;
+        }
+
+        > .desc {
+          color: #999999;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          margin-bottom: 0;
+        }
+      }
+
+      > .divider {
+        height: 91px;
+        border: 1px solid #700f11;
+        opacity: 0.3;
+        margin: auto;
+      }
+
+      > .right {
+        color: #84a600;
+        font-size: 28px;
+      }
+    }
   }
 }

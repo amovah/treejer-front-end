@@ -4,6 +4,7 @@ import Layout from 'Root/shared/Layout';
 import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
+import Box from 'Root/shared/Box';
 import styles from './index.less';
 
 export default () => (
@@ -93,8 +94,25 @@ export default () => (
           </Link>
         </p>
       </div>
+
       <div className="right">
-        b
+        <Box
+          className="box"
+        >
+          <div className="left">
+            <p className="title">
+              A Tree Planted Under Your Name
+            </p>
+            <p className="desc">
+              Get custom digital tree graphic with your name and photo along with a collectible
+              (real) tree to add to your forest + EVERYTHING ABOVE
+            </p>
+          </div>
+          <div className="divider" />
+          <p className="right">
+            $50
+          </p>
+        </Box>
       </div>
     </div>
   </Layout>
