@@ -1,7 +1,11 @@
 import { generate } from 'shortid';
 import types from 'Root/actions';
 
-export default (state = [], action) => {
+export default (state = [
+  { type: 'success', text: 'ali', id: 'a' },
+  { type: 'error', text: 'alssi', id: 'b' },
+  { type: 'success', text: 'sfasalssi', id: 'cb' },
+], action) => {
   switch (action.type) {
     case types.notifications.PUSH: {
       return [
