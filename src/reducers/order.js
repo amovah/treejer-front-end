@@ -44,7 +44,7 @@ export default (state = defaults, action) => {
 
     case types.order.CHANGE_QTY: {
       const index = state.trees.findIndex(i => i.id === action.id);
-      const count = state.count + (action.qty - state.trees[index].count);
+      const count = state.count + (action.qty - state.trees[index].qty);
 
       return {
         count,
