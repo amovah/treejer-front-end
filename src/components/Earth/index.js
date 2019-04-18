@@ -5,6 +5,7 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
+import Button from 'Root/shared/Button';
 import styles from './index.less';
 
 export default () => (
@@ -93,6 +94,18 @@ export default () => (
             READ MORE
           </Link>
         </p>
+
+        <div className="ill">
+          Illustration
+        </div>
+
+        <div className="button">
+          <Button
+            className="button"
+          >
+            Visit GoFundMe Campaign
+          </Button>
+        </div>
       </div>
 
       <div className="right">

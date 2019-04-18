@@ -1,11 +1,12 @@
 import React from 'react';
+import classnames from 'classnames';
 import styles from './index.less';
 
-export default props => (
+export default ({ className, ...props }) => (
   <button
     type="button"
     {...props}
-    className={styles.button}
+    className={classnames(styles.button, className)}
   >
     {props.children}
   </button>
