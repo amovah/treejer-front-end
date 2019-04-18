@@ -115,7 +115,7 @@ export default class extends Component {
             }}
             type="submit"
           >
-            Next
+            Sign In
           </Button>
 
           <div className="notMember">
