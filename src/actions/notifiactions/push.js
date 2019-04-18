@@ -3,7 +3,7 @@ import store from 'Root/store';
 
 export default (notification) => {
   store.dispatch({
-    type: types.notifiactions.PUSH,
+    type: types.notifications.PUSH,
     notification,
   });
 };

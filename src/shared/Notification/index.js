@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styles from './index.less';
 import Notif from './Notif';
 
-const Notifiaction = props => (
+const Notification = props => (
   <div className={styles.container}>
     {props.notifications.map(i => (
       <Notif
@@ -19,4 +19,4 @@ export default connect(
   state => ({
     notifications: state.notifications,
   }),
-)(Notifiaction);
+)(Notification);

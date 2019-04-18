@@ -3,6 +3,6 @@ import store from 'Root/store';
 
 export default () => {
   store.dispatch({
-    type: types.notifiactions.POP,
+    type: types.notifications.POP,
   });
 };

@@ -6,6 +6,7 @@ import store from 'Root/store';
 import Components from 'Root/components';
 import Modal from 'Root/shared/Modal';
 import Spinner from 'Root/shared/Spinner';
+import Notification from 'Root/shared/Notification';
 
 import './styles/index.less';
 
@@ -16,5 +17,6 @@ export default () => (
       <Components />
     </Router>
     <Modal />
+    <Notification />
   </Provider>
 );
