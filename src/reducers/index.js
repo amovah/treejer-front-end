@@ -6,6 +6,7 @@ import trees from './trees';
 import order from './order';
 import redirect from './redirect';
 import lazy from './lazy';
+import notifications from './notifications';
 
 export default combineReducers({
   user,
@@ -15,4 +16,5 @@ export default combineReducers({
   order,
   redirect,
   lazy,
+  notifications,
 });

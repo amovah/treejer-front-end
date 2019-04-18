@@ -33,4 +33,8 @@ export default {
     ON: 'lazy/ON',
     OFF: 'lazy/OFF',
   },
+  notifications: {
+    PUSH: 'notifications/PUSH',
+    POP: 'notifications/POP',
+  },
 };
