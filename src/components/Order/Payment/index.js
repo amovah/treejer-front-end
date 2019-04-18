@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
 import classnames from 'classnames';
+import store from 'Root/store';
 import setMethodOrder from 'Root/actions/order/setMethod';
 import Button from 'Root/shared/Button';
 import submitOrder from 'Root/actions/order/submit';
@@ -10,7 +10,6 @@ import etherWhite from './ether-white.png';
 import etherBlack from './ether-black.png';
 import visaWhite from './visa-white.png';
 import visaBlack from './visa-black.png';
-import Price from './Price';
 
 class Payment extends Component {
   state = {
@@ -18,7 +17,11 @@ class Payment extends Component {
     paymentMethod: 'fiat',
   }
 
+  priceTotal = 0;
+
   componentDidMount() {
+    this.priceTotal = store.getState()
+      .order.trees.map(i => i.qty * i.price).reduce((a, b) => a + b, 0);
     setMethodOrder('fiat');
     this.setState({
       paymentMethod: 'fiat',
@@ -186,7 +189,7 @@ class Payment extends Component {
             Cash Total
           </p>
           <p className="price">
-            €<Price />
+            €{this.priceTotal}
           </p>
           <div className="breaker" />
         </div>
@@ -195,8 +198,4 @@ class Payment extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    user: state.user,
-  }),
-)(Payment);
+export default Payment;
