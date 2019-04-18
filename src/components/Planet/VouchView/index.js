@@ -14,6 +14,12 @@ class VouchView extends Component {
     code: '',
   }
 
+  validate = (e) => {
+    e.preventDefault();
+
+    validateClaim(this.state.code);
+  }
+
   vouchView = () => (
     <Box className={styles.vouchBox}>
       <img
@@ -21,7 +27,7 @@ class VouchView extends Component {
         alt="claim"
         className="left"
       />
-      <div className="right">
+      <form className="right">
         <p className="have">
           Have a voucher?
         </p>
@@ -40,11 +46,12 @@ class VouchView extends Component {
           style={{
             width: '100%',
           }}
-          onClick={() => { validateClaim(this.state.code); }}
+          type="submit"
+          onClick={this.validate}
         >
           SUBMIT
         </Button>
-      </div>
+      </form>
     </Box>
   )
 
