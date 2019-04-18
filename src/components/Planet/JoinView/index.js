@@ -19,7 +19,9 @@ class JoinView extends Component {
     });
   }
 
-  sendInvitation = async () => {
+  sendInvitation = async (e) => {
+    e.preventDefault();
+
     const res = await fetch(`/invitations/sendInvitation/${this.state.mail}`, {
       method: 'POST',
     });
@@ -86,18 +88,18 @@ class JoinView extends Component {
             <p className="subtitle">
               Send the invitation link to your friends!
             </p>
-            <div className="inputgroup">
+            <form className="inputgroup">
               <Input
                 placeholder="email@example.com"
                 onChange={this.onChangeMail}
               />
               <button
-                type="button"
+                type="submit"
                 onClick={this.sendInvitation}
               >
                 SEND
               </button>
-            </div>
+            </form>
           </div>
           <img
             src={`${cdn}/invite.png`}
@@ -110,7 +112,7 @@ class JoinView extends Component {
       </Fragment>
     );
   }
-};
+}
 
 export default connect(
   state => ({
