@@ -129,6 +129,7 @@ export default class extends Component {
               <div className="button">
                 <Button
                   className="button"
+                  onClick={() => { global.window.location = 'https://www.gofundme.com/earth-day-treejer-reforestation-project-launch'; }}
                 >
                   Contribute!
                 </Button>
