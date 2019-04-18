@@ -7,6 +7,7 @@ import Box from 'Root/shared/Box';
 import logout from 'Root/actions/user/logout';
 import openModal from 'Root/actions/modal/open';
 import history from 'Root/history';
+import loadReceipts from 'Root/actions/user/loadReceipts';
 import styles from './index.less';
 import PaymentHistory from './PaymentHistory';
 
@@ -15,7 +16,8 @@ class User extends Component {
     show: false,
   }
 
-  openPaymentHistory = () => {
+  openPaymentHistory = async () => {
+    await loadReceipts();
     openModal(<PaymentHistory />);
   }
 
