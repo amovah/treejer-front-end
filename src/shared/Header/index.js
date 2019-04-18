@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { cdn } from 'Root/config';
 import styles from './index.less';
 import User from './User';
@@ -7,7 +6,7 @@ import User from './User';
 export default props => (
   <div className={styles.header}>
     <div>
-      <Link
+      <span
         to="/"
         className="logo"
       >
@@ -15,33 +14,33 @@ export default props => (
           src={`${cdn}/logo.png`}
           alt="logo"
         />
-      </Link>
+      </span>
 
       {
         !props.less
         && (
           <Fragment>
-            <Link
+            <span
               to="/for-startups"
             >
               for startups
-            </Link>
-            <Link
+            </span>
+            <span
               to="/about"
             >
               about
-            </Link>
-            <Link
+            </span>
+            <span
               to="/contact"
             >
               contact
-            </Link>
-            <Link
+            </span>
+            <span
               to="/planet"
               className="unique"
             >
               become a planter
-            </Link>
+            </span>
           </Fragment>
         )
       }

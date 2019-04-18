@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import { cdn } from 'Root/config';
 import Box from 'Root/shared/Box';
@@ -84,23 +83,23 @@ class User extends Component {
 
   signInView = () => (
     <div>
-      <Link
+      <span
         to="/sign-in"
         className={styles.login}
       >
         Sign In
-      </Link>
+      </span>
       {
         !this.props.less
         && (
           <Fragment>
             <div className={styles.divider} />
-            <Link
+            <span
               to="/adopt-a-tree"
               className={classnames(styles.adopt, this.props.white && 'white')}
             >
               adopt a tree
-            </Link>
+            </span>
           </Fragment>
         )
       }
