@@ -95,6 +95,7 @@ class VouchView extends Component {
               rate={i.o2RatePerDay}
               drive={i.drive}
               key={generate()}
+              quantity={i.quantity}
               withoutButton
             />
           ))

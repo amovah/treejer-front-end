@@ -22,10 +22,18 @@ export default props => (
     <div className="details">
       <div className="detail">
         <p className="title">
-          Adopters
+          {
+            props.quantity
+              ? 'Quantity'
+              : 'Adopters'
+          }
         </p>
         <p className="info">
-          1.5 K
+          {
+            props.quantity
+              ? props.quantity
+              : '1.5 K'
+          }
         </p>
       </div>
       <div className="divider" />

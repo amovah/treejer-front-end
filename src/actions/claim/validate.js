@@ -11,7 +11,10 @@ export default async (code) => {
     const trees = [];
     const treeModels = store.getState().trees;
     for (const item of res.data.items) {
-      trees.push(treeModels.find(i => item.identifier === i.id));
+      trees.push({
+        ...treeModels.find(i => item.identifier === i.id),
+        quantity: item.quantity,
+      });
     }
 
     store.dispatch({
