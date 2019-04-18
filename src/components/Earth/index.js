@@ -26,11 +26,13 @@ export default () => (
         This Earth Day pledge to plant a tree!
       </p>
 
-      <div className="left">
-        a
-      </div>
-      <div className="right">
-        b
+      <div className="content">
+        <div className="left">
+          a
+        </div>
+        <div className="right">
+          b
+        </div>
       </div>
     </div>
   </Layout>
