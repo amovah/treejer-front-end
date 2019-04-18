@@ -9,24 +9,28 @@
   }
 }
 
+:local(.title) {
+  text-align: center;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 1.8px;
+}
+
 :local(.container) {
-  > .title {
-    text-align: center;
-    color: #000000;
-    font-size: 36px;
-    letter-spacing: 1.8px;
+  .inARow();
+
+  > .left {
+    width: 810px;
+    margin-right: 75px;
+
+    > .text {
+      color: #707070;
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
 
-  > .content {
-    .inARow();
-
-    > .left {
-      width: 810px;
-      margin-right: 20px;
-    }
-
-    > .right {
-      width: 480px;
-    }
+  > .right {
+    width: 480px;
   }
 }
