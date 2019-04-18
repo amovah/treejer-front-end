@@ -1,5 +1,4 @@
 import React from 'react';
-import { generate } from 'shortid';
 import { connect } from 'react-redux';
 import styles from './index.less';
 import Notif from './Notif';
@@ -10,7 +9,7 @@ const Notifiaction = props => (
       <Notif
         type={i.type}
         text={i.text}
-        key={generate()}
+        key={i.id}
       />
     ))}
   </div>
