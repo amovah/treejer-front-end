@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import qs from 'querystring';
 import SignLayout from 'Root/shared/SignLayout';
 import Input from 'Root/shared/Input';
@@ -149,6 +148,14 @@ export default class extends Component {
     </form>
   );
 
+  moveToSignIn = () => {
+    if (this.state.referral) {
+      history.push(`/sign-in?referral=${this.state.referral}`);
+    } else {
+      history.push('/sign-in');
+    }
+  }
+
   render() {
     return (
       <SignLayout>
@@ -167,12 +174,13 @@ export default class extends Component {
             <span>
               Already have an account?
             </span>
-            <Link
-              to="/sign-in"
+            <button
               className="goTo"
+              type="button"
+              onClick={this.moveToSignIn}
             >
               Sign In
-            </Link>
+            </button>
           </div>
         </div>
       </SignLayout>

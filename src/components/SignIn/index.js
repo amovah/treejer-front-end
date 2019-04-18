@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import qs from 'querystring';
 import history from 'Root/history';
@@ -63,6 +62,14 @@ export default class extends Component {
     });
   }
 
+  moveToSignUp = () => {
+    if (this.state.referral) {
+      history.push(`/sign-up?referral=${this.state.referral}`);
+    } else {
+      history.push('/sign-up');
+    }
+  }
+
   render() {
     return (
       <SignLayout>
@@ -122,12 +129,13 @@ export default class extends Component {
             <span>
               Not a member?
             </span>
-            <Link
-              to="/sign-up"
+            <button
               className="goTo"
+              onClick={this.moveToSignUp}
+              type="button"
             >
               Sign Up
-            </Link>
+            </button>
           </div>
         </form>
       </SignLayout>
