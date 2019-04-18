@@ -147,6 +147,8 @@ export default class extends Component {
               </p>
             </Box>
 
+            <div className="connection" />
+
             <Box className="box">
               <div className="left">
                 <p className="title">
@@ -162,6 +164,8 @@ export default class extends Component {
                 €50
               </p>
             </Box>
+
+            <div className="connection" />
 
             <Box className="box">
               <div className="left">
@@ -180,6 +184,8 @@ export default class extends Component {
               </p>
             </Box>
 
+            <div className="connection" />
+
             <Box className="box">
               <div className="left">
                 <p className="title">
@@ -195,6 +201,8 @@ export default class extends Component {
                 €500
               </p>
             </Box>
+
+            <div className="connection" />
 
             <Box className="box">
               <div className="left">
