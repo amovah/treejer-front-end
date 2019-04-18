@@ -21,7 +21,10 @@ class User extends Component {
 
   loggedView = () => (
     <div>
-      <p className={styles.userName}>
+      <p
+        className={styles.userName}
+        onClick={() => { this.setState(prev => ({ show: !prev.show })); }}
+      >
         Hello {this.props.user.firstname}!
       </p>
       <div className={styles.divider} />
