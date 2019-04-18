@@ -23,7 +23,9 @@ export default class extends Component {
     });
   }
 
-  sendMessage = async () => {
+  sendMessage = async (e) => {
+    e.preventDefault();
+
     const res = await fetch('/comments', {
       method: 'POST',
       body: JSON.stringify(
@@ -43,7 +45,7 @@ export default class extends Component {
         <Socials />
 
         <div className={styles.container}>
-          <div className="form">
+          <form className="form">
             <div className="row">
               <Input
                 placeholder="First Name"
@@ -90,13 +92,13 @@ export default class extends Component {
               />
             </div>
             <button
-              type="button"
+              type="submit"
               className="button"
               onClick={this.sendMessage}
             >
               Submit
             </button>
-          </div>
+          </form>
           <div className="ill">
             <img
               src={`${cdn}/contact.png`}
