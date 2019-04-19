@@ -39,7 +39,7 @@ export default async (url, options = {}, token = true, query = {}) => {
     lazyOff();
 
     const json = await res.json();
-    if (json.error) {
+    if (res.status >= 400 && json.error) {
       if (json.error.message.includes('Error!')) {
         sendNotification({
           type: 'error',
