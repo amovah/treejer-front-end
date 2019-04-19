@@ -1,0 +1,61 @@
+@import '~Root/styles/mixins';
+
+:local(.container) {
+  .inARow();
+  flex-direction: column;
+
+  > .title {
+    color: #000000;
+    font-size: 48px;
+    letter-spacing: 2.4px;
+    margin-top: 0;
+  }
+
+  > .boxes {
+    > .row {
+      .inARow();
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > .box {
+        width: 260px;
+        height: 64px;
+        border-radius: 10px;
+        background-color: #2dd393;
+        .inARow();
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        margin-right: 150px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  > .subtitle {
+    margin-top: 130px;
+    color: #142535;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4.54px;
+  }
+
+  > .orgs {
+    .inARow();
+
+    > * {
+      margin: 0 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
