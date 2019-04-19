@@ -1,0 +1,41 @@
+@import '~Root/styles/mixins';
+
+:local(.container) {
+  > .section {
+    .inARow();
+    margin-bottom: 100px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    > .text {
+      width: 536px;
+
+      > .title {
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+      }
+
+      > .desc {
+        color: #a8a8a8;
+        font-size: 18px;
+        letter-spacing: 0.13px;
+      }
+    }
+
+    > .logo {
+      width: 536px;
+      height: 480px;
+      border: 1px solid #707070;
+      background-color: #ffffff;
+    }
+
+    > .padder {
+      width: 200px;
+    }
+  }
+}

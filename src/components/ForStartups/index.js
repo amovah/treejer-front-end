@@ -6,6 +6,7 @@ import Layout from 'Root/shared/Layout';
 import styles from './index.less';
 import Head from './Head';
 import Help from './Help';
+import Green from './Green';
 
 export default () => (
   <Layout>
@@ -17,6 +18,10 @@ export default () => (
     <TopPadding gap={100} />
     <div className={styles.divider} />
     <TopPadding gap={100} />
+    <Green />
+    <TopPadding gap={128} />
+    <div className={styles.divider} />
+    <TopPadding gap={128} />
     <Footer />
   </Layout>
 );
