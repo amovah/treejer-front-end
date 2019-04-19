@@ -1,0 +1,90 @@
+@import '~Root/styles/mixins';
+
+@bar: 5px;
+
+:local(.container) {
+  .inARow();
+  flex-direction: column;
+
+  > .title {
+    font-size: 48px;
+    letter-spacing: 2.4px;
+    margin-top: 0;
+    margin-bottom: 95px;
+  }
+
+  > .content {
+    position: relative;
+
+    > .bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+
+      > .head {
+        width: 50px;
+        height: @bar;
+        background-color: #a8a8a8;
+        position: absolute;
+      }
+
+      > .tail {
+        .head;
+        bottom: 0;
+      }
+
+      > .act {
+        height: 100%;
+        width: @bar;
+        background-color: #a8a8a8;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    > .section {
+      .inARow();
+      align-items: flex-start;
+
+      > .pad {
+        width: 520px;
+      }
+
+      > .ball {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        z-index: 1;
+        border: 8px solid #faf8f1;
+        background-color: #2dd393;
+        border-radius: 50%;
+        margin: 0 50px;
+      }
+
+      > .text {
+        width: 520px;
+
+        &.left {
+          text-align: right;
+        }
+
+        > .title {
+          color: #000000;
+          font-size: 36px;
+          letter-spacing: 1.8px;
+          margin-top: 0;
+        }
+
+        > .desc {
+          color: #a8a8a8;
+          font-size: 18px;
+          letter-spacing: 0.13px;
+        }
+      }
+    }
+  }
+}

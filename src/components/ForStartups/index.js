@@ -7,6 +7,7 @@ import styles from './index.less';
 import Head from './Head';
 import Help from './Help';
 import Green from './Green';
+import HowIt from './HowIt';
 
 export default () => (
   <Layout>
@@ -19,6 +20,10 @@ export default () => (
     <div className={styles.divider} />
     <TopPadding gap={100} />
     <Green />
+    <TopPadding gap={128} />
+    <div className={styles.divider} />
+    <TopPadding gap={128} />
+    <HowIt />
     <TopPadding gap={128} />
     <div className={styles.divider} />
     <TopPadding gap={128} />
