@@ -16,6 +16,7 @@ const devMode = process.env.NODE_ENV !== 'production';
   },
   module: {
     rules: [
+      {test: /\.(config)$/, loader: 'file-loader?name=[name].[ext]'},
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
