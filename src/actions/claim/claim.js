@@ -2,6 +2,7 @@ import store from 'Root/store';
 import history from 'Root/history';
 import fetch from 'Root/fetch';
 import relogin from 'Root/actions/user/relogin';
+import sendNotification from 'Root/actions/notifications/send';
 import clear from './clear';
 
 export default async () => {
@@ -16,6 +17,11 @@ export default async () => {
     if (!res) {
       return;
     }
+
+    sendNotification({
+      type: 'success',
+      text: 'The voucher\'s trees has been addedd to your forest successfully.',
+    });
 
     clear();
     await relogin();
