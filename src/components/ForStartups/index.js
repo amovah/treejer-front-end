@@ -9,6 +9,7 @@ import Help from './Help';
 import Green from './Green';
 import HowIt from './HowIt';
 import Why from './Why';
+import Ask from './Ask';
 
 export default () => (
   <Layout>
@@ -31,6 +32,8 @@ export default () => (
     <Why />
     <TopPadding gap={128} />
     <div className={styles.divider} />
+    <TopPadding gap={128} />
+    <Ask />
     <TopPadding gap={128} />
     <Footer />
   </Layout>
