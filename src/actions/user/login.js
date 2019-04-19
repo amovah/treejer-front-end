@@ -10,8 +10,6 @@ export default async (credentials) => {
     method: 'POST',
     body: JSON.stringify(credentials),
   }, false);
-  console.log(res);
-
   if (!res) {
     return;
   }
