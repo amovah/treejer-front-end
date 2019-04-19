@@ -93,12 +93,12 @@ export default class extends Component {
                 Adopt a real tree and add it to your
                 personal forest in the Planet
               </p>
-              <Link
+              <span
                 to="/know-more"
                 className="link"
               >
                 KNOW MORE
-              </Link>
+              </span>
             </div>
             <div className="verticalDivider" />
             <div className="content">
@@ -113,12 +113,12 @@ export default class extends Component {
                 Get rewards for making a positive
                 impact on the environment
               </p>
-              <Link
+              <span
                 to="/know-more"
                 className="link"
               >
                 KNOW MORE
-              </Link>
+              </span>
             </div>
             <div className="verticalDivider" />
             <div className="content">
@@ -134,12 +134,12 @@ export default class extends Component {
                 Exchange your earned Oxygen (O2) for
                 products, services or money!
               </p>
-              <Link
+              <span
                 to="/know-more"
                 className="link"
               >
                 KNOW MORE
-              </Link>
+              </span>
             </div>
           </div>
 
