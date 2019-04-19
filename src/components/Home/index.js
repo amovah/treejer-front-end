@@ -6,6 +6,7 @@ import Header from 'Root/shared/Header';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
 import fetch from 'Root/fetch';
+import sendNotification from 'Root/actions/notifications/send';
 import styles from './index.less';
 
 export default class extends Component {
@@ -22,11 +23,19 @@ export default class extends Component {
   subscribe = async (e) => {
     e.preventDefault();
 
-    await fetch('/subscribes', {
+    const res = await fetch('/subscribes', {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,
       }),
+    });
+    if (!res) {
+      return;
+    }
+
+    sendNotification({
+      type: 'success',
+      text: 'Your email address has been subscribed successfully.',
     });
   }
 
