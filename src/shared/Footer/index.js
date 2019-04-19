@@ -11,63 +11,72 @@ export default () => (
       >
         About Us
       </Link>
-      <Link
+      <span
         to="/ambassadors"
+        className="disable"
       >
         Ambassadors
-      </Link>
-      <Link
+      </span>
+      <span
         to="/careers"
+        className="disable"
       >
         Careers
-      </Link>
+      </span>
       <Link
-        to="/contact-us"
+        to="/contact"
       >
         Contact Us
       </Link>
-      <Link
+      <span
         to="/refer-and-earn"
+        className="disable"
       >
         Refer And Eearn
-      </Link>
-      <Link
+      </span>
+      <span
         to="/partners"
+        className="disable"
       >
         Partners
-      </Link>
+      </span>
     </div>
     <div className="someLinks">
       <Link
-        to="/planet-ecosystem"
+        to="/planet"
       >
         Planet Ecosystem
       </Link>
-      <Link
+      <span
         to="/planters"
+        className="disable"
       >
         Planters
-      </Link>
-      <Link
+      </span>
+      <span
         to="/preservers"
+        className="disable"
       >
         Preservers
-      </Link>
-      <Link
+      </span>
+      <span
         to="/rangers"
+        className="disable"
       >
         Rangers
-      </Link>
-      <Link
+      </span>
+      <span
         to="/adopters"
+        className="disable"
       >
         Adopters
-      </Link>
-      <Link
+      </span>
+      <span
         to="/volunteers"
+        className="disable"
       >
         Volunteers
-      </Link>
+      </span>
     </div>
     <div className="footerInfo">
       <p>
