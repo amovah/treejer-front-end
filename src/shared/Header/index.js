@@ -36,12 +36,12 @@ export default props => (
             >
               contact
             </Link>
-            <Link
+            {/* <Link
               to="/planet"
               className="unique"
             >
               become a planter
-            </Link>
+            </Link> */}
           </Fragment>
         )
       }
