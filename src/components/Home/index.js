@@ -146,7 +146,7 @@ export default class extends Component {
 
           <div className="treejerContainer">
             <Link
-              to="/treejer-for-bussiness"
+              to="/for-startups"
               className="treejer"
             >
               Treejer for Business
