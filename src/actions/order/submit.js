@@ -2,6 +2,7 @@ import history from 'Root/history';
 import store from 'Root/store';
 import setRedirect from 'Root/actions/redirect/set';
 import fetch from 'Root/fetch';
+import sendNotification from 'Root/actions/notifications/send';
 import clear from './clear';
 
 export default async () => {
@@ -29,6 +30,11 @@ export default async () => {
   if (!res) {
     return;
   }
+
+  sendNotification({
+    type: 'success',
+    text: 'A new invoice including your invoice number has been sent to your email address successfully.',
+  });
 
   clear();
 
