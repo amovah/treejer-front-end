@@ -96,7 +96,7 @@ class User extends Component {
           <Fragment>
             <div className={styles.divider} />
             <Link
-              to="/adopt-a-tree"
+              to="/planet"
               className={classnames(styles.adopt, this.props.white && 'white')}
             >
               adopt a tree
