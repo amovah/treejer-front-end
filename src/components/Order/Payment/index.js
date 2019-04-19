@@ -38,14 +38,10 @@ class Payment extends Component {
   onSubmit = async () => {
     const res = await submitOrder();
 
-    console.log('here', res);
-
-    if (res === 'uninvited') {
-      console.log('kheili khari');
+    if (!res) {
       return;
     }
 
-    console.log('here', res.id);
     this.setState({
       orderId: res.id,
     });
