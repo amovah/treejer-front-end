@@ -57,7 +57,7 @@ export default class extends Component {
 
           <div className="buttons">
             <Link
-              to="/go-to-planet"
+              to="/planet"
               className="goToPlanet"
             >
               Go To the Planet
