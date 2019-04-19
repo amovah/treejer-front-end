@@ -5,6 +5,7 @@ import Input from 'Root/shared/Input';
 import history from 'Root/history';
 import { cdn } from 'Root/config';
 import fetch from 'Root/fetch';
+import sendNotification from 'Root/actions/notifications/send';
 import styles from './index.less';
 import PadDivider from '../PadDivider';
 
@@ -25,8 +26,14 @@ class JoinView extends Component {
     const res = await fetch(`/invitations/sendInvitation/${this.state.mail}`, {
       method: 'POST',
     });
+    if (!res) {
+      return;
+    }
 
-    console.log(res);
+    sendNotification({
+      type: 'success',
+      text: 'An invitation email has been sent to your friend\'s address successfully.',
+    });
   }
 
   render() {
