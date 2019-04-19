@@ -204,7 +204,7 @@ export default class extends Component {
 
           <div className="container">
             <Link
-              to="start-a-plantation-drive-into-region"
+              to="/planet"
             >
               Start A Plantation Drive in Your Region
             </Link>
