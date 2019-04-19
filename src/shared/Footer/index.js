@@ -75,7 +75,7 @@ export default () => (
         individuals, businesses and governments to plant and preserve trees.
       </p>
       <Link
-        to="/know-more"
+        to="/about"
       >
         Know More
       </Link>
