@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import './web.config';
 import React from 'react';
 import { render } from 'react-dom';
 import relogin from 'Root/actions/user/relogin';
