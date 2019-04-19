@@ -10,11 +10,7 @@ export default async () => {
   if (!state.user.logged) {
     setRedirect('/order');
     history.push('/sign-in');
-    return '';
-  }
-
-  if (state.user.status === 'WaitList') {
-    return 'uninvited';
+    return;
   }
 
   const res = await fetch('/receipts', {
@@ -30,6 +26,9 @@ export default async () => {
       method: state.order.method,
     }),
   });
+  if (!res) {
+    return;
+  }
 
   clear();
 

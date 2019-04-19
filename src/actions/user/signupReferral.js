@@ -7,7 +7,7 @@ export default async (credentials, referral) => {
     body: JSON.stringify(credentials),
   }, false);
 
-  if (res.data.error) {
+  if (!res) {
     return null;
   }
 

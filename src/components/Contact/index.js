@@ -26,14 +26,15 @@ export default class extends Component {
   sendMessage = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('/comments', {
+    const res = fetch('/comments', {
       method: 'POST',
       body: JSON.stringify(
         this.state,
       ),
     }, false);
-
-    console.log(res);
+    if (!res) {
+      return;
+    }
   }
 
   render() {

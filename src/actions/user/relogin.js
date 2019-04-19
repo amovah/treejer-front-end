@@ -9,6 +9,9 @@ export default async () => {
         include: ['trees', 'receipts'],
       },
     });
+    if (!details) {
+      return;
+    }
 
     store.dispatch({
       type: types.user.LOGIN,

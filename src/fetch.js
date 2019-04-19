@@ -2,6 +2,7 @@ import qs from 'querystring';
 import { url as serverURL } from 'Root/config';
 import lazyOn from 'Root/actions/lazy/on';
 import lazyOff from 'Root/actions/lazy/off';
+import sendNotification from 'Root/actions/notifications/send';
 
 export default async (url, options = {}, token = true, query = {}) => {
   try {
@@ -37,12 +38,29 @@ export default async (url, options = {}, token = true, query = {}) => {
 
     lazyOff();
 
+    const json = await res.json();
+    if (json.error) {
+      if (json.error.message.includes('Error!')) {
+        sendNotification({
+          type: 'error',
+          text: json.error.message,
+        });
+      } else {
+        sendNotification({
+          type: 'error',
+          text: 'Error! Something went wrong, Please try again later.',
+        });
+      }
+
+      return null;
+    }
+
     return {
       res,
-      data: await res.json(),
+      data: json,
     };
   } catch (e) {
     lazyOff();
-    throw Error('url not found');
+    return null;
   }
 };

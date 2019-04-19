@@ -4,6 +4,9 @@ import fetch from 'Root/fetch';
 
 export default async () => {
   const res = await fetch('/trees/treeModels', {}, false);
+  if (!res) {
+    return;
+  }
 
   const trees = [];
   for (const [key, value] of Object.entries(res.data)) {

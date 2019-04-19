@@ -7,8 +7,8 @@ export default async (credentials, referral) => {
     body: JSON.stringify(credentials),
   }, false);
 
-  if (res.data.error) {
-    throw new Error();
+  if (!res) {
+    return;
   }
 
   global.localStorage.token = res.data.id;
@@ -22,7 +22,9 @@ export default async (credentials, referral) => {
     const inv = await fetch(`/clients/${res.data.userId}/changeStatus/${referral}`, {
       method: 'PUT',
     });
-    console.log(inv);
+    if (!inv) {
+      return;
+    }
 
     await login(credentials);
   }

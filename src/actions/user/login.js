@@ -10,9 +10,10 @@ export default async (credentials) => {
     method: 'POST',
     body: JSON.stringify(credentials),
   }, false);
+  console.log(res);
 
-  if (res.data.error) {
-    throw new Error();
+  if (!res) {
+    return;
   }
 
   store.dispatch({
@@ -31,6 +32,9 @@ export default async (credentials) => {
       include: ['trees', 'receipts'],
     },
   });
+  if (!res) {
+    return;
+  }
 
   store.dispatch({
     type: types.user.CHANGE,

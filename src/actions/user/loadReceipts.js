@@ -7,6 +7,9 @@ export default async () => {
 
   if (user.logged) {
     const res = await fetch(`/clients/${user.id}/receipts`);
+    if (!res) {
+      return;
+    }
 
     store.dispatch({
       type: types.user.LOAD_RECEIPTS,

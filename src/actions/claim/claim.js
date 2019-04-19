@@ -10,7 +10,13 @@ export default async () => {
   if (!state.user.logged) {
     history.push('/sign-in');
   } else {
-    await fetch(`/trees/${state.user.id}/reclaim/${state.claim.code}`, { method: 'POST' });
+    const res = await fetch(`/trees/${state.user.id}/reclaim/${state.claim.code}`, {
+      method: 'POST',
+    });
+    if (!res) {
+      return;
+    }
+
     clear();
     await relogin();
   }

@@ -3,7 +3,10 @@ import store from 'Root/store';
 import fetch from 'Root/fetch';
 
 export default async () => {
-  await fetch('/clients/logout', { method: 'POST' }).catch(() => {});
+  const res = await fetch('/clients/logout', { method: 'POST' });
+  if (!res) {
+    return;
+  }
 
   global.localStorage.token = '';
 
