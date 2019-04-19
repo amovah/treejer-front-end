@@ -6,6 +6,7 @@ import Input from 'Root/shared/Input';
 import TopPadding from 'Root/shared/Header/TopPadding';
 import { cdn } from 'Root/config';
 import fetch from 'Root/fetch';
+import sendNotification from 'Root/actions/notifications/send';
 import styles from './index.less';
 
 export default class extends Component {
@@ -35,6 +36,11 @@ export default class extends Component {
     if (!res) {
       return;
     }
+
+    sendNotification({
+      type: 'success',
+      text: 'Your message has been delivered successfully. Our team will reach out to you soon.',
+    });
   }
 
   render() {
