@@ -36,5 +36,6 @@ export default {
   notifications: {
     PUSH: 'notifications/PUSH',
     POP: 'notifications/POP',
+    REMOVE: 'notifications/REMOVE',
   },
 };

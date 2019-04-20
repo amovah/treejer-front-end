@@ -13,6 +13,15 @@ export default (state = [], action) => {
       return state.slice(1);
     }
 
+    case types.notifications.REMOVE: {
+      const index = state.findIndex(i => i.id === action.id);
+
+      return [
+        ...state.slice(0, index),
+        ...state.slice(index + 1),
+      ];
+    }
+
     default: {
       return state;
     }
