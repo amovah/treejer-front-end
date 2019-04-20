@@ -1,8 +1,10 @@
 import push from './push';
 import remove from './remove';
 
-export default (notification) => {
+export default (notification, autoClose = true) => {
   const id = push(notification);
 
-  setTimeout(() => remove(id), 5000);
+  if (autoClose) {
+    setTimeout(() => remove(id), 5000);
+  }
 };
