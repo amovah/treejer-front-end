@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import removeIcon from './remove.png';
 import styles from './index.less';
 
 export default props => (
@@ -7,7 +8,7 @@ export default props => (
     className={
       classnames(
         styles.notification,
-        props.type === 'error' && styles.error,
+        props.type,
       )
     }
   >
@@ -17,6 +18,19 @@ export default props => (
     <p className="text">
       {props.text}
     </p>
-    <div className={classnames('banner', props.type === 'error' && 'error')} />
+    <div className={classnames('banner', props.type)} />
+    {
+      props.type === 'warning'
+      && (
+        <div
+          className="removeIcon"
+        >
+          <img
+            src={removeIcon}
+            alt="remove"
+          />
+        </div>
+      )
+    }
   </div>
 );

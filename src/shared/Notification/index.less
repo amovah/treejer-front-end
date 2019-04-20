@@ -24,8 +24,12 @@
   padding: 0 40px;
   position: relative;
 
-  &:local(.error) {
+  &.error {
     background-color: #fbdcdc;
+  }
+
+  &.warning {
+    background-color: #ffe9ad;
   }
 
   > .title {
@@ -53,6 +57,10 @@
 
     &.error {
       background-color: #ff6e6e;
+    }
+
+    &.warning {
+      background-color: #f9aa33;
     }
   }
 }
