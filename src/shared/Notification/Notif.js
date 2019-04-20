@@ -14,7 +14,7 @@ export default props => (
     }
   >
     <p className="title">
-      {props.type === 'error' ? 'ERROR' : 'SUCCESS'}
+      {props.type.toUpperCase()}
     </p>
     <p className="text">
       {props.text}
