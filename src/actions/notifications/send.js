@@ -1,8 +1,8 @@
 import push from './push';
-import pop from './pop';
+import remove from './remove';
 
 export default (notification) => {
-  push(notification);
+  const id = push(notification);
 
-  setTimeout(pop, 5000);
+  setTimeout(() => remove(id), 5000);
 };
