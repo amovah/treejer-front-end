@@ -1,4 +1,3 @@
-import { generate } from 'shortid';
 import types from 'Root/actions';
 
 export default (state = [], action) => {
@@ -6,10 +5,7 @@ export default (state = [], action) => {
     case types.notifications.PUSH: {
       return [
         ...state,
-        {
-          ...action.notification,
-          id: generate(),
-        },
+        action.notification,
       ];
     }
 
