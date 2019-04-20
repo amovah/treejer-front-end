@@ -7,9 +7,8 @@ const Notification = props => (
   <div className={styles.container}>
     {props.notifications.map(i => (
       <Notif
-        type={i.type}
-        text={i.text}
         key={i.id}
+        {...i}
       />
     ))}
   </div>

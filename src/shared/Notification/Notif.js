@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import removeAction from 'Root/actions/notifications/remove';
 import removeIcon from './remove.png';
 import styles from './index.less';
 
@@ -24,6 +25,7 @@ export default props => (
       && (
         <div
           className="removeIcon"
+          onClick={() => removeAction(props.id)}
         >
           <img
             src={removeIcon}
