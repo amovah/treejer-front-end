@@ -9,10 +9,6 @@ export default (state = [], action) => {
       ];
     }
 
-    case types.notifications.POP: {
-      return state.slice(1);
-    }
-
     case types.notifications.REMOVE: {
       const index = state.findIndex(i => i.id === action.id);
 
