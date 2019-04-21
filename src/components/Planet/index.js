@@ -60,11 +60,31 @@ const Planet = () => (
         Plantation Drives
       </p>
       <div className="boxes">
-        <SeedBox />
-        <SeedBox />
-        <SeedBox />
-        <SeedBox />
-        <SeedBox />
+        <SeedBox
+          pic={`${cdn}/drives/seydbar.png`}
+          title="Seydbar School"
+          desc="50 Trees in Iran"
+        />
+        <SeedBox
+          pic={`${cdn}/drives/roosta.png`}
+          title="RoostaGol"
+          desc="0 Trees in Iran"
+        />
+        <SeedBox
+          pic={`${cdn}/drives/golestan.png`}
+          title="Golestan Villages"
+          desc="1500 Trees in Iran"
+        />
+        <SeedBox
+          pic={`${cdn}/drives/kerman.png`}
+          title="Kerman Villages"
+          desc="0 Trees in Iran"
+        />
+        <SeedBox
+          pic={`${cdn}/drives/tehran.png`}
+          title="Tehran Villages"
+          desc="0 Trees in Iran"
+        />
       </div>
     </div>
 
