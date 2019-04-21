@@ -26,10 +26,9 @@ export default async (credentials, referral) => {
     return res.data;
   }
 
-  const inv = await fetch(`/clients/${user.data.userId}/changeStatus/${referral}`, {
+  await fetch(`/clients/${user.data.userId}/changeStatus/${referral}`, {
     method: 'PUT',
   });
-  console.log(inv);
 
   await login(credentials);
   return res.data;
