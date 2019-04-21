@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Box from 'Root/shared/Box';
 import Table from 'Root/shared/Table';
 import styles from './index.less';
+import needInviteImage from './needinvite.png';
+import noTreeImage from './notree.png';
 import PadDivider from '../PadDivider';
 
 const generateData = item => [
@@ -66,6 +68,10 @@ const ForestView = (props) => {
           />
         </div>
         <div className="highShow">
+          <img
+            src={needInviteImage}
+            alt="need invite"
+          />
           <p>
             You should have an invitation to create your first forest!
           </p>
@@ -89,6 +95,10 @@ const ForestView = (props) => {
             />
           </div>
           <div className="highShow">
+            <img
+              src={noTreeImage}
+              alt="no tree"
+            />
             <p>
               You have no Trees in your Forest! Add one!
             </p>
