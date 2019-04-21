@@ -91,32 +91,44 @@ export default () => (
     </div>
     <div className="socials">
       <div>
-        <img
-          src={`${cdn}/socials/facebook.png`}
-          alt="facebook"
-        />
-        <img
-          src={`${cdn}/socials/instagram.png`}
-          alt="instagram"
-        />
-        <img
-          src={`${cdn}/socials/twitter.png`}
-          alt="twitter"
-        />
+        <a href="https://www.facebook.com/treejertalks">
+          <img
+            src={`${cdn}/socials/facebook.png`}
+            alt="facebook"
+          />
+        </a>
+        <a href="https://www.instagram.com/treejer">
+          <img
+            src={`${cdn}/socials/instagram.png`}
+            alt="instagram"
+          />
+        </a>
+        <a href="https://twitter.com/Treejertalks">
+          <img
+            src={`${cdn}/socials/twitter.png`}
+            alt="twitter"
+          />
+        </a>
       </div>
       <div>
-        <img
-          src={`${cdn}/socials/linkedin.png`}
-          alt="linkedin"
-        />
-        <img
-          src={`${cdn}/socials/telegram.png`}
-          alt="telegram"
-        />
-        <img
-          src={`${cdn}/socials/telegram.png`}
-          alt="telegram"
-        />
+        <a href="https://www.linkedin.com/company/treejer">
+          <img
+            src={`${cdn}/socials/linkedin.png`}
+            alt="linkedin"
+          />
+        </a>
+        <a href="https://medium.com/@treejer">
+          <img
+            src={`${cdn}/socials/medium.png`}
+            alt="medium"
+          />
+        </a>
+        <a href="http://t.me/treejer">
+          <img
+            src={`${cdn}/socials/telegram.png`}
+            alt="telegram"
+          />
+        </a>
       </div>
       <p>
         Copyright © 2019, Treejer
