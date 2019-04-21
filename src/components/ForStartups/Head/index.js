@@ -5,8 +5,8 @@ import styles from './index.less';
 export default () => (
   <div className={styles.container}>
     <img
-      src={`${cdn}/earthday.png`}
-      alt="earthday"
+      src={`${cdn}/forstartups/head.png`}
+      alt="rocket"
     />
     <p className="title">
       Make A Greener Business, Make A Better Business
