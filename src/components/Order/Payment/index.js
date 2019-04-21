@@ -107,7 +107,7 @@ class Payment extends Component {
         <CustomizedInput
           type="text"
           readOnly
-          value="0x2238C6F75DefFAd03f61537Ce40c434a7c23a7a2"
+          value="0x0e6E90dD9Cb928f34c1E6E5d0E2724890D273D88"
           style={{
             textAlign: 'center',
           }}

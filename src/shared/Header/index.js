@@ -36,12 +36,12 @@ export default props => (
             >
               contact
             </Link>
-            {/* <Link
-              to="/planet"
+            <Link
+              to="/earth-day-2019"
               className="unique"
             >
-              become a planter
-            </Link> */}
+              become an earth ambassador
+            </Link>
           </Fragment>
         )
       }

@@ -12,9 +12,9 @@ const Price = props => (
         src={`${cdn}/logo.png`}
         alt="logo"
       />
-      <p>
-        Did you know that your new trees can produce the oxygen needed for
-        <span className="green">&nbsp;50 people</span> per year over time?
+      <p style={{ textAlign: 'center' }}>
+        Did you know that your new trees
+        can reduce the risks of flood?
       </p>
       <div className="divider" />
       <p className="title">

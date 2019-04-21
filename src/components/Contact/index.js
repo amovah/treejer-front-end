@@ -71,7 +71,7 @@ export default class extends Component {
             </div>
             <div className="row">
               <Input
-                placeholder="Username"
+                placeholder="Username (Optional)"
                 onChange={this.updateState('username')}
                 style={{
                   width: '100%',

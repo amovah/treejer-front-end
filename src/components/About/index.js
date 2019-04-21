@@ -118,7 +118,7 @@ export default class extends PureComponent {
                 Alireza Arabi
               </p>
               <p className="role">
-                Cofounder and CTO
+                Cofounder and Shift Solutions Architect
               </p>
             </Box>
           </div>
@@ -175,14 +175,17 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={`${cdn}/teams/John.png`}
-                alt="John"
+                src={`${cdn}/teams/AliMovahedi.jpg`}
+                alt="AliMovahedi"
+                height={124}
+                width={144}
+                style={{ marginBottom: 20 }}
               />
               <p className="name">
-                John Doe
+                Ali Movahedi
               </p>
               <p className="role">
-                CMO
+                Full Stack Engineer
               </p>
             </Box>
             <Box className="card">

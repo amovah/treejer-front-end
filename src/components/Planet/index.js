@@ -68,7 +68,7 @@ const Planet = () => (
         <SeedBox
           pic={`${cdn}/drives/roosta.png`}
           title="RoostaGol"
-          desc="0 Trees in Iran"
+          desc="1000 Trees in Iran"
         />
         <SeedBox
           pic={`${cdn}/drives/golestan.png`}
@@ -78,12 +78,12 @@ const Planet = () => (
         <SeedBox
           pic={`${cdn}/drives/kerman.png`}
           title="Kerman Villages"
-          desc="0 Trees in Iran"
+          desc="500 Trees in Iran"
         />
         <SeedBox
           pic={`${cdn}/drives/tehran.png`}
           title="Tehran Villages"
-          desc="0 Trees in Iran"
+          desc="200 Trees in Iran"
         />
       </div>
     </div>

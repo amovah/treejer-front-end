@@ -148,7 +148,7 @@ export default class extends Component {
               to="/for-startups"
               className="treejer"
             >
-              Treejer for Business
+              Treejer for Startups
             </Link>
           </div>
         </div>
@@ -214,7 +214,7 @@ export default class extends Component {
 
         <div className={styles.theytrusted}>
           <p className="title">
-            They Trusted Treejer
+            Trusted by
           </p>
 
           <div className="orgs">
