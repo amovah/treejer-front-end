@@ -47,11 +47,8 @@ class JoinView extends Component {
               </p>
               <p className="desc">
                 Planet is an Invite-Only ecosystem where likeminded people can have collectible
-                trees.
-                If you know someone who cares for the environment you can invite her/him to join us
-                :)
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                trees. You need an invitation to be able to add trees to your forest. You can get
+                this invitation from current users or subscribe to the waitlist.
               </p>
               <button
                 type="button"
