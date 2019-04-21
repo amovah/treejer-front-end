@@ -82,13 +82,10 @@ class Order extends Component {
           </p>
           <div className="divider" />
           <p className="desc">
-            You will be provided with <b>one voucher</b>
-            . So if you have collected 20
-            maples from one planter and 40
-            from another, only one voucher will
-            be given to you. However, the entire
-            collection will be added to forest as
-            soon as the owner claims the Trees.
+            You will be provided with <b>one voucher</b>. So if, for example, you have collected
+            different Trees from different plantation drives for your friend, only one voucher will
+            be given to you to transfer to him/her.  They can add the whole tree collection by
+            entering only one code.
           </p>
         </Box>
 
