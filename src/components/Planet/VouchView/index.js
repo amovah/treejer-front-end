@@ -70,9 +70,8 @@ class VouchView extends Component {
           Congratulations!!
         </p>
         <p className="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          You have got new trees in your forest, we&apos;ll take care of  them. Now your forest is
+          even bigger! :)
         </p>
         <Button
           style={{
