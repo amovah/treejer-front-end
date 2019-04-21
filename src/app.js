@@ -14,7 +14,7 @@ import Treejer from './Treejer';
     if (Date.now() - time >= 1000 * 60 * 60 * 6) {
       sendNotification({
         type: 'warning',
-        text: 'My Apologies',
+        text: 'Please zoom out to see the website in the correct form until we fix this problem.',
       }, false);
       global.localStorage.lastNotified = Date.now().toString();
     }
@@ -22,7 +22,7 @@ import Treejer from './Treejer';
     global.localStorage.lastNotified = Date.now().toString();
     sendNotification({
       type: 'warning',
-      text: 'My Apologies',
+      text: 'Please zoom out to see the website in the correct form until we fix this problem.',
     }, false);
   }
 
