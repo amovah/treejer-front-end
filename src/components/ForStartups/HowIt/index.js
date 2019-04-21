@@ -23,10 +23,9 @@ export default () => (
             Buy Voucher for User
           </p>
           <p className="desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero
-            eos et accusam et justo duo dolores et ea rebum.
+            Treejer gives you a voucher code when you purchase trees for your customers. You just
+            need to select tree owners as &quot;My Customers&quot; in the checkout. We&apos;ll
+            send you the voucher via email.
           </p>
         </div>
       </div>
@@ -39,10 +38,9 @@ export default () => (
             Transfer Voucher to User
           </p>
           <p className="desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero
-            eos et accusam et justo duo dolores et ea rebum.
+            You need to transfer the voucher code to your customers either online or offline when
+            you sell your product or service. It&apos;s a simple code that can be displayed in your
+            product&apos;s checkout page.
           </p>
         </div>
         <div className="ball" />
@@ -59,10 +57,9 @@ export default () => (
             User Submits Voucher
           </p>
           <p className="desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero
-            eos et accusam et justo duo dolores et ea rebum.
+            Your users can submit the voucher in Treejer website to collect their trees and add
+            them to their forest. Doing this they can know where and by whom their trees are
+            planted. However, their trees are planted even if they don&apos;t submit their voucher.
           </p>
         </div>
       </div>
