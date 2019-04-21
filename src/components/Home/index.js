@@ -127,8 +127,7 @@ export default class extends Component {
                 alt="trade-your-oxygens"
               />
               <p className="title">
-                Trade Your Oxygens
-                Earn Oxygen
+                Sell Your Oxygens
               </p>
               <p className="details">
                 Exchange your earned Oxygen (O2) for
