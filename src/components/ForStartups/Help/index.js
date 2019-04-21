@@ -1,4 +1,5 @@
 import React from 'react';
+import { cdn } from 'Root/config';
 import styles from './index.less';
 
 export default () => (
@@ -8,14 +9,15 @@ export default () => (
     </p>
     <div className="helps">
       <div className="box">
-        <div className="icon">
-          ICON
-        </div>
+        <img
+          src={`${cdn}/forstartups/green.png`}
+          alt="green"
+        />
         <p className="title">
           Green Marketing
         </p>
         <p className="desc">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+          Boost your sales and customer engagement in a changing world
         </p>
         <span className="knowMore">
           KNOW MORE
@@ -27,14 +29,15 @@ export default () => (
       <div className="padder" />
 
       <div className="box">
-        <div className="icon">
-          ICON
-        </div>
+        <img
+          src={`${cdn}/forstartups/hr.png`}
+          alt="green"
+        />
         <p className="title">
           HR Rewarding
         </p>
         <p className="desc">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+          Offer green employee reward programs or corporate gifts
         </p>
         <span className="knowMore">
           KNOW MORE
@@ -46,14 +49,15 @@ export default () => (
       <div className="padder" />
 
       <div className="box">
-        <div className="icon">
-          ICON
-        </div>
+        <img
+          src={`${cdn}/forstartups/social.png`}
+          alt="green"
+        />
         <p className="title">
           Social Impact
         </p>
         <p className="desc">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+          Engage your customers, talents and investors by being more sustainable
         </p>
         <span className="knowMore">
           KNOW MORE
