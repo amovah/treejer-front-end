@@ -12,13 +12,11 @@ export default () => (
       Make A Greener Business, Make A Better Business
     </p>
     <p className="desc">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-      et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-      sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+      Treejer has a strong mission to empowering socially and environmentally concerned businesses.
+      Having one of the most inclusive, transparent and efficient sustainability programs through
+      tree plantations, we are determined to bring value to your brand, products and services.
+      Moreover, our community of environmentally concerned users are always looking for responsible
+      businesses to support if they socially aligned vision and mission.
     </p>
   </div>
 );
