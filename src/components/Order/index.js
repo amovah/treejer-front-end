@@ -68,13 +68,8 @@ class Order extends Component {
           </p>
           <div className="divider" />
           <p className="desc">
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            All of your collected Trees will be added to your forest as soon as your payment is
+            confirmed. We will notify you about this with an email.
           </p>
         </Box>
 
