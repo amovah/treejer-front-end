@@ -52,9 +52,6 @@ class Payment extends Component {
       return (
         <Button
           onClick={this.onSubmit}
-          style={{
-            marginTop: 50,
-          }}
         >
           SUBMIT INVOICE
         </Button>
@@ -86,14 +83,20 @@ class Payment extends Component {
           <p className="pay">
             Please pay for the invoice online via the following link:
           </p>
-          <CustomizedInput
+          <p readOnly className="tempText">
+            <b>Account Number</b>: 0000045558334545<br />
+            <b>NIB</b>: 0023 0000 45558334545 94<br />
+            <b>IBAN</b>: PT50 0023 0000 4555 8334 5459 4<br />
+            <b>SWIFT</b>: ACTVPTPL
+          </p>
+          {/* <CustomizedInput
             type="text"
             readOnly
             value="https://treejer.paymentgateway.com"
             style={{
               textAlign: 'center',
             }}
-          />
+          /> */}
           {this.logView()}
         </Fragment>
       );
