@@ -6,21 +6,25 @@ export default (state = defaults, action) => {
   switch (action.type) {
     case types.order.ADD: {
       const index = state.trees.findIndex(i => i.id === action.tree.id);
-      const trees = [
-        ...state.trees.slice(0, index),
-        ...state.trees.slice(index + 1),
-      ];
+      let trees = [];
 
       if (index > -1) {
-        trees.push({
-          ...state.trees[index],
-          qty: state.trees[index].qty + 1,
-        });
+        trees = [
+          ...state.trees.slice(0, index),
+          {
+            ...state.trees[index],
+            qty: state.trees[index].qty + 1,
+          },
+          ...state.trees.slice(index + 1),
+        ];
       } else {
-        trees.push({
-          ...action.tree,
-          qty: 1,
-        });
+        trees = [
+          ...state.trees.slice(),
+          {
+            ...action.tree,
+            qty: 1,
+          },
+        ];
       }
 
       return {
