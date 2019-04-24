@@ -118,7 +118,7 @@ export default class extends PureComponent {
                 Alireza Arabi
               </p>
               <p className="role">
-                Cofounder and Shift Solutions Architect
+                Cofounder and Chief Solutions Architect
               </p>
             </Box>
           </div>
