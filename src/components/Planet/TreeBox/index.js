@@ -51,7 +51,7 @@ export default props => (
           Value
         </p>
         <p className="info">
-          ${props.price}
+          €{props.price}
         </p>
       </div>
     </div>
