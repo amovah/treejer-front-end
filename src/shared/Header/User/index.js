@@ -59,28 +59,33 @@ class User extends Component {
           </button>
         </Box>
       </div>
-      {
-        (!this.props.less && this.props.basket !== 0)
-        && (
-          <Fragment>
-            <div className={styles.divider} />
-            <div
-              className={styles.badge}
-              onClick={() => history.push('/order')}
-            >
-              <img
-                src={`${cdn}/trees/badge.png`}
-                alt="badge"
-              />
-              <span>
-                {this.props.basket}
-              </span>
-            </div>
-          </Fragment>
-        )
-      }
+      {this.basket()}
     </div>
   )
+
+  basket = () => {
+    if (this.props.less || this.props.basket === 0) {
+      return null;
+    }
+
+    return (
+      <Fragment>
+        <div className={styles.divider} />
+        <div
+          className={styles.badge}
+          onClick={() => history.push('/order')}
+        >
+          <img
+            src={`${cdn}/trees/badge.png`}
+            alt="badge"
+          />
+          <span>
+            {this.props.basket}
+          </span>
+        </div>
+      </Fragment>
+    );
+  }
 
   signInView = () => (
     <div>
@@ -104,6 +109,7 @@ class User extends Component {
           </Fragment>
         )
       }
+      {this.basket()}
     </div>
   )
 
