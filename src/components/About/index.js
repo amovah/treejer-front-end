@@ -175,17 +175,17 @@ export default class extends PureComponent {
             </Box>
             <Box className="card">
               <img
-                src={`${cdn}/teams/AliMovahedi.jpg`}
-                alt="AliMovahedi"
+                src={`${cdn}/teams/Hossein.jpg`}
+                alt="Hossein"
                 height={124}
-                width={144}
+                width={124}
                 style={{ marginBottom: 20 }}
               />
               <p className="name">
-                Ali Movahedi
+                Hossein Namazian
               </p>
               <p className="role">
-                Full Stack Engineer
+                Blockchain Developer
               </p>
             </Box>
             <Box className="card">
