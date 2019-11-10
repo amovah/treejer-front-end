@@ -12,6 +12,9 @@ import Order from './Order';
 import Planet from './Planet';
 import Earth from './Earth';
 import ForStartups from './ForStartups';
+import ImpactAway from './ImpactAway';
+import Verify from './Verify';
+import Volunteer from './Volunteer';
 
 export default () => (
   <Switch404>
@@ -25,6 +28,9 @@ export default () => (
     <Route path="/planet" exact component={Planet} />
     <Route path="/earth-day-2019" exact component={Earth} />
     <Route path="/for-startups" exact component={ForStartups} />
+    <Route path="/impactaway" exact component={ImpactAway} />
+    <Route path="/verify" exact component={Verify} />
+    <Route path="/volunteer" exact component={Volunteer} />
     <Route path="/404-notfound" component={NotFound} />
   </Switch404>
 );
